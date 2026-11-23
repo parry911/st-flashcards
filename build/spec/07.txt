@@ -1,0 +1,9 @@
+# Nanotech and materials
+C def | u1114 | u1115 u1116 u1117 u1118 u1124
+C use+gov+issue | - | u1119 u1120 u1121 u1122 u1123
+C use+issue+gov | u1125 | u1126 u1127 u1128
+C use+issue+fix | u1129 | u1130 u1131 u1132
+C use+issue | u1133 | u1134 u1135 u1136 u1137 u1138 u1139 u1140
+C def | u1141 | u1142 u1143
+C use+gov+issue | u1144 | u1145 u1146 u1147 u1148
+C def+how | - | u1149 u1150 u1151

@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>S&amp;T Flashcards</title>
+<style>
+/*CSS_GS3*/
+/* ---------- S&T additions ---------- */
+:root{--st:#0f6e78;--st-soft:#e0f0f1;--sec:#55565c}
+@media (prefers-color-scheme: dark){:root{--st:#62c6cf;--st-soft:#17302f;--sec:#b3b5bb}}
+.chip.st{color:var(--st);background:var(--st-soft)}
+.chip.tbl{color:var(--data);background:var(--data-soft)}
+.crumb{font-size:12.5px;font-weight:650;letter-spacing:.05em;text-transform:uppercase;color:var(--ink3);margin-top:22px;line-height:1.4}
+.crumb .sep{opacity:.6;margin:0 4px}
+.front .ttl.q{margin-top:6px}
+.partline{font-size:13.5px;color:var(--ink2);margin-top:2px}
+.partline b{font-weight:600}
+.sec{font-size:13px;font-weight:700;color:var(--sec);letter-spacing:.01em;margin:10px 2px 0;line-height:1.4}
+.sec:first-child{margin-top:0}
+.rw .hd{color:var(--st);text-transform:none;letter-spacing:0;font-size:14px;font-weight:650}
+.rw .hd.tb{color:var(--data)}
+.rw.s0 .body.hb .hd{margin:1px 0 0}
+.ln .th{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.03em;text-transform:uppercase;color:var(--ink3);margin-right:4px}
+.pic{margin:6px 0 2px;text-align:center}
+.pic.big img{max-height:none}
+.pic img{max-width:100%;max-height:420px;border-radius:10px;border:1px solid var(--line);background:#fff;cursor:zoom-in}
+.vid{align-self:flex-start;display:inline-flex;align-items:center;gap:6px;font-size:13.5px;color:var(--accent);text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:5px 12px;margin:4px 2px}
+.lightbox{position:fixed;inset:0;background:rgba(0,0,0,.86);display:none;align-items:center;justify-content:center;z-index:20;padding:16px;cursor:zoom-out}
+.lightbox.on{display:flex}
+.lightbox img{max-width:100%;max-height:100%;border-radius:8px;background:#fff}
+.lst{display:block}.lst>br{display:none}
+.lst .li{display:block;position:relative;padding:2px 0 2px 14px}
+.lst .li:before{content:"";position:absolute;left:2px;top:.78em;width:5px;height:5px;border-radius:50%;background:var(--ink3)}
+.lst .li2{margin-left:16px}
+.chiprow{display:flex;flex-wrap:wrap;gap:6px;align-items:center;width:auto}
+.chip.role{font-size:12px;padding:3px 9px}
+.chip.def{color:var(--define);background:var(--define-soft)} .chip.how{color:var(--st);background:var(--st-soft)}
+.chip.use{color:var(--for);background:var(--for-soft)} .chip.issue{color:var(--against);background:var(--against-soft)}
+.chip.fix{color:var(--value);background:var(--value-soft)} .chip.gov{color:var(--accent);background:var(--accent-soft)}
+.chip.news{color:var(--data);background:var(--data-soft)} .chip.fact{color:var(--ink2);background:var(--strip)}
+.chip.tbl{color:var(--data);background:var(--data-soft)} .chip.pic{color:var(--st);background:var(--st-soft)}
+.cnt{font-size:12px;color:var(--ink3);font-weight:600;margin-left:2px}
+.cueline{font-size:14px;color:var(--ink2);margin-top:8px;line-height:1.5}
+.cueline .dot{color:var(--ink3)}
+.sec.tg{color:var(--st);text-transform:uppercase;letter-spacing:.04em;font-size:12px}
+.rw.cont{margin-top:-4px}
+.rw.cont .n{opacity:.55}
+.headrow{font-size:12px;color:var(--ink3);margin:-4px 0 10px}
+
+/* pinned issue heads from the page title */
+.pin{background:var(--card);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);margin:0 0 14px;font-size:14px;line-height:1.5}
+.pin summary{list-style:none;cursor:pointer;padding:11px 14px;display:flex;gap:8px;align-items:baseline}
+.pin summary::-webkit-details-marker{display:none}
+.pin summary .one{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--ink2)}
+.pin summary .tw{flex:0 0 auto;font-size:12px;color:var(--ink3)}
+.pin[open] summary .one{display:none} .pin[open] summary{justify-content:flex-end}
+.pin[open] summary .tw:after{content:"hide"} .pin:not([open]) summary .tw:after{content:"show"}
+.pin .in{padding:0 16px 14px}
+.pin .lead{font-family:var(--serif);font-size:17px;font-weight:600;line-height:1.35;color:var(--ink)}
+.pin ul{margin:8px 0 0;padding:0;list-style:none}
+.pin li{padding:6px 0 6px 14px;border-top:1px solid var(--line);position:relative;font-size:15px;font-weight:600;color:var(--ink)}
+.pin li:first-child{border-top:0}
+.pin li:before{content:"";position:absolute;left:0;top:14px;width:6px;height:6px;border-radius:50%;background:var(--st)}
+.pin .niche{margin-top:8px;padding:9px 11px;border-radius:10px;background:var(--st-soft);color:var(--ink);font-size:14px}
+.pin .vd{margin-top:12px;padding-top:10px;border-top:1px solid var(--line);font-size:12.5px;color:var(--ink3);line-height:1.5}
+.pin .vd b{color:var(--ink2)}
+/* wide screens: the box sits beside the card and stays on screen */
+@media (min-width:1060px){
+  .wrap{max-width:none;width:680px;margin-left:calc(50vw - 530px);margin-right:0}
+  .actions .in{max-width:648px;margin-left:calc(50vw - 530px)}
+  .pin{position:fixed;top:64px;left:calc(50vw + 190px);width:340px;max-height:calc(100vh - 150px);overflow:auto;margin:0}
+  .pin summary{display:none}
+  .pin .in{padding:16px 18px 16px}
+}
+@media (min-width:1400px){
+  .wrap{margin-left:auto;margin-right:auto}
+  .actions .in{margin-left:auto;margin-right:auto}
+  .pin{left:calc(50vw + 370px);width:min(380px,calc(50vw - 400px))}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header><h1 id="title">S&amp;T Flashcards</h1><span class="sub" id="subtitle"></span></header>
+  <div class="controls">
+    <div class="selrow">
+      <select id="subjSel" aria-label="Subject"></select>
+      <select id="topicSel" aria-label="Topic"></select>
+    </div>
+    <div class="row">
+      <div class="seg" id="modeSeg">
+        <button data-v="order">In order</button><button data-v="topics">Shuffle topics</button><button data-v="all">Shuffle all</button><button data-v="smart">Smart</button>
+      </div>
+    </div>
+    <div class="progress">
+      <div class="bar"><i class="k" id="pk"></i><i class="m" id="pm"></i></div>
+      <span class="legend"><b id="nk">0</b> known · <b id="nm">0</b> missed · <b id="nn">0</b> new</span>
+      <button class="toggle" id="missTgl">Missed only</button>
+    </div>
+  </div>
+  <details class="pin" id="pin"><summary><span class="one" id="pinOne"></span><span class="tw"></span></summary><div class="in" id="pinIn"></div></details>
+  <div id="stage"></div>
+  <div class="foot">
+    <button class="linkbtn" id="progBtn">Progress by subject</button>
+    <button class="linkbtn" id="syncBtn">Sync across devices</button>
+    <button class="linkbtn" id="resetBtn">Reset progress</button>
+  </div>
+</div>
+<div class="actions"><div class="in" id="actions"></div></div>
+<div class="toast" id="toast"></div>
+<div class="lightbox" id="lightbox"><img id="lbImg" alt=""></div>
+<div class="modal" id="modal"><div class="box">
+  <h3>Reset progress?</h3>
+  <p>This clears every card's known and missed status and your place in the deck. It cannot be undone.</p>
+  <div class="row"><button class="btn ghost" id="mCancel">Cancel</button><button class="btn miss" style="flex:0 0 auto" id="mOk">Reset</button></div>
+</div></div>
+<div class="modal" id="smodal"><div class="box sync" id="sbox"></div></div>
+<div class="modal" id="pmodal"><div class="box wide sheet" id="pbox"></div></div>
+<script>
+const DECK=/*DATA*/;
+</script>
+<script>
+(function(){
+"use strict";
+const KEY="stdeck.v1";
+const BUILD="/*BUILD*/";
+const $=s=>document.querySelector(s);
+const SUBJ={}; DECK.subjects.forEach(s=>SUBJ[s.id]=s.name);
+const IMG=DECK.img||{};
+
+/* ---------- pinned issue heads (from the page title, word for word) ---------- */
+(function pin(){
+  const P=DECK.pin, el=$("#pin");
+  $("#pinOne").textContent=P.heads.join(", ");
+  $("#pinIn").innerHTML=`<div class="lead">${P.lead}</div><ul>${P.heads.map(h=>`<li>${h}</li>`).join("")}</ul><div class="niche">${P.niche}</div><div class="vd">${P.vd}</div>`;
+  let open=null; try{open=localStorage.getItem("stpin.v1");}catch(e){}
+  el.open=open===null?false:open==="1";
+  el.addEventListener("toggle",()=>{ if(matchMedia("(min-width:1060px)").matches) return; try{localStorage.setItem("stpin.v1",el.open?"1":"0");}catch(e){} });
+  const wide=()=>{ if(matchMedia("(min-width:1060px)").matches) el.open=true; else{ let o=null; try{o=localStorage.getItem("stpin.v1");}catch(e){} el.open=o==="1"; } };
+  wide(); matchMedia("(min-width:1060px)").addEventListener("change",wide);
+})();
+
+/* ---------- build cards ---------- */
+const cards={}, groups=[];
+DECK.topics.forEach(t=>{
+  const g={key:t.id,subj:t.subj,name:t.name,ids:[]};
+  t.cards.forEach(c=>{
+    const nrow=c.rows.filter(r=>"t" in r).length;
+    cards[c.id]={id:c.id,topic:t,payload:c,count:nrow};
+    g.ids.push(c.id);
+  });
+  groups.push(g);
+});
+
+/* ---------- state ---------- */
+let S=load();
+function load(){
+  try{const s=JSON.parse(localStorage.getItem(KEY)); if(s&&s.v===1) return s;}catch(e){}
+  return {v:1,subj:"all",topic:"all",mode:"order",missed:false,queue:null,pos:0,st:{},back:false};
+}
+let lastSig=null;
+const placeSig=()=>[S.subj,S.topic,S.mode,S.missed,S.pos,S.round,(S.queue||[]).length,(S.queue||[])[0],(S.queue||[])[S.pos]].join("|");
+function save(){const sig=placeSig(); if(sig!==lastSig){ if(lastSig!==null){S.at=Date.now(); setTimeout(()=>{try{queueSync();}catch(e){}},0);} lastSig=sig; }
+  try{localStorage.setItem(KEY,JSON.stringify(S));}catch(e){}}
+const isMissed=id=>S.st[id]&&S.st[id].s==="m";
+function scopeGroups(){ return groups.filter(g=>(S.subj==="all"||g.subj===S.subj)&&(S.topic==="all"||g.key===S.topic)); }
+function filteredGroups(){ return scopeGroups().map(g=>{let ids=g.ids; if(S.missed) ids=ids.filter(isMissed); return {key:g.key,ids};}).filter(g=>g.ids.length); }
+function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+/* Smart order: weakest first, then cards due for review, new cards mixed in, well-known cards last.
+   A known card comes due again after 1, 3, 7, 14, 30 or 60 days, longer the more often you've got it right. */
+const DAY=864e5, GAPS=[1,3,7,14,30,60];
+function smartQueue(ids){
+  const now=Date.now(), weak=[], due=[], fresh=[], later=[];
+  ids.forEach(id=>{const o=S.st[id];
+    if(!o||!o.s){ fresh.push(id); return; }
+    if(o.s==="m"){ weak.push([id,-(o.miss/Math.max(1,o.seen)),o.t||0]); return; }
+    const strength=Math.max(1,(o.seen-o.miss)-o.miss), gap=GAPS[Math.min(strength,GAPS.length)-1]*DAY, over=(now-(o.t||0))/gap;
+    (over>=1?due:later).push([id,-over]); });
+  weak.sort((a,b)=>a[1]-b[1]||a[2]-b[2]); due.sort((a,b)=>a[1]-b[1]); later.sort((a,b)=>a[1]-b[1]);
+  const rev=weak.concat(due).map(x=>x[0]), q=[]; let i=0,j=0;
+  while(i<rev.length||j<fresh.length){ for(let k=0;k<2&&i<rev.length;k++) q.push(rev[i++]); if(j<fresh.length) q.push(fresh[j++]); }
+  S.dueN=q.length; return q.concat(later.map(x=>x[0]));
+}
+function buildQueue(){
+  let gs=filteredGroups(), q;
+  if(S.mode==="order"){ q=gs.flatMap(g=>g.ids); }
+  else if(S.mode==="topics"){
+    gs=shuffle(gs); const miss=gs.filter(g=>g.ids.some(isMissed)), rest=gs.filter(g=>!g.ids.some(isMissed));
+    q=miss.concat(rest).flatMap(g=>g.ids);
+  } else if(S.mode==="smart"){ q=smartQueue(gs.flatMap(g=>g.ids)); }
+  else { const all=shuffle(gs.flatMap(g=>g.ids)); q=all.filter(isMissed).concat(all.filter(i=>!isMissed(i))); }
+  if(S.mode!=="smart") S.dueN=null;
+  S.queue=q; S.round=1; S.pos=0; S.back=false; save();
+}
+function validQueue(){return Array.isArray(S.queue)&&S.queue.every(id=>cards[id]);}
+if(Array.isArray(S.queue)&&S.queue.length&&!validQueue()){ /* cards removed in a deck update: skip them, keep your place */
+  const gone=S.queue.slice(0,S.pos).filter(id=>!cards[id]).length;
+  S.queue=S.queue.filter(id=>cards[id]); S.pos=Math.max(0,Math.min(S.pos-gone,S.queue.length));
+}
+if(S.subj!=="all"&&!SUBJ[S.subj]){S.subj="all";S.topic="all";}
+if(S.topic!=="all"&&!groups.some(g=>g.key===S.topic)) S.topic="all";
+if(!validQueue()||!S.queue.length) buildQueue();
+
+/* ---------- reveal state ---------- */
+let R=null;
+function resetReveal(c){
+  const rows=c.payload.rows, idx=[]; rows.forEach((r,i)=>{ if("t" in r) idx.push(i); });
+  R={id:c.id,idx,steps:idx.map(()=>0),pre:idx.map(()=>false),marks:idx.map(()=>null)};
+  const rec=S.st[c.id], r=rec&&rec.r&&(!rec.v||rec.v===c.payload.v)&&rec.v?rec.r:null;
+  if(r&&r.some(x=>x===0)){ R.part=true; r.forEach((x,i)=>{ if(x===1&&i<R.steps.length){ R.steps[i]=1; R.pre[i]=true; } }); }
+}
+const allDone=()=>!R||R.steps.every(s=>s>=1);
+
+/* ---------- render ---------- */
+function counts(ids){let k=0,m=0; ids.forEach(id=>{const s=S.st[id]; if(s&&s.s==="k")k++; else if(s&&s.s==="m")m++;}); return {k,m,n:ids.length-k-m,t:ids.length};}
+const esc=s=>String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+function render(){
+  $("#title").innerHTML=DECK.title; $("#subtitle").textContent=DECK.subtitle+" · "+BUILD;
+  document.querySelectorAll("#modeSeg button").forEach(b=>b.classList.toggle("on",b.dataset.v===S.mode));
+  const ss=$("#subjSel"); ss.innerHTML='<option value="all">All subjects</option>'+DECK.subjects.map(s=>`<option value="${s.id}">${esc(s.name)}</option>`).join(""); ss.value=S.subj;
+  const tops=S.subj==="all"?[]:groups.filter(g=>g.subj===S.subj);
+  const ts=$("#topicSel"); ts.innerHTML='<option value="all">All topics</option>'+tops.map(g=>`<option value="${g.key}">${esc(g.name.replace(/<[^>]+>/g,""))}</option>`).join(""); ts.value=S.topic; ts.disabled=tops.length<2; ts.style.display=tops.length<2?"none":"";
+  const scopeIds=scopeGroups().flatMap(g=>g.ids); const c0=counts(scopeIds);
+  $("#nk").textContent=c0.k;$("#nm").textContent=c0.m;$("#nn").textContent=c0.n;
+  $("#pk").style.width=(c0.t?c0.k/c0.t*100:0)+"%"; $("#pm").style.width=(c0.t?c0.m/c0.t*100:0)+"%";
+  const mt=$("#missTgl"); mt.classList.toggle("on",S.missed); mt.textContent=S.missed?"Missed only ✓":"Missed only"; mt.disabled=!S.missed&&c0.m===0;
+  const stage=$("#stage");
+  if(!S.queue.length){ stage.innerHTML=`<div class="card"><div class="done"><h2>No cards here</h2><p>${S.missed?"Nothing is marked missed in this selection.":"Pick another subject or topic."}</p></div></div>`; actions([]); return; }
+  if(S.pos>=S.queue.length){ renderDone(stage); return; }
+  const c=cards[S.queue[S.pos]];
+  if(!R||R.id!==c.id) resetReveal(c);
+  const kick=`<div class="kicker"><span>${esc(SUBJ[c.topic.subj])}</span><span>${S.pos+1} / ${S.queue.length}</span></div>`;
+  if(!S.back){
+    stage.innerHTML=`<div class="card"><div class="front" id="front">${kick}${frontHTML(c)}
+      <div class="hint"><span>Recall it first, then tap</span><span>Space</span></div></div></div>`;
+    $("#front").onclick=flip;
+    actions([["ghost","‹","prev"],["primary","Show answer","flip"],["ghost","›","next"]]);
+  } else {
+    stage.innerHTML=`<div class="card back" id="backcard">${kick}${backHTML(c)}<div class="fliphint">${R.steps.length?"Forgot an open point? Tap it to turn it red. Tap again to undo.<br>":""}<button class="flipback" id="flipBack">↺ Flip back</button></div></div>`;
+    bindRows();
+    $("#flipBack").onclick=e=>{e.stopPropagation(); unflip();};
+    const done=allDone();
+    actions([["ghost","‹","prev"]].concat(R.steps.length&&!done?[["ghost","Show all","all"]]:[]).concat([[anyRed()?"miss sug":"miss","Missed <kbd>1</kbd>","miss"],["got","Got it <kbd>2</kbd>","got"],["ghost","›","next"]]));
+    if(anyRed()){const g=document.querySelector('#actions [data-a="got"]'); if(g){g.disabled=true; g.title="A point is red, so this card counts as missed";}}
+  }
+}
+const ROLE={def:["What it is","def"],how:["How it works","how"],use:["Uses & significance","use"],issue:["Challenges","issue"],fix:["Way forward","fix"],gov:["Initiatives","gov"],news:["In the news","news"],fact:["Key facts","fact"],tbl:["Table","tbl"],pic:["Your notes","pic"]};
+function titles(c){
+  const p=c.payload, path=p.path||[], tn=c.topic.name;
+  let big, crumbs;
+  if(p.title){ big=p.title; crumbs=[tn].concat(path); if(crumbs.length>1&&crumbs[crumbs.length-1]===p.title) crumbs.pop(); }
+  else if(path.length){ big=path[path.length-1]; crumbs=[tn].concat(path.slice(0,-1)); }
+  else { big=tn; crumbs=[]; }
+  return {big,crumbs};
+}
+function chip(c){
+  const p=c.payload;
+  const roles=(p.roles||[]).map(r=>`<span class="chip role ${ROLE[r][1]}">${ROLE[r][0]}</span>`).join("");
+  const n=p.table?`${c.count} row${c.count===1?"":"s"}`:c.count?`${c.count} point${c.count===1?"":"s"}`:"picture";
+  return `<span class="chiprow">${roles}<span class="cnt">${n}</span></span>`;
+}
+const strip=s=>String(s).replace(/<br>/g," ").replace(/<[^>]+>/g,"").trim();
+function cueLine(c){
+  const rows=c.payload.rows;
+  let secs=rows.filter(r=>"sec" in r).map(r=>r.sec);
+  if(!secs.length) secs=rows.filter(r=>r.h&&!r.cont).map(r=>r.h);   /* no headings: Perry's labels are the cue */
+  if(!secs.length&&!c.payload.table){ const f=rows.find(r=>"t" in r); if(f){ const w=strip(f.t).split(/\s+/); secs=[esc(w.slice(0,7).join(" "))+(w.length>7?" …":"")]; } }
+  if(!secs.length) return "";
+  const show=secs.slice(0,4).join('<span class="dot"> · </span>')+(secs.length>4?'<span class="dot"> · …</span>':"");
+  return `<div class="cueline">${show}</div>`;
+}
+function frontHTML(c){
+  const T=titles(c);
+  const crumb=T.crumbs.length?`<div class="crumb">${T.crumbs.join('<span class="sep">›</span>')}</div>`:`<div class="crumb">&nbsp;</div>`;
+  return chip(c)+crumb+`<div class="ttl q">${T.big}</div>`+cueLine(c);
+}
+function backHTML(c){
+  const p=c.payload, T=titles(c);
+  const crumb=T.crumbs.length?`<div class="topicname">${T.crumbs.join(' › ')}</div>`:"";
+  const head=`<div class="backhead">${chip(c)}${crumb}<div class="ttl">${T.big}</div></div>`;
+  const th=(p.table&&p.head)?`<div class="headrow">Columns: ${p.head.map(esc).join(" · ")}</div>`:"";
+  let k=-1;
+  const body=p.rows.map(r=>{
+    if("sec" in r) return `<div class="sec${r.tg?" tg":""}">${r.sec}</div>`;
+    if("img" in r){ const f=IMG[r.img]; return f?`<div class="pic${c.count?"":" big"}"><img src="${f}" alt="" loading="lazy" onerror="this.parentNode.style.display='none'"></div>`:""; }
+    if("video" in r) return `<a class="vid" href="${esc(r.video)}" target="_blank" rel="noopener">▶ Video</a>`;
+    k++; return rowHTML(r,k,!!p.table);
+  }).join("");
+  const hint=(!R.steps.length||allDone())?"":R.part?`<div class="recall">Green points: you knew them last time. Recall the closed ones.</div>`:`<div class="recall">Say each point aloud, then tap it to check.</div>`;
+  return head+th+hint+`<div class="rows">${body}</div>`;
+}
+function rowHTML(r,i,tb){
+  const st=R.steps[i];
+  const firstHidden=R.steps.findIndex(s=>s<1);
+  const hc="hd"+(tb?" tb":"");
+  if(st===0) return r.h?`<div class="rw s0 ${i===firstHidden?"next":""}${r.cont?" cont":""}" data-i="${i}"><div class="n">${i+1}</div><div class="body hb"><div class="${hc}">${r.h}</div></div></div>`
+                       :`<div class="rw s0 ${i===firstHidden?"next":""}${r.cont?" cont":""}" data-i="${i}"><div class="n">${i+1}</div><div class="body" style="--w:${45+((i*37)%40)}%"></div></div>`;
+  const h=(r.h?`<div class="${hc}">${r.h}</div>`:"")+`<div class="ln">${r.t}</div>`;
+  const cls=(isRed(i)?" fg":(R.pre[i])?" kn":"")+(r.cont?" cont":"");
+  return `<div class="rw s2${cls}" data-i="${i}"><div class="n">${i+1}</div><div class="body">${h}</div></div>`;
+}
+function bindRows(){
+  document.querySelectorAll(".rw").forEach(el=>el.onclick=e=>{ if(e.target.closest("a")) return; const i=+el.dataset.i; if(el.classList.contains("s2")) toggleRed(i); else step(i);});
+  document.querySelectorAll(".pic img").forEach(im=>im.onclick=e=>{e.stopPropagation(); $("#lbImg").src=im.src; $("#lightbox").classList.add("on");});
+}
+$("#lightbox").onclick=()=>$("#lightbox").classList.remove("on");
+function curId(){return S.queue[S.pos];}
+function isRed(i){return !!(R&&R.marks&&R.marks[i]===0);}
+const anyRed=()=>!!(R&&R.steps&&R.steps.some((_,i)=>isRed(i)));
+function toggleRed(i){const id=curId(), o=S.st[id]||(S.st[id]={seen:0,miss:0}); const r=(o.r||[]).slice();
+  R.marks[i]=R.marks[i]===0?(R.pre[i]?1:null):0; r[i]=R.marks[i]; o.r=r; o.v=cards[id].payload.v; o.t=Date.now(); save(); queueSync(); render();}
+function step(i){ if(R.steps[i]<1){R.steps[i]=1; render();
+  const target=document.querySelector('.rw[data-i="'+i+'"]'); if(target) target.scrollIntoView({block:'nearest',behavior:'smooth'}); } }
+function nextStep(){ const i=R.steps.findIndex(s=>s<1); if(i<0) return false; step(i); return true; }
+function showAll(){ R.steps=R.steps.map(()=>1); render(); }
+function renderDone(stage){
+  const missed=[...new Set(S.queue)].filter(isMissed), rn=S.round||1, tot=new Set(S.queue).size;
+  stage.innerHTML=`<div class="card"><div class="done"><div class="kicker" style="justify-content:center"><span>Round ${rn} complete</span></div>
+    <h2>${missed.length?missed.length+" of "+tot+" card"+(tot>1?"s":"")+" still missed":"Every card known"}</h2>
+    <p>${missed.length?"Go through only the missed cards now, or start a new round.":"Start a new round, or shuffle to test recall out of order."}</p>
+    <div class="row">${missed.length?'<button class="btn miss" style="flex:0 0 auto" id="revMiss">Review missed</button>':""}<button class="btn" id="newRound">New round</button></div></div></div>`;
+  if(missed.length) $("#revMiss").onclick=()=>{S.queue=shuffle(missed.slice()); S.round=rn+1; S.pos=0; S.back=false; save(); render();};
+  $("#newRound").onclick=()=>{buildQueue(); render();};
+  actions([]);
+}
+function actions(list){
+  const el=$("#actions"); el.innerHTML=list.map(([cls,txt,act])=>`<button class="btn ${cls}" data-a="${act}">${txt}</button>`).join("");
+  el.querySelectorAll("button").forEach(b=>b.onclick=()=>act(b.dataset.a));
+  const p=el.querySelector('[data-a="prev"]'); if(p) p.disabled=S.pos===0;
+}
+function act(a){({flip,prev,next,all:showAll,miss:()=>grade("m"),got:()=>grade("k")})[a]();}
+function unflip(){const card=document.querySelector(".card"); if(card) card.classList.add("flipping"); setTimeout(()=>{S.back=false; R=null; save(); render();},120);}
+function dueCheck(){ if(S.mode==="smart"&&S.dueN&&S.pos===S.dueN&&S.pos<S.queue.length) setTimeout(()=>toast("Due cards done · the rest you know well"),200); }
+function next(){ if(S.pos<S.queue.length){S.pos++; dueCheck(); S.back=false; R=null; save(); render(); window.scrollTo(0,0);} }
+function flip(){const card=document.querySelector(".card"); if(card) card.classList.add("flipping"); setTimeout(()=>{S.back=true; save(); render();},120);}
+function prev(){ if(S.pos>0){S.pos--; S.back=false; R=null; save(); render(); window.scrollTo(0,0);} }
+function grade(s){
+  if(s==="k"&&anyRed()) s="m";
+  const id=S.queue[S.pos], o=S.st[id]||{seen:0,miss:0};
+  if(R&&R.steps.length){o.r=R.steps.map((st,i)=>R.marks[i]===0?0:st>0?1:null);}
+  o.seen++; o.s=s; o.t=Date.now(); o.v=cards[id].payload.v; if(s==="m") o.miss++;
+  S.st[id]=o; S.pos++; dueCheck(); S.back=false; R=null; save(); queueSync(); render(); window.scrollTo(0,0);
+}
+/* ---------- progress sheet ---------- */
+function progressSheet(){
+  const rows=DECK.subjects.map(s=>{const ids=groups.filter(g=>g.subj===s.id).flatMap(g=>g.ids); return {s,c:counts(ids),n:groups.filter(g=>g.subj===s.id).length};});
+  const all=counts(groups.flatMap(g=>g.ids));
+  const bar=c=>`<div class="bar"><i class="k" style="width:${c.t?c.k/c.t*100:0}%"></i><i class="m" style="width:${c.t?c.m/c.t*100:0}%"></i></div>`;
+  $("#pbox").innerHTML=`<h3>Progress by subject</h3>
+   <div class="pl" data-s="all"><div class="nm">All subjects<small>${all.t} cards</small></div><div class="ct">${all.k} known · ${all.m} missed</div>${bar(all)}</div>`+
+   rows.map(({s,c,n})=>`<div class="pl" data-s="${s.id}"><div class="nm">${esc(s.name)}<small>${n} topic${n>1?"s":""} · ${c.t} cards</small></div><div class="ct">${c.k} known · ${c.m} missed</div>${bar(c)}</div>`).join("")+
+   `<div class="row" style="justify-content:flex-end;margin-top:12px"><button class="btn ghost" id="pClose">Close</button></div>`;
+  $("#pmodal").classList.add("on");
+  $("#pClose").onclick=()=>$("#pmodal").classList.remove("on");
+  document.querySelectorAll("#pbox .pl").forEach(el=>el.onclick=()=>{S.subj=el.dataset.s; S.topic="all"; buildQueue(); R=null; $("#pmodal").classList.remove("on"); render(); toast(S.subj==="all"?"All subjects":SUBJ[S.subj]);});
+}
+/* ---------- controls ---------- */
+function rebuild(msg){buildQueue(); R=null; render(); if(msg) toast(msg);}
+document.querySelectorAll("#modeSeg button").forEach(b=>b.onclick=()=>{ S.mode=b.dataset.v;
+  rebuild(S.mode==="order"?"In page order":S.mode==="topics"?"Topics shuffled · each topic's cards stay together":S.mode==="smart"?"Smart · weakest and due cards first":"Every card shuffled");});
+$("#subjSel").onchange=e=>{S.subj=e.target.value; S.topic="all"; rebuild("New round");};
+$("#topicSel").onchange=e=>{S.topic=e.target.value; rebuild("New round");};
+$("#missTgl").onclick=()=>{S.missed=!S.missed; rebuild(S.missed?"Only cards you missed":"All cards");};
+$("#progBtn").onclick=progressSheet;
+/* ---------- sync through the same private GitHub gist as the GS3 deck (own files: st-dev-*) ---------- */
+const SK="stsync.v1", GDESC="GS3 flashcards progress (used by the flashcard site; do not delete)";
+let SY=null; try{SY=JSON.parse(localStorage.getItem(SK));}catch(e){}
+if(!SY){ for(const k of ["gs3sync.v3","gs3sync.v1"]){ try{const o=JSON.parse(localStorage.getItem(k)); if(o&&o.token){ SY={token:o.token,gist:o.gist||null,dev:Math.random().toString(36).slice(2,8),dirty:true}; localStorage.setItem(SK,JSON.stringify(SY)); break; }}catch(e){} } }
+if(SY&&!SY.dev){SY.dev=Math.random().toString(36).slice(2,8); SY.dirty=false; try{localStorage.setItem(SK,JSON.stringify(SY));}catch(e){}}
+const saveSY=()=>{try{SY?localStorage.setItem(SK,JSON.stringify(SY)):localStorage.removeItem(SK);}catch(e){}};
+function toCompact(st){const o={}; Object.entries(st).forEach(([id,x])=>{ if(x.s||(x.r&&x.r.some(v=>v===0||v===1))) o[id]=[x.s||"",x.seen||0,x.miss||0,x.t||0,(x.r||[]).map(v=>v===1?"1":v===0?"0":"_").join(""),x.v||""]; }); return o;}
+function fromCompact(c){const out={}; Object.entries(c||{}).forEach(([id,a])=>{const o={seen:a[1],miss:a[2]}; if(a[0]) o.s=a[0]; if(a[3]) o.t=a[3]; if(a[4]) o.r=[...a[4]].map(ch=>ch==="1"?1:ch==="0"?0:null); if(a[5]) o.v=a[5]; out[id]=o;}); return out;}
+function mergeIn(data){
+  const rz=data.resetAt||0;
+  if(rz>(S.resetAt||0)){ Object.keys(S.st).forEach(id=>{ if((S.st[id].t||0)<rz) delete S.st[id]; }); S.resetAt=rz; }
+  Object.entries(fromCompact(data.st)).forEach(([id,o])=>{ if((o.t||0)<(S.resetAt||0)) return; const l=S.st[id];
+    if(!l||(o.t||0)>(l.t||0)||(!(o.t||l.t)&&(o.seen||0)>(l.seen||0))) S.st[id]=o; });
+  const a=data.at;
+  if(a&&a.t>(S.at||0)&&Array.isArray(a.queue)){ const q=a.queue.filter(id=>cards[id]);
+    if(q.length){ const cur=a.queue[a.pos]; let pos=q.indexOf(cur); if(pos<0) pos=Math.min(a.pos,q.length);
+      const moved=JSON.stringify([S.subj,S.topic,S.queue&&S.queue[S.pos]])!==JSON.stringify([a.subj,a.topic,cur]);
+      Object.assign(S,{subj:a.subj||"all",topic:a.topic||"all",mode:a.mode,missed:!!a.missed,queue:q,pos,round:a.round||1,dueN:a.dueN,back:false,at:a.t}); R=null; lastSig=placeSig();
+      if(moved) setTimeout(()=>toast("Continuing from your other device"),300); } }
+  save();
+}
+async function gh(path,opt){opt=opt||{};
+  const r=await fetch("https://api.github.com"+path,{cache:"no-store",method:opt.method||"GET",body:opt.body?JSON.stringify(opt.body):undefined,
+    headers:Object.assign({Authorization:"Bearer "+SY.token,Accept:"application/vnd.github+json"},opt.body?{"Content-Type":"application/json"}:{})});
+  if(!r.ok){const e=new Error("HTTP "+r.status); e.status=r.status; throw e;} return r.json();}
+const myFile=()=>"st-dev-"+SY.dev+".json";
+async function readDocs(g){ const out=[];
+  for(const [name,f] of Object.entries(g.files||{})){ if(!/^st-dev-.+\.json$/.test(name)) continue;
+    try{ const txt=f.truncated?await (await fetch(f.raw_url,{cache:"no-store"})).text():f.content; const d=JSON.parse(txt); d._own=(name===myFile()); out.push(d); }catch(e){} }
+  return out; }
+function newestOther(docs){ let best=null; docs.forEach(d=>{ if(!d._own&&d.at&&Array.isArray(d.at.queue)&&(!best||d.at.t>best.t)) best=d.at; }); return best; }
+async function findGist(){
+  for(let p=1;p<=5;p++){const list=await gh("/gists?per_page=100&page="+p); const g=list.find(x=>x.description===GDESC); if(g) return g.id; if(list.length<100) break;}
+  const g=await gh("/gists",{method:"POST",body:{description:GDESC,public:false,files:{[myFile()]:{content:JSON.stringify({v:1,resetAt:S.resetAt||0,st:{}})}}}}); return g.id;
+}
+let syncing=false, again=false, st8="", sTimer=null;
+function syncLabel(t){st8=t; const b=$("#syncBtn"); if(b) b.textContent=t;}
+const hhmm=d=>d.toLocaleTimeString([], {hour:"numeric",minute:"2-digit"});
+let edits=0;
+function queueSync(){ if(!SY) return; edits++; SY.dirty=true; saveSY(); clearTimeout(sTimer); syncLabel("Saving…"); sTimer=setTimeout(syncNow,2500); }
+let remoteAt=null;
+async function syncNow(){
+  if(!SY) return; if(syncing){again=true; return;} syncing=true; clearTimeout(sTimer);
+  try{
+    if(!SY.gist){SY.gist=await findGist(); saveSY();}
+    const g=await gh("/gists/"+SY.gist); const docs=await readDocs(g); remoteAt=newestOther(docs);
+    if(!docs.some(d=>d._own)) SY.dirty=true;
+    const rz=Math.max(0,...docs.map(d=>d.resetAt||0));
+    const before=JSON.stringify(S.st)+placeSig();
+    docs.forEach(d=>mergeIn(Object.assign({},d,{resetAt:rz,at:d._own?null:d.at})));
+    if(JSON.stringify(S.st)+placeSig()!==before){ if(R&&!S.back) R=null; render(); }
+    const e0=edits;
+    if(SY.dirty) await gh("/gists/"+SY.gist,{method:"PATCH",body:{files:{[myFile()]:{content:JSON.stringify({v:1,resetAt:S.resetAt||0,st:toCompact(S.st),at:{t:S.at||0,dev:SY.dev,subj:S.subj,topic:S.topic,mode:S.mode,missed:S.missed,queue:S.queue,pos:S.pos,round:S.round,dueN:S.dueN}})}}}});
+    if(SY.dirty&&edits===e0) SY.dirty=false;
+    SY.last=Date.now(); saveSY(); syncLabel("Synced "+hhmm(new Date()));
+  }catch(e){
+    if(e.status===404&&SY.gist){SY.gist=null; saveSY(); again=true;}
+    syncLabel(e.status===401?"Sync key stopped working: tap to fix":"Not synced: tap to retry");
+  }
+  syncing=false; sTimer=null; if(again){again=false; syncNow();}
+}
+function syncSheet(html){$("#sbox").innerHTML=html; $("#smodal").classList.add("on");}
+const closeSync=()=>$("#smodal").classList.remove("on");
+function setupSheet(err){
+  syncSheet(`<h3>Sync across devices</h3>
+   <ol><li>Open <a href="https://github.com/settings/tokens/new?scopes=gist&description=Flashcards%20sync" target="_blank" rel="noopener">this GitHub page</a> and sign in.</li>
+   <li>Set <b>Expiration</b> to <b>No expiration</b>. Leave only <b>gist</b> ticked.</li>
+   <li>Press <b>Generate token</b> at the bottom and copy the key (starts with <b>ghp_</b>).</li>
+   <li>Paste it below. Do this once on each device, using the same key. (If the GS3 deck already syncs on this device, this deck picks the key up by itself.)</li></ol>
+   <input id="sTok" type="password" placeholder="ghp_…" autocomplete="off" autocapitalize="off" spellcheck="false">
+   ${err?`<div class="err">${err}</div>`:""}
+   <div class="row" style="justify-content:flex-end"><button class="btn ghost" id="sClose">Cancel</button><button class="btn got" style="flex:0 0 auto" id="sGo">Connect</button></div>`);
+  $("#sClose").onclick=closeSync;
+  $("#sGo").onclick=async()=>{ const tok=$("#sTok").value.trim(); if(!tok){$("#sTok").focus(); return;}
+    $("#sGo").disabled=true; $("#sGo").textContent="Connecting…";
+    SY={token:tok,dev:Math.random().toString(36).slice(2,8),dirty:true}; try{ SY.gist=await findGist(); saveSY(); closeSync(); await syncNow(); toast("Sync is on"); }
+    catch(e){ SY=null; saveSY(); setupSheet(e.status===401?"GitHub didn't accept that key. Copy it again, all of it.":e.status===403||e.status===404?"That key can't make gists. Make a new one with only 'gist' ticked.":"Couldn't reach GitHub. Check your internet and try again."); }
+  };
+}
+function jumpTo(a){ const q=a.queue.filter(id=>cards[id]); if(!q.length) return; let pos=q.indexOf(a.queue[a.pos]); if(pos<0) pos=Math.min(a.pos,q.length-1);
+  Object.assign(S,{subj:a.subj||"all",topic:a.topic||"all",mode:a.mode,missed:!!a.missed,queue:q,pos,round:a.round||1,dueN:a.dueN,back:false}); R=null; save(); render(); window.scrollTo(0,0); toast("Moved to card "+(pos+1)); }
+async function onSheet(){
+  syncSheet(`<h3>Sync is on</h3><p>Checking…</p>`);
+  try{ const g=await gh("/gists/"+SY.gist); remoteAt=newestOther(await readDocs(g)); }catch(e){}
+  const other=!!(remoteAt&&Array.isArray(remoteAt.queue));
+  const where=other?`Your other device was last on <b>card ${remoteAt.pos+1}</b>${remoteAt.t>1e12?" at "+hhmm(new Date(remoteAt.t)):""}.`:"Your other device hasn't saved a place yet. Open the site there once.";
+  syncSheet(`<h3>Sync is on</h3><p>Progress and your place in the deck save to your private GitHub gist.${SY.last?" Last synced "+hhmm(new Date(SY.last))+".":""}</p><p>${where}</p>
+   ${other?'<div class="row" style="justify-content:flex-end;margin-bottom:10px"><button class="btn got" style="flex:0 0 auto" id="sJump">Go to that card</button></div>':""}
+   <div class="row" style="justify-content:flex-end"><button class="btn ghost" id="sOff">Turn off here</button><button class="btn ghost" id="sClose">Close</button><button class="btn" style="flex:0 0 auto" id="sNow">Sync now</button></div>`);
+  $("#sClose").onclick=closeSync;
+  $("#sNow").onclick=async()=>{closeSync(); await syncNow();};
+  if(other) $("#sJump").onclick=()=>{closeSync(); jumpTo(remoteAt);};
+  $("#sOff").onclick=()=>{SY=null; saveSY(); closeSync(); syncLabel("Sync across devices"); toast("Sync off on this device");};
+}
+$("#syncBtn").onclick=()=>{ if(!SY) setupSheet(); else if(/fix/.test(st8)) setupSheet(); else if(/retry/.test(st8)) syncNow(); else onSheet(); };
+$("#smodal").onclick=e=>{if(e.target.id==="smodal") closeSync();};
+document.addEventListener("visibilitychange",()=>{ if(!SY) return; if(document.visibilityState==="visible") syncNow(); else if(sTimer) syncNow(); });
+syncLabel(SY?"Syncing…":"Sync across devices"); if(SY) syncNow();
+setInterval(()=>{ if(SY&&document.visibilityState==="visible"&&!sTimer&&!syncing) syncNow(); },20000);
+$("#pmodal").onclick=e=>{if(e.target.id==="pmodal") $("#pmodal").classList.remove("on");};
+$("#resetBtn").onclick=()=>$("#modal").classList.add("on");
+$("#mCancel").onclick=()=>$("#modal").classList.remove("on");
+$("#mOk").onclick=()=>{const keep={subj:S.subj,topic:S.topic,mode:S.mode}; S={v:1,...keep,missed:false,queue:null,pos:0,st:{},back:false,resetAt:Date.now()}; queueSync(); buildQueue(); R=null; $("#modal").classList.remove("on"); render(); toast("Progress reset");};
+let tt; function toast(m){const t=$("#toast"); t.textContent=m; t.classList.add("on"); clearTimeout(tt); tt=setTimeout(()=>t.classList.remove("on"),1600);}
+document.addEventListener("keydown",e=>{
+  if($("#lightbox").classList.contains("on")){ if(e.key==="Escape"||e.key===" "||e.key==="Enter"){e.preventDefault(); $("#lightbox").classList.remove("on");} return; }
+  if($("#modal").classList.contains("on")||$("#pmodal").classList.contains("on")||$("#smodal").classList.contains("on")) return;
+  if(e.target.tagName==="SELECT"||e.target.tagName==="INPUT"||e.target.tagName==="SUMMARY") return;
+  if(!S.queue.length||S.pos>=S.queue.length) return;
+  if(e.key===" "||e.key==="Enter"){e.preventDefault(); if(!S.back) flip(); else if(!nextStep()) unflip(); }
+  else if(S.back&&(e.key==="1"||e.key==="m")) grade("m");
+  else if(S.back&&(e.key==="2"||e.key==="g")) grade("k");
+  else if(S.back&&e.key==="a") showAll();
+  else if(e.key==="ArrowLeft") prev();
+  else if(e.key==="ArrowRight") next();
+});
+render();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+# Biotech and genetics
+# BIO TECH
+C def | - | u388 u389 u390+u391+u392+u393+u394+u395
+C fact+use | - | u396 u397
+C how | u398 | u399 u400 u401 u402
+C use | u403 | u404 u405 u406 u407
+C def+use | l:u408 | u408 u409
+C gov | u410 | u411 u412 u413 u414 u415 u416
+C issue+fix | - | u417 u418
+C how | @N58 | u419 u420 u421
+C news | @N59 | u422 u423 u424 u425 u426
+# GMO
+C def+how | u427 | u428 u429 u430
+C use+gov+issue | u431 | u432 u434 u433 u435
+# GENOME SEQUENCING
+C def+how | u436 | u437 u438
+C use | u439 | u440 u441
+C gov+issue+fix | - | u442 u443 u444
+C def+use | u445 | u446 u447 u448 u449 u450 u451 u452 u453 u454 h:u455 u456
+C gov | @N62 | u457 u458 u459
+# GENE EDITING
+C def | - | u460 u461 u462 u467
+C how | l:u463 | u463 u464 u465 u466
+C news | - | u468 u469 u470
+C use | u471 | u472 u473
+C def+how | @N64 | u474 u475 u476 u477
+C def | @N65 | u478 u479 u480 u481+u482+u483+u484
+C how | u485 | u486 u487 u488 u489 u490 u491
+C how | l:u492 | u492 u493 u494 u495 u496
+# GENE TECH SOME DEF
+C def+use | @N67 | u497 u498 u499 u500
+C news | @N68 | u501 u502 u503
+C how | u504 | u505 u506+u507+u508 u509 u510 u511 u512 u513
+C how | u514 | u515 u516 u517
+# PANGENOME
+C def | u519 | u518 u520 u521 u522
+C how | u523 | u524 u525 u526
+C use | u527 | u528 u529 u530
+# SHUKR
+C news | u531 | u532 u533
+C news | u534 | u535 u536 u537 u538
+C use | u539 | u540 u541 u542
+# DNA PROFILING
+C def+how | u543 | u544 u545 u546 u547+u548+u549 u550
+C how | u551 | u552 u553 u554 u555 u556 u557 u558
+C how | - | u559 u560 u561 u562 u563 u564
+# JUMPING GENES
+C def | u565 | u566 u567 u568
+C how | u569 | u570 u571 u572
+C use+issue | u573 | u574 u575 u576
+C news | u577 | u578 u579 u580
+# BIOCHEMICAL MARKERS
+C def | @N73 | u581 u582 u583
+# DEEP PROJECT
+C def | u584 | u585 u586 u587 u588
+C news+use | u589 | u590 u591 u592 u593 u594 u595
+# CHROMATIN REMODELLING
+C def | u596 | u597 u598 u599 u600+u601+u602
+C how | u603 | u604 u605 u606 u607 u608 u609
+C how | u610 | u611 u612 u613 u614
+C use | u615 | u616 u617 u618
+# HELICASE
+C def | u619 | u620 u621
+C how | u622 | u623 u624 u625 u626 u627
+C how | u628 | u629 u630 u631 u632 u633 u634
+# RNA EDITING
+C def | u635 | u636 u637 u638 u639 u640&u641&u642 u643
+C how+issue | u644 | u645 u646 u647 u648 u649 u650 u651 u652
+C def | u653 | u654 u655 u656 u657 u658
+# SYNTHETIC BIOLOGY
+C def | - | u659 u660 u661 u662 u663
+C use | u664 | u665 u666 u667
+# CELL-FREE, MICROBIOME, NEW DRUG MODALITIES, TRANSGENICS
+C def | - | u668 u669
+C def+use | - | u670 u671 u672 u673 u674 u675
+C def | u676 | u677 u678 u679 u680
+C def | - | u681 u682 u683
+# STACKED GE PLANTS
+C def | u684 | u685 u686 u687 u688
+C gov | l:u689 | u689 u690 u691 u692 u693+u694+u695
+C use | u696 | u697 u698 u699 u700
+# PROTEINS, rDNA
+C def | u701 | u702 u703 u704 u705 u706
+C def+how | u707 | u708 u709
+# MITOCHONDRIAL TRANSPLANTATION
+C def+use | u710 | u711 u712 u713
+C issue | u714 | u715
+C how | @N87 | u716 u717 u718 u719 u720 u721 u722 u723

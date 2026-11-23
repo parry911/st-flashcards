@@ -1,0 +1,54 @@
+# Infections and public health
+# COMMON INFECTIONS
+C fact | u840 | u839 u841+u842 u843 u844+u845+u846 u847 u848+u849+u850
+C def | l:u851 | u851 u852 u853
+C def | l:u854 | u854 u855 u856 u857 u858
+C def+gov | u859 | u860 u861 u862>u863 u864 u865
+C def | u866 | u867 u868 u869 u870 u871 u872
+C def | u873 | u874 u875 u876 u877 u878
+C fact | - | u879+u880
+C tbl | - | u881
+C fix | u882 | u883 u884 u885 u886 u887 u888 u889 u890
+C fix | u891 | u892 u893 u894 u895 u896 u897
+C fix | u898 | u899 u900 u901 u902 u903
+C gov | u904 | u905+u906+u907+u908
+C news | @N101 | u909 u910 u911 u912 u913
+# OUTBREAKS
+C fix | - | u914 u915 u983 u984 u985 u986 u987
+C fix | @N103 | u916 u917 u918 u919 u920 u921
+C fix | @N104 | u922 u923 u924 u925 u926 u927 u928 u929
+C fix | @N105 | u930 u931 u932 u933 u934
+C fix | @N106 | u935 u936 u937 u938
+C fix | @N107 | u939 u940 u941 u942 u943 u944
+C fix | @N109 | u945 u946 u947 u948 u949 u950 u951
+C fix | @N111 | u952 u953 u954
+C fix | @N112 | u955 u956+u957+u958+u959+u960 u961 u962+u963+u964+u965+u966+u967+u968+u969 u970 u971+u972+u973+u974+u975+u976
+C issue | u977 | u978+u979+u980+u981+u982
+# IMMUNITY
+C def | u988 | u989 u990
+C def | u991 | u992 u993 u994 u995 u996 u997
+C tbl | u998 | u999
+C gov+news | u1000 | u1001 u1002 u1003 u1004 u1009 u1010 u1011
+C use+gov | u1005 | u1006 u1007>u1008 u1012
+C def+use | @N115 | u1013 u1014
+# AMR
+C fact+use+gov | - | u1015 u1016 u1017 u1018 u1019 u1020
+C gov | l:u1021 | u1021 u1022 u1023 u1024 u1025 u1026
+C fix | u1027 | u1028 u1029 u1030 u1031 u1032 u1033
+C issue+fix | u1034 | u1035>u1036 u1037 u1038 u1039>u1040 u1041
+C gov | @N118 | u1042 u1043 u1044
+# TRANS-FAT, UPF
+C news | u1045 | u1046 u1047
+C def | u1048 | u1049 u1050 u1051 u1052 u1053 u1054 u1055+u1056
+C gov | u1057 | u1058 u1059 u1060
+C issue+fix | u1061 | u1062 u1063 u1064 u1065 u1066 u1067
+C def+gov+fix | - | u1068 u1069 u1070 u1071
+# NCD
+C def | u1072 | u1073 u1074 u1075 u1076 u1077 u1078 u1084
+C def | u1079 | u1080 u1081 u1082 u1083
+C issue | - | u1085 u1086 u1087 u1088 u1089 u1090 u1091 u1092
+C gov | - | u1093 u1094 u1095 u1096
+# OBESITY
+C news+def | u1097 | u1098 u1099 u1100 u1101 u1102 u1103 u1104
+C issue | u1105 | u1106 u1107 u1108 u1109
+C news | l:u1110 | u1110 u1111 u1112 u1113

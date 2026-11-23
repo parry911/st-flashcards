@@ -1,0 +1,31 @@
+# Health and medicine
+# HEALTH AND TECH (traditional medicine)
+C use | u724 | u725+u726+u727
+C gov+issue | u728 | u729 u730 u731
+# STEM CELLS
+C def | - | u732 u733 u734 u735 u736
+C def | u737 | u738 u739 u740 u741
+C use | u742 | u743 u744 u745 u746 u747+u748 u749
+C tbl | - | u750
+C gov | u751 | u752 u753 u754 u755
+C issue | u756 | u757 u758 u759
+# ORGAN TRANSPLANTATION
+C def+gov | - | u760 u761 u762
+C issue+fix | - | u763 u764
+# ORGAN ON CHIP
+C def+use+gov | - | u765 u766 u767
+# DRUG QUALITY
+C news+gov | u770 | u768 u769 u771 u772 u773 u774
+C issue | u775 | u776 u777 u778 u779
+C gov | u780 | u781 u782 u783 u784
+C gov | @N95 | u785 u786 u787 u788 u789 u790
+C gov | @N95 | u791 u792 u793 u794 u795 u796 u797 u798
+# FDC
+C def | u799 | u800 u801 u802 u803
+C fix | u804 | u805 u806 u807 u808
+# MACROLIDES
+C def+how | u809 | u810 u811 u812 u813 u814 u815
+# ORT
+C def+how | u816 | u817 u818 u819 u820 u827 u828 u829 u830
+C use | u821 | u822 u823 u824 u825 u826
+C gov | u831 | u832 u833 u834 u835 u836 u837 u838

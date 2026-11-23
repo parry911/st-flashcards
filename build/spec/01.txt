@@ -1,0 +1,42 @@
+# Quantum and fundamental physics
+# QUANTUM MECHANICS
+C def | u1 | u2 u3 u4 u5 u6
+C def | l:u7 | u7 u23 u24&u25
+C how | u8 | u9 u10 u11
+C how | u18 | u19 u20 u21 u22
+C news | @N1 | u12 u13 u14 u15 u16+u17 u26
+C how | @N3 | u27 u28 u29 u30 u31 u32
+C use+issue | @N4 | u33 u34 u35 u36 u37
+C how | @N5 | u38 u39 u40 u41 u42 u43
+C use | u44 | u45 u46 u47 u48 u49
+C gov | @N7 | u50 u51 u52
+C gov | @N8 | u53 u54 u55
+# HEISENBERG
+C def | - | u56 u57 u58 u59
+C use | u60 | u61 u62 u63
+# WAVE-PARTICLE DUALITY
+C def+how | u64 | u65 u66 u67 u68 u69 u70 u71 u72 u73
+C how | u74 | u75 u76 u77 u78
+C use | u79 | u80 u81 u82
+# HAWKING
+C def+how | - | u83&u84 u85 u86+u87+u88+u89 u90 u91+u92+u93
+# NEUTRINO
+C def | u94 | u95 u96 u97 u98 u99 u100
+C how | u101 | u102&u103 u104 u105 u106
+C use | u107 | u108+u109+u110+u111
+# MATTER-ANTIMATTER
+C def | u112 | u113 u114 u115 u116 u117
+C how+use | u118 | u119 u120 u121 u122 u123
+# BEC
+C how | - | h:u124 u125 u126 u127 u128
+C tbl | u129 | u130 u131
+C how | - | u132 u133 u134 u135 u136+u137+u138+u139 u140&u141 u142
+C use | u143 | u144 u145 u146 u147 u148
+C fact | u149 | u150 u151 u152 u153 u154 u155
+C how | - | u156 u157&u158
+C how | l:u159 | u159 u160 u161 u162 u163 u164
+C how | l:u165 | u165 u166
+C def | u167 | u168 u169 u170 u171
+C news | @N15 | u172 u173 u174 u175
+# SUPERSOLID
+C news+use | u176 | u177-u182

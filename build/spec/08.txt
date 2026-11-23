@@ -1,0 +1,36 @@
+# Space
+# SPACE ECONOMY & SIGNIFICANCE
+C use | @N129 | u1152 u1153 u1154 u1155 u1156
+C issue | @N130 | u1157/s u1173 u1210
+C gov+issue | @N132 | u1159/s
+C news | @N140 | u1249 u1250 u1160 u1161
+C news | @N131 | u1158 u1174
+C news | @N137 | u1211 u1212 u1213 u1214
+C news | - | u1162 u1163+u1164+u1165+u1166
+C how | - | u1167 u1168 u1169 u1170 u1171 u1172
+C news | - | u1175 u1176 u1177 u1178
+C news | - | u1179 u1180 u1181
+C def+use | - | u1183 u1184 u1185 u1186 u1187 u1188 u1189
+C news | - | u1190 u1191 u1192 u1193 u1182
+C how | @N134 | u1194 u1195 u1196 u1197 u1198 u1199 u1200 u1201 u1202
+C use+issue | u1203 | u1204 u1205 u1206
+C how+use | @N135 | u1207 u1208 u1209
+C fact | @N138 | u1222 u1223 u1215 u1217 u1218 u1219 u1221 u1220
+C fact | u1225 | u1216 u1224 u1226 u1227 u1228&u1229
+C how | l:u1230 | u1230 u1231 u1232 u1233 u1234 u1235&u1236 u1237 u1238
+C how | l:u1239 | u1239 u1240 u1241 u1242 u1243 u1244+u1245
+C news+how | @N139 | u1246 u1247 u1248
+C gov+issue | @N141 | u1251 u1252 u1253 u1254 u1255 u1256 u1257
+C use+issue | @N142 | u1258 u1259 u1260 u1261
+C gov | @N143 | u1262 u1263 u1264>u1265 u1266 u1267 u1268
+# SATELLITE INTERNET
+C def+use+issue | u1269 | u1270 u1271 u1272 u1273 u1274
+# GEOSPATIAL
+C def+use | u1275 | u1276 u1277
+C gov+issue+fix | - | u1278 u1279 u1280 u1281
+# SPACE OBSERVATION & RESEARCH
+C fact | @N147 | u1282 u1283 u1284 u1285 u1286>u1287 u1288 u1289
+C news | @N148 | u1290 u1291 u1292 u1293
+C def+news | @N149 | u1294 u1295 u1296 u1297
+C news | @N150 | u1298 u1299 u1300 u1301 u1302
+C def | @N151 | u1303
