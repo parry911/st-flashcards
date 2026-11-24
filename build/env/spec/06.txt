@@ -2,24 +2,24 @@
 # Meaning
 C def | - | u1158/+ u1159/+ u1160 u1161/+
 # Process (with drawback of each stage)
-C how+issue | - | u1162/+ u1163/+ u1164/+ u1165/+
-C how+issue | l:u1166 | u1166/+ u1167/+ u1168/+ u1169/+
-C how | - | u1170/+1.2.3.4.5.!6 u1171 u1172 u1173
+C how+issue | - | u1162/+a1.1 u1163/+a1.1.2.a2 u1164/+a1.1 u1165/+a1.1
+C how+issue | l:u1166 | u1166/+ u1167/+ u1168/+a1.1 u1169/+1.2.3.!a1.4.5.6
+C how | - | u1170/+1.2.3.!4.5.!6 u1171 u1172 u1173
 # 2006 vs Draft 2020
 C tbl | - | u1174 u1175/+
 # Problems
-C issue | - | u1176/+ u1177/+ u1178/+
+C issue | - | u1176/+1.2.!3.4.5 u1177/+1.2.!3.4.5 u1178/+a1.1.!2.!a4.3.4.5
 C issue | - | u1179/+ u1180/+ u1181/+
 # Way forward
 C fix | - | u1182/+ u1183/+ u1184/+
-C fix | - | u1185/+ u1186/+
+C fix | - | u1185/+ u1186/+1.2.3.!4.5.6.7
 # Cases (each case its own point)
 C fact | - | u1187/++
 # NGOs and activists
 C eg | - | u1188/+ u1189 u1190 u1191 u1192
 # Coal pithead plants
-C issue | - | u1193/+
+C issue | - | u1193/+1.2.!3.4.5.!a1.6.7.8
 # Rehabilitation
-C issue+gov | - | u1194/+
+C issue+gov | - | u1194/+1.!a1.2.3.!a2.4.5.6.7
 # SDGs
 C fact | - | u1195/+

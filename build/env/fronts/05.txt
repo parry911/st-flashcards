@@ -100,14 +100,14 @@ new-technology-for-disaster-management:fact-main | How does India finance DRR, w
 meaning:def-main | What is EIA, where does it come from, its types and its project categories?
 process-with-drawback-of-each-stage:how-main | EIA stages from screening to scoping, and the drawback at each?
 process-with-drawback-of-each-stage:how-main-eia-5-questions | The five questions of the main EIA, and the drawbacks of each step?
-process-with-drawback-of-each-stage:how-main-2 | Who sits on a public hearing, the appraisal chain, and what happens after clearance?
+process-with-drawback-of-each-stage:how-main-2 | Who sits on a public hearing and who is exempt, the appraisal chain, and what happens after clearance?
 2006-vs-draft-2020-pyq-2020:tbl-main | How does the draft EIA 2020 differ from EIA 2006, and how did people push back?
 problems:issue-main | What's wrong with EIA reports and public hearings?
 problems:issue-main-2 | What goes wrong at clearance and after it, and how is EIA being diluted now?
-way-forward:fix-main | How do we fix EIA: an independent authority, better hearings, reasons on record?
+way-forward:fix-main | How do we fix EIA's institutions and public hearings?
 way-forward:fix-main-2 | Better monitoring after clearance, and reforms to the EIA system itself?
 cases:fact-main | The key environmental cases and constitutional provisions behind EIA?
 ngos-and-activists-pyq-2024:eg-main | What do NGOs and activists do in EIA, with four examples?
-coal-pithead-plants-pyq-2014:issue-main | Environmental impacts of coal pithead plants, and the norms on them?
+coal-pithead-plants-pyq-2014:issue-main | Environmental impacts of coal pithead plants, and the rules and fixes?
 rehabilitation-pyq-2016:issue-main | Who gets displaced by projects, what they lose, and what RFCTLARR 2013 promises?
 sdgs:fact-main | How are the SDGs doing, India's rank, and the finance gap?
