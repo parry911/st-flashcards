@@ -5,18 +5,18 @@ air:def-carbon-capture | What is India doing on carbon capture, and why do we ne
 air:issue-carbon-capture | What holds back carbon capture, and what should be done?
 air:cause-air-pollution-statistics | Why is India's air so bad, how bad is it (IQAir 2025), and what does it cost?
 air:def-smog-types-and-gothenburg-protocol | Two types of smog and how each forms, and what the Gothenburg Protocol does?
-air:gov-national-clean-air-programme-2019 | NCAP: who funds it, its target, who runs it, its goal, and how it has done?
+air:gov-national-clean-air-programme-2019 | Explain NCAP, and how has it done?
 air:tbl-initiatives-by-india | How did the WHO tighten air quality guidelines in 2021, and how far behind are India's standards?
-air:gov-initiatives-by-india | What tools does India use for Delhi's air: monitoring, CAQM, GRAP stages?
+air:gov-initiatives-by-india | Which bodies and tools handle Delhi's air emergencies?
 air:fact-delhi | Delhi's air: what it costs, where the pollution comes from, and why winters are worst?
 air:eg-initiatives-by-india | Which city cleaned its air and how, and what is the fix for Delhi?
-air:how-solution-to-air-pollution-electric-cars | How are EVs being pushed in India: V2G, schemes, current share?
+air:how-solution-to-air-pollution-electric-cars | How is India pushing EVs, and where does adoption stand?
 air:use-solution-to-air-pollution-electric-cars | Why do EVs cut emissions, and what holds them back?
 air:gov-3-key-government-initiatives | Three government missions that cut transport and energy emissions?
-water:fact-availability-stress | India's water stress in numbers: share of water, wastewater, groundwater use, future demand?
+water:fact-availability-stress | India's water stress in numbers? Six facts.
 water:fact-cgwb-2025-6-762-units | What does CGWB 2025 say about groundwater, why is it falling, and what is being done?
-water:issue-gw-pollution-cgwb-2025 | What pollutes India's groundwater, the deeper causes, and which tech can help?
-water:def-availability-stress | What is "water bankruptcy", why has the world reached it, and the fix?
+water:issue-gw-pollution-cgwb-2025 | What pollutes India's groundwater, what harm and fixes, the deeper causes, and which tech helps?
+water:def-availability-stress | What is "water bankruptcy", why has the world reached it, where does India stand, and the fix?
 water:gov-availability-stress | Why does urban water governance fail, and what works?
 water:fact-rivers | How polluted are India's rivers, from what, and with what impact?
 water:gov-rivers | Laws and schemes for rivers, how Namami Gange is doing, why earlier plans failed, and what next?
@@ -31,7 +31,7 @@ land-degradation:use-significance-1-global-context-impact | Why does land degrad
 land-degradation:def-pillars-key-features-2-international-fra | Three international frameworks against land degradation?
 land-degradation:gov-india-s-response-challenges-causes-3-ind | India's land restoration target, progress, status and schemes?
 land-degradation:cause-india-s-response-challenges-causes-3-ind | How much of India is degraded, why, with what effects, and the remedies?
-land-degradation:fix-way-forward-4-the-way-forward-local-wisd | Way forward on land: landscape restoration, local techniques, invasive species?
+land-degradation:fix-way-forward-4-the-way-forward-local-wisd | The way forward on land degradation, including local techniques?
 plastic-pollution:def-main | How much plastic waste does India produce, and how is it trending?
 plastic-pollution:tbl-main | The main types of plastic, and how to remember each?
 plastic-pollution:eg-main | One plastic-ban success, one failure, and India's response?
