@@ -1,0 +1,25 @@
+# 6. EIA ("ANUDEEP NOTES" = "EIA notes", one topic per bold sub-head)
+# Meaning
+C def | - | u1158/+ u1159/+ u1160 u1161/+
+# Process (with drawback of each stage)
+C how+issue | - | u1162/+ u1163/+ u1164/+ u1165/+
+C how+issue | l:u1166 | u1166/+ u1167/+ u1168/+ u1169/+
+C how | - | u1170/+1.2.3.4.5.!6 u1171 u1172 u1173
+# 2006 vs Draft 2020
+C tbl | - | u1174 u1175/+
+# Problems
+C issue | - | u1176/+ u1177/+ u1178/+
+C issue | - | u1179/+ u1180/+ u1181/+
+# Way forward
+C fix | - | u1182/+ u1183/+ u1184/+
+C fix | - | u1185/+ u1186/+
+# Cases (each case its own point)
+C fact | - | u1187/++
+# NGOs and activists
+C eg | - | u1188/+ u1189 u1190 u1191 u1192
+# Coal pithead plants
+C issue | - | u1193/+
+# Rehabilitation
+C issue+gov | - | u1194/+
+# SDGs
+C fact | - | u1195/+

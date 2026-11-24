@@ -1,0 +1,135 @@
+# 5. DISASTER MANAGEMENT
+# Seismic and disaster statistics
+C def+use | - | u878 u879 u880
+# India's disaster approach
+C def+eg+how | - | u881 u882/+ u883/+3
+# Disaster risk formula
+C def | - | u884 u887 u888 u889/+
+C def+eg | - | u885/+2.3.4 u886 u890
+# Insurance coverage
+C def+use+eg | - | u891 u892/+ u893/+
+C gov+issue+fix | - | u894/+ u895/+ u896/+
+# Examples of disaster innovation
+C def+eg+gov | - | u897 u898/+ u899
+C issue+fix | - | u900/+ u901/+
+# Disaster management cycle (diagram on the first card)
+C def+use | - | u902 u903 u908 u909
+C eg+gov | - | u904/+ u905/+
+C issue+fix | - | u906/+ u907/+
+# Components of prevention
+C def | - | u910 u911 u912
+C eg+gov | - | u913/+ u914/+
+C issue+fix | - | u915/+ u916/+
+# Components of preparedness
+C def | l:u917 | u917 u918
+C gov | - | u919 u920 u921 u922/+
+C gov+issue | - | u923 u924 u925
+# Components of response
+C def | - | u926 u927 u928
+C eg+gov | - | u929/+ u930/+
+C issue+fix | - | u931/+ u932/+
+# Components of recovery
+C def+eg+gov | - | u933 u934 u935/+ u936/+
+C issue+fix | - | u937/+ u938/+
+# Disaster resilience
+C def | - | u939 u940 u941/+ u942
+C eg+gov | - | u943/+ u944/+
+# Accountability and oversight
+C def+eg | - | u945&u946 u947/+
+C issue+fix | - | u948/+ u949/+
+# DM Act 2005
+C def+how | - | u950 u951 u952 u953 u954 u955
+C fix | u956 | u957 u958 u959 u960
+C eg | - | u961/+
+# DM Amendment Act 2025
+C def | - | u962 u963 u964 u965
+C gov+eg | u966 | u967/+ u968/+ u969/+ u970/+
+# Legal framework for disasters
+C def | - | u971/+ u972 u973 u974 u975 u976 u977 u978
+C eg+gov | - | u979/+ u980/+
+C issue+fix | - | u981/+ u982/+
+# NDMP 2019
+C def | - | u983 u984 u985 u986
+C eg | - | u987/+
+# SDG 13.1.2
+C fact | - | u988
+# Early warning systems
+C def+use | - | u989 u990
+C eg+gov | - | u991/+ u992/+
+C issue+fix | - | u993/+ u994/+
+# WCDRR
+C def | l:u995 | u995 u996 u997 u998
+C def | l:u999 | u999 u1000 u1001 u1002 u1003+u1004
+C def | l:u1005 | u1005 u1006 u1007 u1008/+ u1009/+ u1010/+ u1011/+
+C tbl | u1012 | u1013
+# Earthquakes (hazard frame: extent + causes / effects + examples / NDMA + way forward)
+C def+cause | - | u1014/+ u1015/+ u1016/+1 u1017 u1018
+C effect+eg | - | u1019/+ u1020/+
+C gov | l:u1021 | u1021 u1022 u1023 u1024 u1025
+C issue+fix | - | u1026/+1.2.3.4.5.!6.7.8
+C fact+news | l:u1027 | u1027/+
+# Tsunamis
+C def+cause | - | u1028 u1029
+C effect+eg | - | u1030/+ u1031/+
+C gov+fix | - | u1032 u1033/+
+# Floods
+C def+cause | - | u1034 u1035 u1036 u1037/+
+C effect+eg | - | u1038/+ u1039/+1.2.!3.4.5
+C gov | - | u1040 u1041/+
+C fix | l:u1042 | u1042/+1.2.3.!4.5.!6.7
+# Landslides
+C def+cause | - | u1043 u1044 u1045/+
+C effect+eg | - | u1046/+ u1047/+
+C gov | - | u1048 u1049/+
+C how+fix | l:u1050 | u1050/+1.2.3.4.5.6.!7.!8.9.10.11 u1051
+C fact | - | u1052 u1053/+
+# Sturzstrom
+C def+how+eg | - | u1054 u1055 u1056 u1057 u1058 u1059
+# Cloudburst
+C def+cause | - | u1060 u1061 u1062
+C effect+eg | - | u1063/+ u1064/+
+C gov+fix | - | u1065 u1066 u1067 u1068
+C fact+news | l:u1069 | u1069/+ u1070/+ u1071/+
+# Lightning
+C def+cause | - | u1072 u1073/+
+C effect+gov+fix | - | u1074/+ u1075 u1076/+
+# Cyclone (Montha / Shakti / Ditwah lines are Perry's gaps: shown as they are)
+C def+cause | - | u1077/+ u1078/+
+C effect+eg | - | u1079/+ u1080 u1081 u1082 u1083
+C gov+fix | - | u1084 u1085 u1086/+
+# Drought
+C def+cause | - | u1087/+ u1088 u1089
+C effect+eg | - | u1090/+ u1091/+
+C gov+fix | - | u1092 u1093
+# Wildfires
+C def+cause | - | u1094 u1095 u1096
+C effect+eg | - | u1097/+ u1098
+C gov+fix | - | u1099 u1100/+
+# Industrial accidents
+C def+cause | - | u1101/+ u1102
+C effect+eg | - | u1103/+ u1104 u1105 u1106/+
+C gov+fix | - | u1107/+ u1108
+# Stampedes
+C def+cause | - | u1109/+ u1110/+
+C effect+gov | - | u1111/+ u1112/+
+C fix | l:u1113 | u1113/+!1.2.3.4
+# Heatwaves
+C def+cause | - | u1114/+ u1115/+
+C effect+eg | - | u1116/+ u1117/+2
+C gov+fix | - | u1118 u1119/+!1.2.3.4.5
+# GLOF
+C def+cause | - | u1120/+ u1121
+C effect+eg | - | u1122/+ u1123 u1124
+C gov+fix | - | u1125/+ u1126 u1127
+# Fire safety
+C def+cause | - | u1128 u1129
+C effect+eg | - | u1130/+ u1131/+
+C gov+issue+fix | - | u1132 u1133 u1134/+ u1135/+
+# Dams
+C def+cause | - | u1136 u1137/+ u1138
+C effect+eg | - | u1139/+ u1140/+
+C gov+fix | - | u1141 u1142/+ u1143
+# New technology for DM
+C gov+eg | - | u1144 u1145 u1146 u1147 u1157/+
+C gov | u1148 | h:u1149 u1150 h:u1151 u1152
+C fact+issue+fix | - | u1153/+ u1154/+ u1155/+ u1156/+

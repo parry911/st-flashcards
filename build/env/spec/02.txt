@@ -1,0 +1,115 @@
+# 2. CLIMATE CHANGE  ('/++' = every top-level '+' starts a new point)
+# Natural causes
+C def | - | u269 u270 u271 u272 u273 u274
+C def+use+eg | - | u275 u276/+!1 u277 u278/+
+# Anthropogenic factors
+C def+how | - | u279 u280 u281
+C eg+gov | - | u282/+ u283/+
+# Legal & policy developments
+C gov+news | - | u284 u285 u286/+
+C fact+issue+fix | - | u287/+ u288/+ u289/+ u290
+# Urgency
+C def+eg+gov | - | u291 u292/+ u293/+
+C issue+fix | - | u294/+ u295/+
+# Global temperature trends
+C def+use | - | u296 u298
+C eg+gov | - | u297/+ u299/+
+# Melting glaciers
+C def+fact | - | u300/+1.2.4 u301/+
+C cause+effect+gov | - | u302/+ u303/+ u304/+
+# Oceans & heat
+C def+eg | - | u305 u306 u307/+ u308/+
+C gov+issue+fix | - | u309/+ u310/+ u311/+
+# Extreme weather
+C def+how | - | u312 u313 u314&u315 u316/+ u317 u318
+C eg+gov | - | u319 u320/+
+C issue+fix | - | u321/+ u322/+
+# CO2 records
+C def+how | - | u323 u324 u325
+C eg+gov | - | u326/+ u327/+
+C issue+fix | - | u328/+ u329/+
+# Economic impacts
+C def+eg+gov | - | u330 u331/+ u332/+
+C issue+fix | - | u333/+ u334/+
+# Panchamrit
+C def | - | u335 u336 u337 u338 u339 u340
+C fact+tbl | - | u341/+ u342
+# Country-specific examples
+C eg | - | u343
+# Challenges & solutions
+C issue | - | u344 u345/+2 u346/+ u347
+C gov+fix | - | u348/+ u349
+# Sea level rise
+C fact | - | u350 u351 u352
+C effect | l:u353 | u353
+C effect | - | u354 u355 u356/+ u357/+
+# ICJ
+C def+use | - | u358 u361
+C eg+gov | - | u359/+ u360/+
+C issue+fix | - | u362/+ u363/+
+# Migration
+C def+eg+gov | - | u364 u365/+ u366/+
+C issue+fix | - | u367 u368
+# Antarctic & ozone
+C def | - | u369/+ u370/+ u371 u372
+C eg+gov | - | u373/+ u374/+1.2.3.4.!5
+C issue+fix | - | u375/+ u376/+
+# Impacts - IPCC draft report (each toggle its own card; impact figures as separate points)
+C def+eg | - | u377 u378/+
+C gov+issue+fix | - | u379/+ u380/+ u381/+
+C effect | - | u382/++
+C effect | - | u383/++
+C effect | - | u384/++
+C effect | - | u385/++
+C effect | - | u386/+ u387/+ u388/+
+C effect+eg | - | u389/+ u390/+
+C effect | - | u391/+ u392/+
+C effect+fix | - | u393/+ u394/+ u395/+1.!2.3.4.5.6.7
+C effect | - | u396/+
+# India-specific legislations
+C fact+how | - | u397/+ u398/+ u399/+
+C gov | - | u400 u401/+
+C gov | - | u402/+
+C gov | - | u403 u404
+C gov | - | u405+u406 u407 u412
+C gov+fix | l:u408 | u408 u409/+1.2.!3.4.5.6
+C gov | - | h:u410 u411
+# COP 3 Kyoto
+C def | - | h:u413 u414 u415
+C gov | - | h:u416 u417 u418 u419
+C pic | - | h:u420 u421 u422 u423 u424 u425
+# COP 15, COP 17
+C def+gov | - | u426/+ u427/+
+C def+gov | - | u428/+ u429/+
+# COP 21 Paris
+C def | - | h:u430 u431 u432 u433 u434
+C def | - | u435 u436 u437
+C gov | - | h:u438 u439 u440 u441 u442
+C gov | - | u443 u444
+C gov | l:u445 | u445 u446/+1.2.3.!4
+# COP 24
+C def+gov | - | u447
+# COP 26 Glasgow
+C def | u448 | u449 u450 u451 u452 u453 u454 u455
+C gov | - | u456 h:u457 u458
+# COP 27
+C def+eg | - | u459 h:u460 u461 u462 u463 u464/+
+C gov | u465 | u466 u467 u468
+C gov | l:u469 | u469 u470+u471+u472
+C issue+fix | - | u473/+ u474/+
+# COP 28
+C def+eg | - | u475 h:u476 u477 u478 u479 u480 u481/+
+C gov | u482 | u483 u484 u485 u486 u487
+C issue+fix | - | u488/+ u489/+
+# COP 29
+C def | - | u490 h:u491 u492 u493 u494
+C def+eg | - | u495/+ u496/+
+C gov | u497 | u498 u499 u500 u501
+C gov+issue+fix | - | u502/+ u503/+ u504/+
+C news | l:u505 | u505/+ u506
+# COP 30
+C def | - | u507 h:u508 u509 u510 u511 u512
+C def | l:u513 | u513/+ u514/+
+C use+eg | - | u515/+ u516/+
+C gov | u517 | u518 u519 u520 u521
+C gov+issue+fix | - | u522/+ u523/+ u524/+

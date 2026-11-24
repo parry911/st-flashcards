@@ -1,0 +1,90 @@
+# 3. POLLUTION
+# Impact Thinking Framework (loose box under the section)
+C def | - | u525
+# Air › Relevance of Coal
+C use | - | u526 u527 u528 u529
+# Air › Carbon Capture
+C def+use | - | u530 u531/+ u532/+
+C issue+fix | - | u533/+ u534/+
+# Air › Air Pollution Statistics
+C cause+fact | - | u535 u536/+ u537
+C def | u538 | u539 u540 u541
+# Air › Initiatives by India
+C gov | u542 | u543 u544 u545 u546 u547
+C tbl | u548 | u549 u550 u551 u552/+
+C gov | - | u553 u555>u556 u557 u558
+C fact+cause | u554 | u559 u560 u561 u563/+ u564/+
+C eg+fix | - | u562 u565/+
+# Air › EVs
+C how+gov | - | u566 u567 u568/+ u569/+
+C use+issue | - | u570/+ u571/+
+C gov | u572 | u573 u574 u575
+# Water › Availability & Stress
+C fact | - | u576 u577/+1.2.3.4 u578 u582 u583 u584
+C fact+cause | l:u579 | u579/+ u580/+1.2.3.!4.5.6.7
+C issue+fix | l:u581 | u581/+ u585/+ u597/+
+C def+cause+fix | - | u586 u587/+ u588 u589/+ u590/+ u591/+
+C gov+issue+fix | - | u592 u593/+ u594 u595 u596/+
+# Water › rivers
+C fact+cause+effect | - | u598/+ u599/+ u600/+
+C gov+issue+fix | - | u601/+ u602/+ u603/+ u604/+
+C issue+eg+fix | u605 | u606/+ u607/+ u608/+
+# Water › Schemes & Missions
+C gov | - | u609 u610 u612
+C gov | - | u611/+ u613
+C how+use+issue | l:u614 | u614 u615/+ u616/+ u617
+# Water › Way Forward & Innovations
+C fix+eg | - | u618/+ u619 u620 u621
+# Water › Legislation
+C gov | - | u622 u623/+ u624/+
+# Land degradation
+C def+eg | - | u625 u626/+
+C use | - | u627 u628 u629 u630
+C def | - | u631 u632 u633
+C gov | - | u634 u635 u636 u637
+C cause+effect+fix | - | u638/+ u639/+ u640/+ u641/+
+C fix | - | u642 u643 u644 u645 u646
+# Plastic pollution (the "How to learn this table" toggle sits on the table card)
+C def | - | u647/+ u648 u649
+C tbl | - | u650 h:u651 u652 u657 u658 u659 u660 u661
+C eg+gov | - | u653/+ u654/+
+C issue+fix | - | u655/+ u656/+
+C gov | - | u662 u663 u664 u665
+# Oil spills
+C eg+gov+fix | - | u666 u667/+ u668/+
+C def+eg+issue | u669 | u670/+ u671/+ u672/+
+C gov+fix | - | u673/+ u674/+
+# Solid waste
+C fact+cause | - | u675/+ u679/+ u676/+
+C gov | - | u677 u678/+ u680/+ u681/+
+C eg | - | u682/+ u683
+# E-waste
+C fact+issue | - | u684/+ u685/+ u686 u687
+C gov | u688 | u689 u690 u691 u692/+
+C gov | - | u693 u694
+C issue+fix+eg | - | u695/+ u696/+ u697/+
+# Hazardous and biomedical waste
+C def+gov+issue | l:u698 | u698 u699/+ u700/+
+C def+gov+issue | l:u701 | u701 u702/+ u703/+
+C fix+eg | - | u704/+ u705/+
+# Mercury
+C def | - | u706 u707
+C use+cause | - | u708 h:u709 u710 u711
+C eg+gov | - | u712/+ u713/+
+C issue+fix | - | u714/+ u715/+
+# Waste to wealth
+C how+gov | - | u716/+ u717
+# Circular economy
+C def+use | - | u718/+ u719/+ u720/+
+C eg+gov | - | u721/+ u722/+
+C issue+fix | - | u723/+1.2.3.4.5.6 u724/+
+# Natural farming
+C def | - | u725/+ u726/+
+C use+eg+gov | - | u727/+ u728/+ u729/+
+C issue+fix | - | u730/+ u731/+
+# Agroforestry
+C def | - | u732+u733 u734/+
+C use+eg | - | u735/+ u736/+
+C gov+issue+fix | - | u737/+ u738/+ u739/+
+# General observation
+C fact | - | u740
