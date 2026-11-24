@@ -94,22 +94,22 @@ C def | u448 | u449 u450 u451 u452 u453 u454 u455
 C gov | - | u456 h:u457 u458
 # COP 27
 C def+eg | - | u459 h:u460 u461 u462 u463 u464/+
-C gov | u465 | u466 u467 u468
+C gov | - | h:u465 u466 u467 u468
 C gov | l:u469 | u469 u470+u471+u472
 C issue+fix | - | u473/+ u474/+
 # COP 28
 C def+eg | - | u475 h:u476 u477 u478 u479 u480 u481/+
-C gov | u482 | u483 u484 u485 u486 u487
+C gov | - | h:u482 u483 u484 u485 u486 u487
 C issue+fix | - | u488/+ u489/+
 # COP 29
 C def | - | u490 h:u491 u492 u493 u494
 C def+eg | - | u495/+ u496/+
-C gov | u497 | u498 u499 u500 u501
+C gov | - | h:u497 u498 u499 u500 u501
 C gov+issue+fix | - | u502/+ u503/+ u504/+
 C news | l:u505 | u505/+ u506
 # COP 30
 C def | - | u507 h:u508 u509 u510 u511 u512
 C def | l:u513 | u513/+ u514/+
 C use+eg | - | u515/+ u516/+
-C gov | u517 | u518 u519 u520 u521
+C gov | - | h:u517 u518 u519 u520 u521
 C gov+issue+fix | - | u522/+ u523/+ u524/+

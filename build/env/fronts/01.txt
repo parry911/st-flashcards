@@ -1,0 +1,92 @@
+# Question fronts, 1. Conservation (Claude's wording; card backs are Perry's notes word for word)
+overview:fact-main | What share of India's forests is under protection, and how does it compare with Aichi Target 11?
+overview:def-carrying-capacity | What is carrying capacity, what happens when it is crossed, and how is it used in planning?
+overview:eg-main | One conservation success and one failure in India, and India's main conservation tools?
+criteria-for-biodiversity-hotspots:def-main | What two criteria make a region a biodiversity hotspot, and why does biodiversity vary so much across India?
+western-ghats:def-main | Why do the Western Ghats matter, beyond being a hotspot?
+western-ghats:eg-main | One recent Western Ghats disaster, one success, and how India protects the range?
+western-ghats:issue-main | What threatens the Western Ghats, why is the ESA still stuck, and what is the fix?
+cop-16-un-convention-on-biological-diver:def-main | COP16 at Cali: theme, and its key outcomes from the Cali Fund to "One Health"?
+cop-16-un-convention-on-biological-diver:eg-main | How has the Cali Fund fared so far, and what did India bring to COP16?
+cop-16-un-convention-on-biological-diver:issue-main | Where did COP16 fall short, and what should come next?
+kunming-montreal-global-biodiversity-fra:def-main | What does the KMGBF aim for, when and where was it adopted, and what are its headline targets?
+kunming-montreal-global-biodiversity-fra:use-main | Why was the KMGBF needed, how far off track is the world, and how does India map onto it?
+kunming-montreal-global-biodiversity-fra:issue-main | What is the KMGBF's biggest gap, and how do we close it?
+india-nbsap-2024-30:def-main | NBSAP 2024–30: what is it aligned with, and its targets, approach, finance and mechanism?
+india-nbsap-2024-30:use-significance-india-s-status | India's biodiversity status in figures: forest cover, carbon, restoration, Ramsar sites, wildlife, PAs?
+india-nbsap-2024-30:eg-main | One NBSAP success, one mixed result, and the tools India uses to implement the plan?
+india-nbsap-2024-30:issue-main | Why could the NBSAP fall short, and how do we fix it?
+case-study-of-eco-bridge-a-k-a-eco-ducts:eg-main | Where is India's long eco-underpass and what is it for?
+people-s-movements:eg-main | Name four people's movements for the environment, with year and place.
+wpa-issues-and-features:def-main | What is the Wildlife (Protection) Act, its constitutional base, and the 2022 change to its schedules?
+wpa-issues-and-features:tbl-main | The four WPA schedules after 2022: what does each protect, with examples?
+wpa-issues-and-features:def-protected-areas-pa-hierarchy | The four kinds of protected areas under the WPA, and what is allowed in each?
+wpa-issues-and-features:gov-statutory-enforcement-bodies | Four bodies that enforce wildlife law, and what each does?
+wpa-issues-and-features:use-main | What has the WPA achieved in numbers, with one success and one failure?
+wpa-issues-and-features:gov-main | India's wildlife programmes and bodies, from Project Tiger onwards?
+wpa-issues-and-features:issue-challenges-current-challenges-critical-a | Where does wildlife protection fail today: enforcement, conflict, federalism, carrying capacity?
+wpa-issues-and-features:fix-main | How do we fix wildlife protection and human–wildlife conflict?
+nwap:def-main | What does the National Wildlife Action Plan focus on, and where does it fall short?
+jan-vishwas-amendment-of-provisions-act:def-main | What did the Jan Vishwas Act 2023 change in environmental law, and how?
+jan-vishwas-amendment-of-provisions-act:use-main | Why decriminalise, what changed in the EPA and Water Act, and what is coming next?
+jan-vishwas-amendment-of-provisions-act:issue-main | Why is the decriminalised law called toothless, and how do we fix it?
+the-biological-diversity-act-2002:def-main | How does the Biological Diversity Act protect biodiversity: bodies, heritage sites, benefit-sharing?
+the-biological-diversity-act-2002:issue-main | How did the 2023 amendment and 2025 rules weaken or change the BD Act?
+the-biological-diversity-act-2002:eg-main | One benefit-sharing success and one biopiracy case under the BD Act?
+the-biological-diversity-act-2002:fact-genetic-resources-tk | Examples of traditional knowledge, the laws that protect it, its problems and the way forward?
+forests:def-main | India's forest and tree cover status, and why forests matter?
+forests:fact-main | What did FAO's Global Forest Resources Assessment 2025 say about India and the world?
+forests:eg-main | One community forest success, one failure, and India's forest missions and targets?
+forests:issue-main | What is shrinking India's forests, and what is the way forward?
+indian-forest-act-1927:def-main | What was the Indian Forest Act 1927 built for, and how does it classify forests?
+indian-forest-act-1927:use-main | What does the IFA still do well, one failed and one useful amendment?
+indian-forest-act-1927:issue-main | Where does the IFA clash with forest dwellers, and how should it change?
+forest-conservation-act-1980:def-main | Why was the Forest (Conservation) Act 1980 passed, and what does it require?
+forest-conservation-act-1980:use-main | What has the FCA achieved, which cases shaped it, and what did the 2023 amendment change?
+forest-conservation-act-1980:issue-main | Where does the FCA fall short, and what should be done?
+forest-rights-act-2006:def-main | What rights does the FRA give, to whom, and why does it matter?
+forest-rights-act-2006:eg-main | Two FRA successes, one failure, and what the government is doing about pending claims?
+forest-rights-act-2006:issue-main | Why is the FRA poorly implemented, and how do we fix it?
+forest-conservation-amendment-act-2023:def-main | How did the 2023 amendment change the meaning of "forest", and what has the SC said since?
+forest-conservation-amendment-act-2023:def-main-2 | What is the border exemption in the 2023 amendment, and the government's reason for it?
+forest-conservation-amendment-act-2023:issue-main | What does the 2023 amendment cost ecologically, and what is the way forward?
+the-van-sanrakshan-evam-samvardhan-amend:def-main | What do the Van Amendment Rules 2025 prioritise, and what changed for linear projects and critical minerals?
+the-van-sanrakshan-evam-samvardhan-amend:def-main-2 | What else do the 2025 rules relax: CA land, timelines, tourism? Recent examples?
+the-van-sanrakshan-evam-samvardhan-amend:issue-main | Why are ecologists worried about the 2025 rules, and what should change?
+aravallis:def-main | What are the Aravallis, and why do they matter?
+aravallis:news-main | What is the Aravalli definition dispute, and why are people protesting?
+aravallis:issue-main | What threatens the Aravallis, what protects them, and what next?
+aravallis:issue-mining-hazards | What harm does mining do, and what are the remedies?
+aravallis:gov-go-no-go-zones | What were Go / No-Go zones, and how is the idea used today?
+sacred-groves:news-main | What is being done to protect sacred groves (2025)?
+international-conventions:def-main | The main biodiversity conventions and programmes, and what each does?
+international-conventions:def-main-2 | What does the CBD do, and what does the KMGBF adopted under it commit to?
+international-conventions:eg-main | Two convention wins for India, and which conventions India is party to?
+international-conventions:issue-main | Why do biodiversity conventions underdeliver, and what would help?
+ecologically-sensitive-area:def-main | What is an eco-sensitive area, who notifies it, and why does it matter?
+ecologically-sensitive-area:eg-main | Three ESZ examples (worked, mixed, failed), and India's response?
+ecologically-sensitive-area:issue-main | Why do ESAs face resistance, and how do we fix it?
+great-nicobar-island-project:def-main | What is the Great Nicobar project, what does it include, and why is it planned?
+great-nicobar-island-project:issue-main | What are the concerns over Great Nicobar, and the way forward?
+wetland-conservation:fact-main | India's wetlands in numbers, and their main problems?
+wetland-conservation:gov-main | What do the Wetland Rules 2017 require, and which other wetland initiatives exist?
+wetland-conservation:def-main | Ramsar: India's sites (oldest, newest), wetland cities and the Montreux Record?
+wetland-conservation:def-main-2 | What is Ramsar's "wise use", India's resolution at COP15, and what unwise use looks like?
+mangrove-cover:def-main | What are mangroves, how much does India have, and why do they matter?
+mangrove-cover:eg-main | One mangrove success, one failure, and India's mangrove schemes?
+mangrove-cover:issue-main | What threatens mangroves, and the way forward?
+coral-bleaching:def-main | What is coral bleaching, what do corals need, and where are India's reefs?
+coral-bleaching:use-main | Why reefs matter, a bleaching example and a recovery example, and how India protects corals?
+coral-bleaching:issue-main | What threatens coral reefs, and how do we protect them?
+peatlands:def-main | What are peatlands, why do they matter, and what threatens them?
+marine-protected-areas:def-main | What is a marine protected area? Three examples in India?
+unregulated-sand-mining:def-main | Why is sand so in demand, and what does unregulated sand mining cause?
+unregulated-sand-mining:gov-main | What law and guidelines govern sand mining, and what are the solutions?
+unregulated-sand-mining:news-main | What has Punjab changed in its sand-mining policy (2025–26)?
+coastal-sand-mining:issue-main | What does coastal sand mining damage, one example, and the rules on it?
+coastal-sand-mining:cause-coastal-erosion | How much of India's coast is eroding, why, with what effects, and the fix?
+coastal-sand-mining:cause-seawater-intrusion | What is seawater intrusion, its causes, examples, effects and remedies?
+coastal-sand-mining:fact-coastal-regions | How exposed are India's coasts, what tools exist, and the way forward?
+high-seas-treaty-biological-diversity-of:def-main | What is India's status on the High Seas Treaty, and what does the treaty do?
+high-seas-treaty-biological-diversity-of:use-main | Why the High Seas Treaty matters, the first high-seas MPAs, and India's steps so far?
+high-seas-treaty-biological-diversity-of:issue-main | Where is the High Seas Treaty weak, and what should India do?

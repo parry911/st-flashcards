@@ -39,7 +39,7 @@ C def+eg | - | u945&u946 u947/+
 C issue+fix | - | u948/+ u949/+
 # DM Act 2005
 C def+how | - | u950 u951 u952 u953 u954 u955
-C fix | u956 | u957 u958 u959 u960
+C fix | - | h:u956 u957 u958 u959 u960
 C eg | - | u961/+
 # DM Amendment Act 2025
 C def | - | u962 u963 u964 u965
@@ -131,5 +131,5 @@ C effect+eg | - | u1139/+ u1140/+
 C gov+fix | - | u1141 u1142/+ u1143
 # New technology for DM
 C gov+eg | - | u1144 u1145 u1146 u1147 u1157/+
-C gov | u1148 | h:u1149 u1150 h:u1151 u1152
+C gov | - | h:u1148 h:u1149 u1150 h:u1151 u1152
 C fact+issue+fix | - | u1153/+ u1154/+ u1155/+ u1156/+

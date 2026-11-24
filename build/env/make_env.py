@@ -1,6 +1,7 @@
 """Build the site page with both decks: S&T data from the live page (or ../site_st.json), Environment & DM from deck.json.
 Writes env/site_deck.json (the env deck as embedded) and ../../index.html."""
 import json, re, os, sys
+from html import escape
 sys.argv = [sys.argv[0]]
 exec(open('core.py').read())
 D = json.load(open('deck.json'))
@@ -11,6 +12,20 @@ assert words(kw) == words(clean_inline(P['keywords'])) and words(pf) == words(cl
 kw = kw.replace('ENVIRONMENT', '<b>ENVIRONMENT</b>', 1)
 pf = pf.replace('PARFREII', '<b>PARFREII</b>', 1)
 D['pin'] = {'kw': kw, 'pf': pf}
+# question fronts (Claude's wording, fronts only; card backs stay word for word): fronts/*.txt, "card id | question"
+import glob as _g
+Q = {}
+for f in sorted(_g.glob('fronts/*.txt')):
+    for ln in open(f):
+        if ' | ' in ln and not ln.startswith('#'):
+            cid, q = ln.rstrip('\n').split(' | ', 1); Q[cid.strip()] = q.strip()
+ids = {c['id'] for t in D['topics'] for c in t['cards']}
+unknown = [k for k in Q if k not in ids]
+assert not unknown, ('fronts for unknown card ids', unknown[:5])
+for t in D['topics']:
+    for c in t['cards']:
+        if c['id'] in Q: c['q'] = escape(Q[c['id']])
+print('question fronts', len(Q), 'of', len(ids))
 D['title'] = 'Environment &amp; DM'
 D['subtitle'] = 'GS3 · 6 sections · ' + str(len(D['topics'])) + ' topics · ' + str(sum(len(t['cards']) for t in D['topics'])) + ' cards'
 D['img'] = {str(k): f'img/env/{k:02d}.jpg' for k in range(len(json.load(open('img_refs.json')))) if os.path.exists(f'../../img/env/{k:02d}.jpg')}

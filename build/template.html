@@ -337,7 +337,7 @@ function cueLine(c){
   const rows=c.payload.rows;
   let secs=rows.filter(r=>"sec" in r).map(r=>r.sec);
   if(!secs.length) secs=rows.filter(r=>r.h&&!r.cont).map(r=>r.h);   /* no headings: Perry's labels are the cue */
-  const own=ENV&&(c.payload.title||(c.payload.path||[]).length||c.topic.cards.length===1);   /* the title already says which card it is: don't give away the answer's first words */
+  const own=ENV;   /* Environment & DM: never show the answer's first words as a cue */
   if(!secs.length&&!c.payload.table&&!own){ const f=rows.find(r=>"t" in r); if(f){ const w=strip(f.t).split(/\s+/); secs=[esc(w.slice(0,7).join(" "))+(w.length>7?" …":"")]; } }
   if(ENV){ const b=strip(titles(c).big); secs=secs.filter(x=>strip(x)!==b); }
   if(!secs.length) return "";
@@ -346,6 +346,10 @@ function cueLine(c){
 }
 function frontHTML(c){
   const T=titles(c);
+  if(ENV&&c.payload.q){   /* question front: the card's own title moves up into the small line */
+    const cr=T.crumbs.concat([T.big]);
+    return chip(c)+`<div class="crumb">${cr.join('<span class="sep">›</span>')}</div><div class="ttl q">${c.payload.q}</div>`;
+  }
   const crumb=T.crumbs.length?`<div class="crumb">${T.crumbs.join('<span class="sep">›</span>')}</div>`:`<div class="crumb">&nbsp;</div>`;
   return chip(c)+crumb+`<div class="ttl q">${T.big}</div>`+cueLine(c);
 }

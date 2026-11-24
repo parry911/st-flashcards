@@ -48,7 +48,7 @@ C eg | - | u111/+
 C fact | l:u112 | u112/+1.2.!3.4.5.6.7.8.9
 # Forests
 C def+use | - | u113/+1.2.4 u121/+
-C fact | u114 | u115 u116 u117 u118 u119 u120
+C fact | - | h:u114 u115 u116 u117 u118 u119 u120
 C eg+gov | - | u122/+ u123/+1.2.3.4.5.6
 C issue+fix | - | u124/+ u125/+
 # Indian Forest Act
@@ -65,7 +65,7 @@ C eg+gov | - | u143/+ u144
 C issue+fix | - | u145 u146/+
 # FC Amendment Act 2023
 C def+eg | - | u147/+ h:u148 u149 u150 u154/+
-C def+use | u151 | u152 u153
+C def+use | - | h:u151 u152 u153
 C issue+fix | - | h:u155 u156 u157 u158/+
 # Van Amendment Rules 2025
 C def | - | u159 u160 u161/+

@@ -1,0 +1,87 @@
+# Question fronts, 2. Climate Change
+natural-causes-of-cc:def-main | What are the natural causes of climate change? Start with the first five.
+natural-causes-of-cc:def-main-2 | Two more natural causes, why they can't explain today's warming, and two historical examples?
+anthropogenic-factors:def-main | The three human factors behind climate change, and how each works?
+anthropogenic-factors:eg-main | Two examples of human-made climate effects, and India's position as an emitter?
+legal-policy-developments:gov-main | Which SC case made climate change a rights issue, and what are India's 2022 and 2035 NDC targets?
+legal-policy-developments:fact-main | Where does India stand on its NDC, what are the gaps, and the way forward?
+urgency-of-climate-change:def-main | Why is climate action urgent now? Evidence, examples and India's response?
+urgency-of-climate-change:issue-main | What makes the climate challenge harder now, and what must happen by 2030?
+global-temperature-trends:def-main | How much has the world warmed, and what does every extra half degree mean?
+global-temperature-trends:eg-main | Recent temperature records (world and India), and India's response?
+melting-glaciers-ice-sheets:def-main | How fast are Himalayan glaciers and ice sheets melting, with figures?
+melting-glaciers-ice-sheets:cause-main | Why is melting speeding up, what does it cause, and what are India and the world doing?
+oceans-heat-absorption:def-main | How much heat and CO₂ do oceans absorb, and what is it doing to them?
+oceans-heat-absorption:gov-main | India's ocean initiatives, the threats oceans face, and the way forward?
+extreme-weather-events:def-main | How do El Niño and La Niña affect India, and what is a super El Niño?
+extreme-weather-events:eg-main | Two recent extreme weather examples, and India's forecasting response?
+extreme-weather-events:issue-main | Why are extremes hard to forecast, and what should be done?
+co-records:def-main | What does the Mauna Loa record show, 2024's emissions, and how CO₂ traps heat?
+co-records:eg-main | Recent CO₂ records, and India's stand and tools on emissions?
+co-records:issue-main | Why are emissions still rising, and how do we cut them?
+economic-impacts:def-main | What does warming cost the economy? Two examples and India's financial tools?
+economic-impacts:issue-main | Why are disaster losses so costly, and how do we cushion them?
+panchamrit-india-s-cop26-climate-goals:def-main | What are the five Panchamrit goals?
+panchamrit-india-s-cop26-climate-goals:fact-main | What does NITI's net-zero report say, and how have India's NDC targets moved from 2015 to 2035?
+country-specific-examples:eg-main | What did Canada's 2023 wildfires show about climate change?
+challenges-solutions:issue-main | What are India's main climate challenges: emissions, hard sectors, CBAM, methane?
+challenges-solutions:gov-main | India's climate measures, and practical solutions with examples?
+climate-change-sea-level-rise:fact-main | How fast is the sea rising around India, and what's driving it?
+climate-change-sea-level-rise:effect-on-india | What does sea-level rise mean for India's coasts, cities, Sundarbans and islands?
+climate-change-sea-level-rise:effect-main | Which neighbours are most at risk from sea-level rise, and what does it mean for India?
+international-court-of-justice:def-main | What did the ICJ's 2025 climate opinion say, and why does it matter?
+international-court-of-justice:eg-main | What led to the ICJ opinion, a related tribunal ruling, and India's argument?
+international-court-of-justice:issue-main | What are the limits of the ICJ opinion, and how can it still be used?
+migration-vulnerable-nations:def-main | Climate migration: the first case, two examples, and India's response?
+migration-vulnerable-nations:issue-main | Why are small island states hit hardest, and what solutions exist?
+antarctic-ozone:def-main | How does ozone get depleted, when will it recover, and which treaties cover ozone and Antarctica?
+antarctic-ozone:eg-main | Proof the Montreal Protocol works, and India's ozone and Antarctic record?
+antarctic-ozone:issue-main | What still threatens the ozone layer, and the way forward?
+impacts-ipcc-draft-report:def-main | What does the IPCC impacts report cover, with two examples?
+impacts-ipcc-draft-report:gov-main | India's adaptation tools, the adaptation gap, and the way forward?
+impacts-ipcc-draft-report:effect-species | What will warming do to species? Four findings with figures.
+impacts-ipcc-draft-report:effect-oceans | What will warming do to oceans: reefs, heatwaves, sea ice?
+impacts-ipcc-draft-report:effect-systems | What will warming do to permafrost and ecosystems?
+impacts-ipcc-draft-report:effect-forests | What will warming do to forests and fire? Four findings.
+impacts-ipcc-draft-report:effect-human-health | How does climate change hurt health, how many deaths, and what did COP30 do?
+impacts-ipcc-draft-report:effect-gender-based-violence | How does heat raise violence against women, and what has worked?
+impacts-ipcc-draft-report:effect-displacement | How many could climate displace, with country figures, and how does it deepen poverty?
+impacts-ipcc-draft-report:effect-agriculture | How is climate change hitting Indian farming, and what makes agriculture resilient?
+impacts-ipcc-draft-report:effect-education | How does heat and rain disrupt schooling, and what solutions exist?
+india-specific-legislations:fact-main | Carbon pricing worldwide, Article 6's three routes, and the problems with carbon markets?
+india-specific-legislations:gov-main | How do the CCTS and the GEI Target Rules work?
+india-specific-legislations:gov-main-2 | What is the Green Credit Programme, and what are its concerns?
+india-specific-legislations:gov-main-3 | How does the PAT scheme work?
+india-specific-legislations:gov-main-4 | Other green initiatives: hydrogen, steel, buildings, carbon capture?
+india-specific-legislations:gov-to-reduce-methane | Why does methane matter, where does India's come from, and how do we cut it?
+india-specific-legislations:gov-main-5 | What are the CCPA's greenwashing guidelines, and the types of greenwashing?
+cop-3-kyoto-protocol:def-main | What did the Kyoto Protocol establish globally?
+cop-3-kyoto-protocol:gov-main | What was India's stance at Kyoto, and how did India gain?
+cop-3-kyoto-protocol:pic-main | Kyoto in diagrams: Annexes, why only developed countries, flexible mechanisms, CDM?
+cop-15-copenhagen-2009:def-main | What came out of Copenhagen, and how did India's stance change there?
+cop-17-durban-south-africa-2011:def-main | What did Durban start, and what did India secure there?
+cop-21-paris:def-main | Paris Agreement: what changed from Kyoto, the temperature goal, and how ambition is kept up?
+cop-21-paris:def-main-2 | Paris on carbon markets, loss and damage, and CBDR?
+cop-21-paris:gov-main | India's three quantitative NDC targets at Paris (2015)?
+cop-21-paris:gov-main-2 | How did India frame its Paris pledges?
+cop-21-paris:gov-global-leadership-the-isa | What is the International Solar Alliance, what has it done, and where does it struggle?
+cop-24-katowice:def-main | What did Katowice adopt, and what did India secure?
+cop-26-glasgow:def-global-outcome-the-glasgow-climate-pact | What were the key outcomes of the Glasgow Climate Pact?
+cop-26-glasgow:gov-main | Why was COP26 important for India?
+cop-27-sharm-el-sheikh:def-main | COP27: what was its crowning achievement, the other outcomes, and examples?
+cop-27-sharm-el-sheikh:gov-main | India's two big moves at COP27, and why they mattered?
+cop-27-sharm-el-sheikh:gov-submission-of-the-lt-leds | What is India's LT-LEDS, and what does it focus on?
+cop-27-sharm-el-sheikh:issue-main | Where did COP27 fall short, and what next?
+cop-28-dubai:def-main | COP28: the stocktake, the "UAE Consensus", the pledges, and what happened on loss and damage?
+cop-28-dubai:gov-main | What did India refuse at COP28 and why, and what did it launch and offer?
+cop-28-dubai:issue-main | Where did COP28 fall short, and what next?
+cop-29-baku:def-main | COP29: what was the finance goal, the compromise, and the carbon-market breakthrough?
+cop-29-baku:def-main-2 | What else came out of COP29, and two examples from it?
+cop-29-baku:gov-main | How did India respond to the COP29 finance deal?
+cop-29-baku:gov-main-2 | India's other COP29 positions, the deal's flaws, and the way forward?
+cop-29-baku:news-extra-cop29-side-outcome | What is the Declaration on Green Digital Action, and why does digital tech matter?
+cop-30-belem:def-main | COP30: TFFF, adaptation finance, just transition and adaptation indicators?
+cop-30-belem:def-bel-m-package-195-parties | What is in the Belém Package, and what else was launched at Belém?
+cop-30-belem:use-main | Why does COP30 matter, and how has the TFFF started?
+cop-30-belem:gov-main | India's key interventions at COP30?
+cop-30-belem:gov-main-2 | India's other COP30 positions, what COP30 missed, and the way forward?

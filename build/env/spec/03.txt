@@ -11,7 +11,7 @@ C cause+fact | - | u535 u536/+ u537
 C def | u538 | u539 u540 u541
 # Air › Initiatives by India
 C gov | u542 | u543 u544 u545 u546 u547
-C tbl | u548 | u549 u550 u551 u552/+
+C tbl | - | h:u548 u549 u550 u551 u552/+
 C gov | - | u553 u555>u556 u557 u558
 C fact+cause | u554 | u559 u560 u561 u563/+ u564/+
 C eg+fix | - | u562 u565/+
