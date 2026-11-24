@@ -29,7 +29,8 @@ NODEPATH = {}
 for t in D['topics']:
     for tg in t['toggles']: NODEPATH[tg['node']] = tg['path']
 ROLES = {'def', 'how', 'use', 'issue', 'fix', 'gov', 'news', 'fact', 'tbl', 'pic', 'eg', 'cause', 'effect'}
-SPLIT_OVER = 75   # paragraphs longer than this open in pieces, cut only at Perry's own sentence ends
+SPLIT_OVER = 75
+MAXLIST = 5   # paragraphs longer than this open in pieces, cut only at Perry's own sentence ends
 
 errors = []
 def err(m): errors.append(m)
@@ -260,6 +261,23 @@ for ti, t in enumerate(D['topics']):
                 c['table'] = 1; c['head'] = r['head']; out_rows += r['rows']
             else:
                 out_rows.append(r)
+        # a list of more than MAXLIST items becomes 2+ points of 3-5 items (Perry, 24 Nov: red marks should show what was forgotten)
+        split_rows = []
+        for r in out_rows:
+            m = re.fullmatch(r'<span class="lst">(.*)</span>', r.get('t', ''), re.S)
+            items = re.findall(r'<span class="li[^"]*">(.*?)</span>(?=<br><span class="li|$)', m.group(1), re.S) if m else []
+            if len(items) > MAXLIST:
+                k = -(-len(items) // MAXLIST); size = -(-len(items) // k)
+                for j in range(0, len(items), size):
+                    chunk = items[j:j + size]
+                    body = '<span class="lst">' + '<br>'.join(f'<span class="li">{x}</span>' for x in chunk) + '</span>'
+                    nr = {'t': body}
+                    if j == 0 and r.get('h'): nr['h'] = r['h']
+                    if j > 0 or r.get('cont'): nr['cont'] = 1
+                    split_rows.append(nr)
+            else:
+                split_rows.append(r)
+        out_rows = split_rows
         for r in out_rows:   # tidy line breaks at the very start or end of a point (no words touched)
             for k in ('t', 'h'):
                 if k in r: r[k] = re.sub(r'^(\s*<br>\s*)+|(\s*<br>\s*)+$', '', r[k]).strip()

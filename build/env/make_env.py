@@ -26,6 +26,14 @@ for t in D['topics']:
     for c in t['cards']:
         if c['id'] in Q: c['q'] = escape(Q[c['id']])
 print('question fronts', len(Q), 'of', len(ids))
+# long prose cards: the front says to give them a quick read in Notion (Perry, 24 Nov)
+READ = [l.strip() for l in open('read_in_notion.txt') if l.strip() and not l.startswith('#')]
+assert all(r in ids for r in READ), [r for r in READ if r not in ids]
+for t in D['topics']:
+    for c in t['cards']:
+        if c['id'] in READ: c['read'] = 1
+D['notion'] = 'https://app.notion.com/p/4221111b206d80b0a97fe118421fe6d8'
+print('quick-read cards', len(READ))
 D['title'] = 'Environment &amp; DM'
 D['subtitle'] = 'GS3 · 6 sections · ' + str(len(D['topics'])) + ' topics · ' + str(sum(len(t['cards']) for t in D['topics'])) + ' cards'
 D['img'] = {str(k): f'img/env/{k:02d}.jpg' for k in range(len(json.load(open('img_refs.json')))) if os.path.exists(f'../../img/env/{k:02d}.jpg')}

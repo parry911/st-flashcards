@@ -88,6 +88,7 @@ mark{background:#d6efd9;color:inherit;border-radius:3px;padding:0 2px}
 .pyqside .x{float:right;border:0;background:none;color:var(--ink3);font-size:20px;line-height:1;cursor:pointer;padding:0 0 0 8px}
 @media (min-width:1400px){.pyqside{position:fixed;top:64px;right:calc(50vw + 370px);width:min(380px,calc(50vw - 400px));max-height:calc(100vh - 150px);overflow:auto}}
 .pin .kw{font-size:14.5px;line-height:1.55;color:var(--ink)}
+.readn{display:inline-block;margin-top:4px;font-size:13px;color:var(--ink2);text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:4px 11px}
 .pin .kw b{font-family:var(--serif);font-size:17px}
 
 /* pinned issue heads from the page title */
@@ -348,7 +349,8 @@ function frontHTML(c){
   const T=titles(c);
   if(ENV&&c.payload.q){   /* question front: the card's own title moves up into the small line */
     const cr=T.crumbs.concat([T.big]);
-    return chip(c)+`<div class="crumb">${cr.join('<span class="sep">›</span>')}</div><div class="ttl q">${c.payload.q}</div>`;
+    const rd=c.payload.read?`<a class="readn" href="${DECK.notion}" target="_blank" rel="noopener" onclick="event.stopPropagation()">📖 Long notes: give this a quick read in Notion</a>`:"";
+    return chip(c)+`<div class="crumb">${cr.join('<span class="sep">›</span>')}</div><div class="ttl q">${c.payload.q}</div>`+rd;
   }
   const crumb=T.crumbs.length?`<div class="crumb">${T.crumbs.join('<span class="sep">›</span>')}</div>`:`<div class="crumb">&nbsp;</div>`;
   return chip(c)+crumb+`<div class="ttl q">${T.big}</div>`+cueLine(c);

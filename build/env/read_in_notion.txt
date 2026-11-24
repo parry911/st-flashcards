@@ -1,0 +1,25 @@
+# Cards that are mostly long prose: the front says "quick read in Notion" (Perry, 24 Nov)
+the-biological-diversity-act-2002:def-main
+the-biological-diversity-act-2002:issue-main
+forest-rights-act-2006:issue-main
+forest-conservation-amendment-act-2023:def-main
+the-van-sanrakshan-evam-samvardhan-amend:def-main
+climate-change-sea-level-rise:effect-on-india
+cop-27-sharm-el-sheikh:gov-main
+cop-28-dubai:def-main
+cop-28-dubai:gov-main
+cop-29-baku:gov-main
+cop-30-belem:def-main
+cop-30-belem:gov-main
+water:gov-schemes-missions
+plastic-pollution:gov-india-s-response-measures
+e-waste:gov-india-legislations-and-rules
+hydrogen:def-blue-hydrogen-blue-hydrogen-the-bridge-f
+disaster-risk-formula:def-main
+national-disaster-management-plan-ndmp-2:def-main
+tsunamis:gov-main
+landslides:fact-main
+cloudburst:def-main
+cloudburst:gov-main
+drought:gov-main
+new-technology-for-disaster-management:gov-main
