@@ -4,8 +4,8 @@ C def+use | - | u878 u879 u880
 # India's disaster approach
 C def+eg+how | - | u881 u882/+ u883/+3
 # Disaster risk formula
-C def | - | u884 u887 u888 u889/+
-C def+eg | - | u885/+2.3.4 u886 u890
+C def | - | u884 u887 u888/+a1.a2 u889/+!a1.1.2.!a7
+C def+eg | - | u885/+!a1.2.3.4 u886 u890
 # Insurance coverage
 C def+use+eg | - | u891 u892/+ u893/+
 C gov+issue+fix | - | u894/+ u895/+ u896/+
@@ -13,7 +13,7 @@ C gov+issue+fix | - | u894/+ u895/+ u896/+
 C def+eg+gov | - | u897 u898/+ u899
 C issue+fix | - | u900/+ u901/+
 # Disaster management cycle (diagram on the first card)
-C def+use | - | u902 u903 u908 u909
+C def+use | - | u902/+a2.a3.a4 u903 u908 u909
 C eg+gov | - | u904/+ u905/+
 C issue+fix | - | u906/+ u907/+
 # Components of prevention
@@ -64,10 +64,10 @@ C def | l:u1005 | u1005 u1006 u1007 u1008/+ u1009/+ u1010/+ u1011/+
 C tbl | u1012 | u1013
 # Earthquakes (hazard frame: extent + causes / effects + examples / NDMA + way forward)
 C def+cause | - | u1014/+ u1015/+ u1016/+1 u1017 u1018
-C effect+eg | - | u1019/+ u1020/+
+C effect+eg | - | u1019/+ u1020/+1.2.3.!4.5.6.7.8
 C gov | l:u1021 | u1021 u1022 u1023 u1024 u1025
-C issue+fix | - | u1026/+1.2.3.4.5.!6.7.8
-C fact+news | l:u1027 | u1027/+
+C issue+fix | - | u1026/+1.2.!3.4.5.!a1.6.7.8
+C fact+news | l:u1027 | u1027/+1.!2.3.4.5.!6
 # Tsunamis
 C def+cause | - | u1028 u1029
 C effect+eg | - | u1030/+ u1031/+
@@ -76,15 +76,15 @@ C gov+fix | - | u1032 u1033/+
 C def+cause | - | u1034 u1035 u1036 u1037/+
 C effect+eg | - | u1038/+ u1039/+1.2.!3.4.5
 C gov | - | u1040 u1041/+
-C fix | l:u1042 | u1042/+1.2.3.!4.5.!6.7
+C fix | l:u1042 | u1042/+1.2.3.!a2.4.5.!a3.6.7
 # Landslides
 C def+cause | - | u1043 u1044 u1045/+
-C effect+eg | - | u1046/+ u1047/+
-C gov | - | u1048 u1049/+
-C how+fix | l:u1050 | u1050/+1.2.3.4.5.6.!7.!8.9.10.11 u1051
-C fact | - | u1052 u1053/+
+C effect+eg | - | u1046/+ u1047/+1.2.3.!a1.4
+C gov | - | u1048 u1049/+1.2.!3.4.5
+C how+fix | l:u1050 | u1050/+!a1.1.2.3.!4.5.6.!7.a3.a4.!8.9.10.11 u1051
+C fact | - | u1052 u1053/+!a1.1.2.3.!a2.4.!a3.5
 # Sturzstrom
-C def+how+eg | - | u1054 u1055 u1056 u1057 u1058 u1059
+C def+how+eg | - | u1054 u1055/+a1.a2.a3 u1056 u1057 u1058 u1059
 # Cloudburst
 C def+cause | - | u1060 u1061 u1062
 C effect+eg | - | u1063/+ u1064/+
@@ -111,16 +111,16 @@ C effect+eg | - | u1103/+ u1104 u1105 u1106/+
 C gov+fix | - | u1107/+ u1108
 # Stampedes
 C def+cause | - | u1109/+ u1110/+
-C effect+gov | - | u1111/+ u1112/+
+C effect+gov | - | u1111/+ u1112/+!a1.1.2.!3.4
 C fix | l:u1113 | u1113/+!1.2.3.4
 # Heatwaves
-C def+cause | - | u1114/+ u1115/+
+C def+cause | - | u1114/+a1.1.!2.3 u1115/+
 C effect+eg | - | u1116/+ u1117/+2
 C gov+fix | - | u1118 u1119/+!1.2.3.4.5
 # GLOF
 C def+cause | - | u1120/+ u1121
 C effect+eg | - | u1122/+ u1123 u1124
-C gov+fix | - | u1125/+ u1126 u1127
+C gov+fix | - | u1125/+1.!2.3.4.5.6 u1126 u1127
 # Fire safety
 C def+cause | - | u1128 u1129
 C effect+eg | - | u1130/+ u1131/+
@@ -128,7 +128,7 @@ C gov+issue+fix | - | u1132 u1133 u1134/+ u1135/+
 # Dams
 C def+cause | - | u1136 u1137/+ u1138
 C effect+eg | - | u1139/+ u1140/+
-C gov+fix | - | u1141 u1142/+ u1143
+C gov+fix | - | u1141 u1142/+1.2.3.4.!a1.5.6 u1143
 # New technology for DM
 C gov+eg | - | u1144 u1145 u1146 u1147 u1157/+
 C gov | - | h:u1148 h:u1149 u1150 h:u1151 u1152

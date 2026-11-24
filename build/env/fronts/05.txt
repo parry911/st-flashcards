@@ -1,7 +1,7 @@
 # Question fronts, 5. Disaster Management and 6. EIA
 seismic-and-disaster-statistics:def-main | How exposed is India to quakes, floods and displacement, and what does that mean for planning?
 india-s-disaster-approach:def-main | How has India's disaster approach shifted, one example each way, and how DRR links with climate adaptation?
-disaster-risk-formula:def-main | What is the disaster risk formula, what are exposure, hazard, disaster and risk, and what is cascading risk?
+disaster-risk-formula:def-main | What is the disaster risk formula and its terms, and what is cascading risk?
 disaster-risk-formula:def-main-2 | What is vulnerability, its four types, and two Indian examples?
 insurance-coverage:def-main | How insured is India against disasters, why it matters, and one success and one failure?
 insurance-coverage:gov-main | India's insurance push, the protection gap, and the way forward?
@@ -25,7 +25,7 @@ disaster-resilience:def-main | What is disaster resilience, how is it measured, 
 disaster-resilience:eg-main | One resilience success, one failure, and India's resilience initiatives?
 accountability-and-oversight:def-main | Who holds disaster management to account, with examples?
 accountability-and-oversight:issue-main | Where is accountability weak, and how do we fix it?
-disaster-management-act-2005:def-main | The DM Act 2005: its three tiers, NDMA, NEC, plans, NDRF and local bodies?
+disaster-management-act-2005:def-main | How does the DM Act 2005 organise disaster management? Six parts.
 disaster-management-act-2005:fix-main | What did the Standing Committee on Finance (2019) recommend on disaster funds?
 disaster-management-act-2005:eg-main | When did the DM Act work, and when did it fail?
 disaster-management-amendment-act-2025:def-main | What did the DM (Amendment) Act 2025 add?
@@ -33,7 +33,7 @@ disaster-management-amendment-act-2025:gov-localisation-of-drr-507-cr-panchayat-
 legal-framework-for-disasters:def-main | Which laws besides the DM Act cover disasters, and what does each handle?
 legal-framework-for-disasters:eg-main | Examples of these laws in action, and the 2025 changes?
 legal-framework-for-disasters:issue-main | What's wrong with India's disaster laws, and the fix?
-national-disaster-management-plan-ndmp-2:def-main | What does NDMP 2019 align with, its themes, its time frames and its response framework?
+national-disaster-management-plan-ndmp-2:def-main | What does NDMP 2019 cover, and how does it organise response?
 national-disaster-management-plan-ndmp-2:eg-main | Two examples of NDMP-style planning that worked?
 sdg-13-1-2:fact-main | What does SDG indicator 13.1.2 track?
 early-warning-systems:def-main | What is an early warning system, and why is it worth the money?
@@ -58,8 +58,8 @@ floods:fix-way-forward | Urban flood resilience: the scale of the problem, the t
 landslides:def-main | How landslide-prone is India, and why do landslides happen, especially in the Western Ghats?
 landslides:effect-main | What do landslides do, with recent examples?
 landslides:gov-main | NDMA's landslide guidelines and the national strategy?
-landslides:how-landslide-hazard-zonation-mapping | What is landslide hazard zonation mapping, at what scales, and its uses?
-landslides:fact-main | What is an avalanche, and what is land subsidence, where and the fix?
+landslides:how-landslide-hazard-zonation-mapping | How is landslide hazard zonation mapping done and used, and how are slopes protected?
+landslides:fact-main | What is an avalanche, and what is land subsidence: its causes, where, and the fix?
 sturzstrom-hyper-mobility-rock-ice-avala:def-main | What is a sturzstrom, how does it work, its drivers, and two examples?
 cloudburst:def-main | What counts as a cloudburst, and how does it form?
 cloudburst:effect-main | What do cloudbursts do, with recent examples?
@@ -80,7 +80,7 @@ industrial-accidents:def-main | How big is the industrial accident risk in India
 industrial-accidents:effect-main | What do industrial accidents do, with key examples?
 industrial-accidents:gov-main | The law on industrial accidents, and the way forward?
 stampedes:def-main | How common are stampedes, where, and why do they happen?
-stampedes:effect-main | What do stampedes do, and NDMA's crowd guidelines?
+stampedes:effect-main | What do stampedes do, and what do NDMA's guide and the law say?
 stampedes:fix-way-forward | What is the FIST model, and other crowd-safety fixes?
 heatwaves:def-main | How does IMD declare a heatwave, who is vulnerable, and why are heatwaves rising?
 heatwaves:effect-main | What do heatwaves do, with examples?
