@@ -48,6 +48,47 @@
 .rw.cont .n{opacity:.55}
 .headrow{font-size:12px;color:var(--ink3);margin:-4px 0 10px}
 
+/* deck switch (S&T | Environment & DM) */
+.deckbar{display:inline-flex;background:var(--strip);border-radius:999px;padding:3px;gap:2px;margin:2px 0 8px}
+.deckbar button{border:0;background:transparent;border-radius:999px;padding:6px 14px;font:inherit;font-size:13px;font-weight:600;color:var(--ink2);cursor:pointer}
+.deckbar button.on{background:var(--card);color:var(--ink);box-shadow:0 1px 2px rgba(0,0,0,.08)}
+/* Environment & DM: section list with tap-to-open topics, circle filter, PYQ star */
+mark{background:#d6efd9;color:inherit;border-radius:3px;padding:0 2px}
+@media (prefers-color-scheme: dark){mark{background:#234a2e}}
+.chip.eg{color:var(--for);background:var(--for-soft)} .chip.cause{color:var(--against);background:var(--against-soft)} .chip.effect{color:var(--value);background:var(--value-soft)}
+.envnav{display:flex;flex-direction:column;gap:8px}
+.navrow{display:flex;gap:8px;align-items:center}
+.navbtn{flex:1 1 auto;min-width:0;display:flex;justify-content:space-between;align-items:center;gap:8px;font:inherit;font-size:13.5px;border:0;background:var(--strip);color:var(--ink);border-radius:10px;padding:8px 10px;text-align:left;cursor:pointer}
+.navbtn span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.navbtn .car{flex:0 0 auto;color:var(--ink3);font-size:11px}
+.circ{display:inline-flex;background:var(--strip);border-radius:10px;padding:3px;gap:2px;flex:0 0 auto}
+.circ button{border:0;background:transparent;border-radius:8px;padding:5px 8px;font-size:14px;line-height:1;cursor:pointer;opacity:.35;filter:grayscale(1)}
+.circ button.on{background:var(--card);opacity:1;filter:none;box-shadow:0 1px 2px rgba(0,0,0,.08)}
+.navpanel{display:none;background:var(--card);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);max-height:62vh;overflow:auto;padding:4px 0}
+.navpanel.on{display:block}
+.nv{display:flex;align-items:baseline;gap:8px;padding:9px 14px;cursor:pointer;font-size:14px;border-top:1px solid var(--line)}
+.nv:first-child{border-top:0}
+.nv span{flex:1 1 auto;min-width:0}
+.nv small{flex:0 0 auto;font-size:12px;color:var(--ink3)}
+.nv i{font-style:normal;color:var(--ink3);font-size:11px}
+.nv.sec{font-weight:650}
+.nv.sec.open{background:var(--strip)}
+.nv.sec.open small{color:var(--accent)}
+.nv.tp{padding-left:28px;border-top:0;font-size:13.5px;padding-top:7px;padding-bottom:7px}
+.nv.cur{color:var(--accent)}
+.nv .st{color:#c9a227;font-weight:700}
+.star{border:0;background:#fbf3d6;color:#8a6516;border-radius:999px;padding:3px 9px;font:inherit;font-size:12px;font-weight:700;cursor:pointer}
+@media (prefers-color-scheme: dark){.star{background:#3a3218;color:#e3c66a}}
+.pq{margin:6px 0 0;padding:0;list-style:none}
+.pq li{padding:9px 0;border-top:1px solid var(--line);font-size:14.5px;line-height:1.5}
+.pq li:first-child{border-top:0}
+.pyqside{display:none;background:var(--card);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);padding:14px 16px 10px}
+.pyqside h3,#qbox h3{margin:0 0 4px;font-family:var(--serif);font-size:16px}
+.pyqside .x{float:right;border:0;background:none;color:var(--ink3);font-size:20px;line-height:1;cursor:pointer;padding:0 0 0 8px}
+@media (min-width:1400px){.pyqside{position:fixed;top:64px;right:calc(50vw + 370px);width:min(380px,calc(50vw - 400px));max-height:calc(100vh - 150px);overflow:auto}}
+.pin .kw{font-size:14.5px;line-height:1.55;color:var(--ink)}
+.pin .kw b{font-family:var(--serif);font-size:17px}
+
 /* pinned issue heads from the page title */
 .pin{background:var(--card);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);margin:0 0 14px;font-size:14px;line-height:1.5}
 .pin summary{list-style:none;cursor:pointer;padding:11px 14px;display:flex;gap:8px;align-items:baseline}
@@ -82,11 +123,17 @@
 </head>
 <body>
 <div class="wrap">
+  <div class="deckbar" id="deckbar"><button data-d="st">S&amp;T</button><button data-d="env">Environment &amp; DM</button></div>
   <header><h1 id="title">S&amp;T Flashcards</h1><span class="sub" id="subtitle"></span></header>
   <div class="controls">
     <div class="selrow">
       <select id="subjSel" aria-label="Subject"></select>
       <select id="topicSel" aria-label="Topic"></select>
+    </div>
+    <div class="envnav" id="envNav" style="display:none">
+      <div class="navrow"><button class="navbtn" id="navBtn"><span id="navLbl">All sections</span><span class="car">▼</span></button>
+        <div class="circ" id="circRow"><button data-c="g" title="Learn">🟢</button><button data-c="y" title="Answer-ready">🟡</button><button data-c="w" title="Skip">⚪</button></div></div>
+      <div class="navpanel" id="navPanel"></div>
     </div>
     <div class="row">
       <div class="seg" id="modeSeg">
@@ -116,35 +163,52 @@
   <div class="row"><button class="btn ghost" id="mCancel">Cancel</button><button class="btn miss" style="flex:0 0 auto" id="mOk">Reset</button></div>
 </div></div>
 <div class="modal" id="smodal"><div class="box sync" id="sbox"></div></div>
+<div class="modal" id="qmodal"><div class="box wide sheet" id="qbox"></div></div>
+<div class="pyqside" id="pyqSide"></div>
 <div class="modal" id="pmodal"><div class="box wide sheet" id="pbox"></div></div>
 <script>
-const DECK=/*DATA*/;
+const DECKS={st:/*DATA*/,env:/*ENVDATA*/};
 </script>
 <script>
 (function(){
 "use strict";
-const KEY="stdeck.v1";
+let DK="st"; try{ if(DECKS.env&&localStorage.getItem("deckpick.v1")==="env") DK="env"; }catch(e){}
+const DECK=DECKS[DK], ENV=DK==="env";
+const KEY=ENV?"envdeck.v1":"stdeck.v1";
+const CIRC={g:"🟢",y:"🟡",w:"⚪"}, UNIT=ENV?"section":"subject";
 const BUILD="/*BUILD*/";
 const $=s=>document.querySelector(s);
 const SUBJ={}; DECK.subjects.forEach(s=>SUBJ[s.id]=s.name);
 const IMG=DECK.img||{};
 
-/* ---------- pinned issue heads (from the page title, word for word) ---------- */
+/* ---------- deck switch: each deck keeps its own place, progress and schedule ---------- */
+(function deckbar(){
+  const el=$("#deckbar"); if(!DECKS.env){ el.style.display="none"; return; }
+  if(ENV) document.title="Environment & DM Flashcards";
+  el.querySelectorAll("button").forEach(b=>{ b.classList.toggle("on",b.dataset.d===DK);
+    b.onclick=()=>{ if(b.dataset.d===DK) return; try{localStorage.setItem("deckpick.v1",b.dataset.d);}catch(e){} location.reload(); }; });
+})();
+/* ---------- pinned box (word for word from the notes) ---------- */
+const PINKEY=ENV?"envpin.v1":"stpin.v1";
 (function pin(){
   const P=DECK.pin, el=$("#pin");
+  if(ENV){ $("#pinOne").textContent="Keywords to use · PARFREII";
+    $("#pinIn").innerHTML=`<div class="kw">${P.kw}</div><div class="vd">${P.pf}</div>`; }
+  else{
   $("#pinOne").textContent=P.heads.join(", ");
   $("#pinIn").innerHTML=`<div class="lead">${P.lead}</div><ul>${P.heads.map(h=>`<li>${h}</li>`).join("")}</ul><div class="niche">${P.niche}</div><div class="vd">${P.vd}</div>`;
-  let open=null; try{open=localStorage.getItem("stpin.v1");}catch(e){}
+  }
+  let open=null; try{open=localStorage.getItem(PINKEY);}catch(e){}
   el.open=open===null?false:open==="1";
-  el.addEventListener("toggle",()=>{ if(matchMedia("(min-width:1060px)").matches) return; try{localStorage.setItem("stpin.v1",el.open?"1":"0");}catch(e){} });
-  const wide=()=>{ if(matchMedia("(min-width:1060px)").matches) el.open=true; else{ let o=null; try{o=localStorage.getItem("stpin.v1");}catch(e){} el.open=o==="1"; } };
+  el.addEventListener("toggle",()=>{ if(matchMedia("(min-width:1060px)").matches) return; try{localStorage.setItem(PINKEY,el.open?"1":"0");}catch(e){} });
+  const wide=()=>{ if(matchMedia("(min-width:1060px)").matches) el.open=true; else{ let o=null; try{o=localStorage.getItem(PINKEY);}catch(e){} el.open=o==="1"; } };
   wide(); matchMedia("(min-width:1060px)").addEventListener("change",wide);
 })();
 
 /* ---------- build cards ---------- */
 const cards={}, groups=[];
 DECK.topics.forEach(t=>{
-  const g={key:t.id,subj:t.subj,name:t.name,ids:[]};
+  const g={key:t.id,subj:t.subj,name:t.name,ids:[],circle:t.circle||null,pyq:(t.pyq||[]).length};
   t.cards.forEach(c=>{
     const nrow=c.rows.filter(r=>"t" in r).length;
     cards[c.id]={id:c.id,topic:t,payload:c,count:nrow};
@@ -164,7 +228,8 @@ const placeSig=()=>[S.subj,S.topic,S.mode,S.missed,S.pos,S.round,(S.queue||[]).l
 function save(){const sig=placeSig(); if(sig!==lastSig){ if(lastSig!==null){S.at=Date.now(); setTimeout(()=>{try{queueSync();}catch(e){}},0);} lastSig=sig; }
   try{localStorage.setItem(KEY,JSON.stringify(S));}catch(e){}}
 const isMissed=id=>S.st[id]&&S.st[id].s==="m";
-function scopeGroups(){ return groups.filter(g=>(S.subj==="all"||g.subj===S.subj)&&(S.topic==="all"||g.key===S.topic)); }
+function circOK(g){ if(!ENV||!g.circle) return true; return !(S.circ&&S.circ[g.circle]===false); }   /* topics with no circle always show */
+function scopeGroups(){ return groups.filter(g=>(S.subj==="all"||g.subj===S.subj)&&(S.topic==="all"?circOK(g):g.key===S.topic)); }
 function filteredGroups(){ return scopeGroups().map(g=>{let ids=g.ids; if(S.missed) ids=ids.filter(isMissed); return {key:g.key,ids};}).filter(g=>g.ids.length); }
 function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
 /* Smart order: weakest first, then cards due for review, new cards mixed in, well-known cards last.
@@ -218,14 +283,18 @@ const esc=s=>String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"
 function render(){
   $("#title").innerHTML=DECK.title; $("#subtitle").textContent=DECK.subtitle+" · "+BUILD;
   document.querySelectorAll("#modeSeg button").forEach(b=>b.classList.toggle("on",b.dataset.v===S.mode));
+  if(ENV){ document.querySelector(".selrow").style.display="none"; $("#envNav").style.display=""; renderNavBar(); }
+  else{
   const ss=$("#subjSel"); ss.innerHTML='<option value="all">All subjects</option>'+DECK.subjects.map(s=>`<option value="${s.id}">${esc(s.name)}</option>`).join(""); ss.value=S.subj;
   const tops=S.subj==="all"?[]:groups.filter(g=>g.subj===S.subj);
   const ts=$("#topicSel"); ts.innerHTML='<option value="all">All topics</option>'+tops.map(g=>`<option value="${g.key}">${esc(g.name.replace(/<[^>]+>/g,""))}</option>`).join(""); ts.value=S.topic; ts.disabled=tops.length<2; ts.style.display=tops.length<2?"none":"";
+  }
   const scopeIds=scopeGroups().flatMap(g=>g.ids); const c0=counts(scopeIds);
   $("#nk").textContent=c0.k;$("#nm").textContent=c0.m;$("#nn").textContent=c0.n;
   $("#pk").style.width=(c0.t?c0.k/c0.t*100:0)+"%"; $("#pm").style.width=(c0.t?c0.m/c0.t*100:0)+"%";
   const mt=$("#missTgl"); mt.classList.toggle("on",S.missed); mt.textContent=S.missed?"Missed only ✓":"Missed only"; mt.disabled=!S.missed&&c0.m===0;
   const stage=$("#stage");
+  sidePYQ();
   if(!S.queue.length){ stage.innerHTML=`<div class="card"><div class="done"><h2>No cards here</h2><p>${S.missed?"Nothing is marked missed in this selection.":"Pick another subject or topic."}</p></div></div>`; actions([]); return; }
   if(S.pos>=S.queue.length){ renderDone(stage); return; }
   const c=cards[S.queue[S.pos]];
@@ -234,38 +303,42 @@ function render(){
   if(!S.back){
     stage.innerHTML=`<div class="card"><div class="front" id="front">${kick}${frontHTML(c)}
       <div class="hint"><span>Recall it first, then tap</span><span>Space</span></div></div></div>`;
-    $("#front").onclick=flip;
+    $("#front").onclick=flip; bindStar(c);
     actions([["ghost","‹","prev"],["primary","Show answer","flip"],["ghost","›","next"]]);
   } else {
     stage.innerHTML=`<div class="card back" id="backcard">${kick}${backHTML(c)}<div class="fliphint">${R.steps.length?"Forgot an open point? Tap it to turn it red. Tap again to undo.<br>":""}<button class="flipback" id="flipBack">↺ Flip back</button></div></div>`;
-    bindRows();
+    bindRows(); bindStar(c);
     $("#flipBack").onclick=e=>{e.stopPropagation(); unflip();};
     const done=allDone();
     actions([["ghost","‹","prev"]].concat(R.steps.length&&!done?[["ghost","Show all","all"]]:[]).concat([[anyRed()?"miss sug":"miss","Missed <kbd>1</kbd>","miss"],["got","Got it <kbd>2</kbd>","got"],["ghost","›","next"]]));
     if(anyRed()){const g=document.querySelector('#actions [data-a="got"]'); if(g){g.disabled=true; g.title="A point is red, so this card counts as missed";}}
   }
 }
-const ROLE={def:["What it is","def"],how:["How it works","how"],use:["Uses & significance","use"],issue:["Challenges","issue"],fix:["Way forward","fix"],gov:["Initiatives","gov"],news:["In the news","news"],fact:["Key facts","fact"],tbl:["Table","tbl"],pic:["Your notes","pic"]};
+const ROLE={def:["What it is","def"],how:["How it works","how"],use:["Uses & significance","use"],issue:["Challenges","issue"],fix:["Way forward","fix"],gov:["Initiatives","gov"],news:["In the news","news"],fact:["Key facts","fact"],tbl:["Table","tbl"],pic:["Your notes","pic"],eg:["Examples","eg"],cause:["Causes","cause"],effect:["Effects","effect"]};
 function titles(c){
-  const p=c.payload, path=p.path||[], tn=c.topic.name;
+  const p=c.payload, path=p.path||[], tn=(ENV&&c.topic.circle?CIRC[c.topic.circle]+" ":"")+c.topic.name;
   let big, crumbs;
   if(p.title){ big=p.title; crumbs=[tn].concat(path); if(crumbs.length>1&&crumbs[crumbs.length-1]===p.title) crumbs.pop(); }
   else if(path.length){ big=path[path.length-1]; crumbs=[tn].concat(path.slice(0,-1)); }
   else { big=tn; crumbs=[]; }
+  if(ENV&&c.topic.group) crumbs=[c.topic.group].concat(crumbs);
   return {big,crumbs};
 }
 function chip(c){
   const p=c.payload;
   const roles=(p.roles||[]).map(r=>`<span class="chip role ${ROLE[r][1]}">${ROLE[r][0]}</span>`).join("");
   const n=p.table?`${c.count} row${c.count===1?"":"s"}`:c.count?`${c.count} point${c.count===1?"":"s"}`:"picture";
-  return `<span class="chiprow">${roles}<span class="cnt">${n}</span></span>`;
+  const q=ENV&&c.topic.pyq&&c.topic.pyq.length?` <button class="star" data-pyq>★ PYQ ${c.topic.pyq.length}</button>`:"";
+  return `<span class="chiprow">${roles}<span class="cnt">${n}</span>${q}</span>`;
 }
 const strip=s=>String(s).replace(/<br>/g," ").replace(/<[^>]+>/g,"").trim();
 function cueLine(c){
   const rows=c.payload.rows;
   let secs=rows.filter(r=>"sec" in r).map(r=>r.sec);
   if(!secs.length) secs=rows.filter(r=>r.h&&!r.cont).map(r=>r.h);   /* no headings: Perry's labels are the cue */
-  if(!secs.length&&!c.payload.table){ const f=rows.find(r=>"t" in r); if(f){ const w=strip(f.t).split(/\s+/); secs=[esc(w.slice(0,7).join(" "))+(w.length>7?" …":"")]; } }
+  const own=ENV&&(c.payload.title||(c.payload.path||[]).length||c.topic.cards.length===1);   /* the title already says which card it is: don't give away the answer's first words */
+  if(!secs.length&&!c.payload.table&&!own){ const f=rows.find(r=>"t" in r); if(f){ const w=strip(f.t).split(/\s+/); secs=[esc(w.slice(0,7).join(" "))+(w.length>7?" …":"")]; } }
+  if(ENV){ const b=strip(titles(c).big); secs=secs.filter(x=>strip(x)!==b); }
   if(!secs.length) return "";
   const show=secs.slice(0,4).join('<span class="dot"> · </span>')+(secs.length>4?'<span class="dot"> · …</span>':"");
   return `<div class="cueline">${show}</div>`;
@@ -347,13 +420,13 @@ function progressSheet(){
   const rows=DECK.subjects.map(s=>{const ids=groups.filter(g=>g.subj===s.id).flatMap(g=>g.ids); return {s,c:counts(ids),n:groups.filter(g=>g.subj===s.id).length};});
   const all=counts(groups.flatMap(g=>g.ids));
   const bar=c=>`<div class="bar"><i class="k" style="width:${c.t?c.k/c.t*100:0}%"></i><i class="m" style="width:${c.t?c.m/c.t*100:0}%"></i></div>`;
-  $("#pbox").innerHTML=`<h3>Progress by subject</h3>
-   <div class="pl" data-s="all"><div class="nm">All subjects<small>${all.t} cards</small></div><div class="ct">${all.k} known · ${all.m} missed</div>${bar(all)}</div>`+
+  $("#pbox").innerHTML=`<h3>Progress by ${UNIT}</h3>
+   <div class="pl" data-s="all"><div class="nm">All ${UNIT}s<small>${all.t} cards</small></div><div class="ct">${all.k} known · ${all.m} missed</div>${bar(all)}</div>`+
    rows.map(({s,c,n})=>`<div class="pl" data-s="${s.id}"><div class="nm">${esc(s.name)}<small>${n} topic${n>1?"s":""} · ${c.t} cards</small></div><div class="ct">${c.k} known · ${c.m} missed</div>${bar(c)}</div>`).join("")+
    `<div class="row" style="justify-content:flex-end;margin-top:12px"><button class="btn ghost" id="pClose">Close</button></div>`;
   $("#pmodal").classList.add("on");
   $("#pClose").onclick=()=>$("#pmodal").classList.remove("on");
-  document.querySelectorAll("#pbox .pl").forEach(el=>el.onclick=()=>{S.subj=el.dataset.s; S.topic="all"; buildQueue(); R=null; $("#pmodal").classList.remove("on"); render(); toast(S.subj==="all"?"All subjects":SUBJ[S.subj]);});
+  document.querySelectorAll("#pbox .pl").forEach(el=>el.onclick=()=>{S.subj=el.dataset.s; S.topic="all"; buildQueue(); R=null; $("#pmodal").classList.remove("on"); render(); toast(S.subj==="all"?"All "+UNIT+"s":SUBJ[S.subj]);});
 }
 /* ---------- controls ---------- */
 function rebuild(msg){buildQueue(); R=null; render(); if(msg) toast(msg);}
@@ -364,9 +437,9 @@ $("#topicSel").onchange=e=>{S.topic=e.target.value; rebuild("New round");};
 $("#missTgl").onclick=()=>{S.missed=!S.missed; rebuild(S.missed?"Only cards you missed":"All cards");};
 $("#progBtn").onclick=progressSheet;
 /* ---------- sync through the same private GitHub gist as the GS3 deck (own files: st-dev-*) ---------- */
-const SK="stsync.v1", GDESC="GS3 flashcards progress (used by the flashcard site; do not delete)";
+const SK=ENV?"envsync.v1":"stsync.v1", PFX=ENV?"env-dev-":"st-dev-", GDESC="GS3 flashcards progress (used by the flashcard site; do not delete)";
 let SY=null; try{SY=JSON.parse(localStorage.getItem(SK));}catch(e){}
-if(!SY){ for(const k of ["gs3sync.v3","gs3sync.v1"]){ try{const o=JSON.parse(localStorage.getItem(k)); if(o&&o.token){ SY={token:o.token,gist:o.gist||null,dev:Math.random().toString(36).slice(2,8),dirty:true}; localStorage.setItem(SK,JSON.stringify(SY)); break; }}catch(e){} } }
+if(!SY){ for(const k of (ENV?["stsync.v1","gs3sync.v3","gs3sync.v1"]:["gs3sync.v3","gs3sync.v1"])){ try{const o=JSON.parse(localStorage.getItem(k)); if(o&&o.token){ SY={token:o.token,gist:o.gist||null,dev:Math.random().toString(36).slice(2,8),dirty:true}; localStorage.setItem(SK,JSON.stringify(SY)); break; }}catch(e){} } }
 if(SY&&!SY.dev){SY.dev=Math.random().toString(36).slice(2,8); SY.dirty=false; try{localStorage.setItem(SK,JSON.stringify(SY));}catch(e){}}
 const saveSY=()=>{try{SY?localStorage.setItem(SK,JSON.stringify(SY)):localStorage.removeItem(SK);}catch(e){}};
 function toCompact(st){const o={}; Object.entries(st).forEach(([id,x])=>{ if(x.s||(x.r&&x.r.some(v=>v===0||v===1))) o[id]=[x.s||"",x.seen||0,x.miss||0,x.t||0,(x.r||[]).map(v=>v===1?"1":v===0?"0":"_").join(""),x.v||""]; }); return o;}
@@ -388,9 +461,9 @@ async function gh(path,opt){opt=opt||{};
   const r=await fetch("https://api.github.com"+path,{cache:"no-store",method:opt.method||"GET",body:opt.body?JSON.stringify(opt.body):undefined,
     headers:Object.assign({Authorization:"Bearer "+SY.token,Accept:"application/vnd.github+json"},opt.body?{"Content-Type":"application/json"}:{})});
   if(!r.ok){const e=new Error("HTTP "+r.status); e.status=r.status; throw e;} return r.json();}
-const myFile=()=>"st-dev-"+SY.dev+".json";
+const myFile=()=>PFX+SY.dev+".json";
 async function readDocs(g){ const out=[];
-  for(const [name,f] of Object.entries(g.files||{})){ if(!/^st-dev-.+\.json$/.test(name)) continue;
+  for(const [name,f] of Object.entries(g.files||{})){ if(!(name.startsWith(PFX)&&name.endsWith(".json"))) continue;
     try{ const txt=f.truncated?await (await fetch(f.raw_url,{cache:"no-store"})).text():f.content; const d=JSON.parse(txt); d._own=(name===myFile()); out.push(d); }catch(e){} }
   return out; }
 function newestOther(docs){ let best=null; docs.forEach(d=>{ if(!d._own&&d.at&&Array.isArray(d.at.queue)&&(!best||d.at.t>best.t)) best=d.at; }); return best; }
@@ -469,7 +542,7 @@ $("#mOk").onclick=()=>{const keep={subj:S.subj,topic:S.topic,mode:S.mode}; S={v:
 let tt; function toast(m){const t=$("#toast"); t.textContent=m; t.classList.add("on"); clearTimeout(tt); tt=setTimeout(()=>t.classList.remove("on"),1600);}
 document.addEventListener("keydown",e=>{
   if($("#lightbox").classList.contains("on")){ if(e.key==="Escape"||e.key===" "||e.key==="Enter"){e.preventDefault(); $("#lightbox").classList.remove("on");} return; }
-  if($("#modal").classList.contains("on")||$("#pmodal").classList.contains("on")||$("#smodal").classList.contains("on")) return;
+  if($("#modal").classList.contains("on")||$("#pmodal").classList.contains("on")||$("#smodal").classList.contains("on")||$("#qmodal").classList.contains("on")) return;
   if(e.target.tagName==="SELECT"||e.target.tagName==="INPUT"||e.target.tagName==="SUMMARY") return;
   if(!S.queue.length||S.pos>=S.queue.length) return;
   if(e.key===" "||e.key==="Enter"){e.preventDefault(); if(!S.back) flip(); else if(!nextStep()) unflip(); }
@@ -479,6 +552,59 @@ document.addEventListener("keydown",e=>{
   else if(e.key==="ArrowLeft") prev();
   else if(e.key==="ArrowRight") next();
 });
+/* ---------- Environment & DM: section list (tap a section to open its topics), circle filter, PYQ star ---------- */
+let OPEN=null;
+function navLabel(){ if(S.topic!=="all"){ const g=groups.find(x=>x.key===S.topic); if(g) return (g.circle?CIRC[g.circle]+" ":"")+strip(g.name); }
+  return S.subj==="all"?"All sections":SUBJ[S.subj]; }
+function renderNavBar(){
+  $("#navLbl").textContent=navLabel();
+  document.querySelectorAll("#circRow button").forEach(b=>b.classList.toggle("on",!(S.circ&&S.circ[b.dataset.c]===false)));
+  if($("#navPanel").classList.contains("on")) renderNav();
+}
+function renderNav(){
+  const all=groups.filter(circOK).reduce((n,g)=>n+g.ids.length,0);
+  const rows=[`<div class="nv all${S.subj==="all"?" cur":""}" data-a="all"><span>All sections</span><small>${all} cards</small></div>`];
+  DECK.subjects.forEach(s=>{
+    const ts=groups.filter(g=>g.subj===s.id&&circOK(g)), open=OPEN===s.id;
+    rows.push(`<div class="nv sec${open?" open":""}${S.subj===s.id&&S.topic==="all"?" cur":""}" data-s="${s.id}"><span>${esc(s.name)}</span><small>${open?"tap again: whole section":ts.length+" topics"}</small><i>${open?"▲":"▼"}</i></div>`);
+    if(open) ts.forEach(g=>rows.push(`<div class="nv tp${S.topic===g.key?" cur":""}" data-t="${g.key}"><span>${g.circle?CIRC[g.circle]+" ":""}${esc(strip(g.name))}${g.pyq?' <b class="st">★</b>':""}</span><small>${g.ids.length}</small></div>`));
+  });
+  const p=$("#navPanel"); p.innerHTML=rows.join("");
+  p.querySelectorAll(".nv").forEach(el=>el.onclick=e=>{ e.stopPropagation();
+    if(el.dataset.a){ closeNav(); S.subj="all"; S.topic="all"; rebuild("All sections"); }
+    else if(el.dataset.s){ if(OPEN!==el.dataset.s){ OPEN=el.dataset.s; renderNav(); el.scrollIntoView&&p.querySelector('[data-s="'+OPEN+'"]').scrollIntoView({block:"nearest"}); }
+      else{ closeNav(); S.subj=el.dataset.s; S.topic="all"; rebuild(SUBJ[S.subj]); } }
+    else if(el.dataset.t){ const g=groups.find(x=>x.key===el.dataset.t); closeNav(); S.subj=g.subj; S.topic=g.key; rebuild(strip(g.name)); }
+  });
+}
+function closeNav(){ $("#navPanel").classList.remove("on"); }
+if(ENV){
+  $("#navBtn").onclick=e=>{ e.stopPropagation(); const p=$("#navPanel"); if(p.classList.contains("on")){ closeNav(); return; }
+    OPEN=S.subj==="all"?null:S.subj; renderNav(); p.classList.add("on"); };
+  document.addEventListener("click",e=>{ if(!e.target.closest("#envNav")) closeNav(); });
+  document.querySelectorAll("#circRow button").forEach(b=>b.onclick=()=>{ const c=b.dataset.c; S.circ=Object.assign({g:true,y:true,w:true},S.circ||{});
+    if(S.circ[c]&&["g","y","w"].filter(k=>S.circ[k]).length===1){ toast("Keep at least one"); return; }
+    S.circ[c]=!S.circ[c]; rebuild("Showing "+["g","y","w"].filter(k=>S.circ[k]).map(k=>CIRC[k]).join(" ")); });
+}
+const pyqHTML=t=>`<h3>★ PYQs · ${esc(strip(t.name))}</h3><ul class="pq">${t.pyq.map(q=>`<li>${q}</li>`).join("")}</ul>`;
+const WIDEQ="(min-width:1400px)";
+function bindStar(c){ document.querySelectorAll("[data-pyq]").forEach(b=>b.onclick=e=>{ e.stopPropagation(); openPYQ(c.topic); }); }
+function openPYQ(t){
+  if(matchMedia(WIDEQ).matches){ S.pyqSide=true; save(); sidePYQ(); return; }
+  $("#qbox").innerHTML=pyqHTML(t)+`<div class="row" style="justify-content:flex-end;margin-top:12px"><button class="btn ghost" id="qClose">Close</button></div>`;
+  $("#qmodal").classList.add("on"); $("#qClose").onclick=()=>$("#qmodal").classList.remove("on");
+}
+function sidePYQ(){
+  const el=$("#pyqSide"); if(!ENV){ el.style.display="none"; return; }
+  const c=S.queue&&S.pos<S.queue.length?cards[S.queue[S.pos]]:null, t=c&&c.topic;
+  const show=!!(S.pyqSide&&matchMedia(WIDEQ).matches&&t&&t.pyq&&t.pyq.length);
+  el.style.display=show?"block":"none"; if(!show) return;
+  el.innerHTML=`<button class="x" id="qx" aria-label="Close">×</button>`+pyqHTML(t);
+  $("#qx").onclick=()=>{ S.pyqSide=false; save(); sidePYQ(); };
+}
+$("#qmodal").onclick=e=>{ if(e.target.id==="qmodal") $("#qmodal").classList.remove("on"); };
+matchMedia(WIDEQ).addEventListener("change",sidePYQ);
+$("#progBtn").textContent="Progress by "+UNIT;
 render();
 })();
 </script>

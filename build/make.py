@@ -34,6 +34,9 @@ D['img'] = {str(k): v for k, v in imgs.items() if k not in skip}
 html = open('template.html').read()
 html = html.replace('/*CSS_GS3*/', open('gs3_css.css').read())
 html = html.replace('/*DATA*/', json.dumps(D, ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/'))
+# the Environment & DM deck rides along (built by env/make_env.py)
+ENVF = 'env/site_deck.json'
+html = html.replace('/*ENVDATA*/', open(ENVF).read().replace('</', '<\\/') if os.path.exists(ENVF) else 'null')
 html = html.replace('/*BUILD*/', 'updated ' + (os.environ.get('BUILD_DATE') or '24 Nov'))
 os.makedirs('site', exist_ok=True)
 open('site/index.html', 'w').write(html)
