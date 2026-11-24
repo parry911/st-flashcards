@@ -9,7 +9,7 @@ urgency-of-climate-change:def-main | Why is climate action urgent now? Evidence,
 urgency-of-climate-change:issue-main | What makes the climate challenge harder now, and what must happen by 2030?
 global-temperature-trends:def-main | How much has the world warmed, and what does every extra half degree mean?
 global-temperature-trends:eg-main | Recent temperature records (world and India), and India's response?
-melting-glaciers-ice-sheets:def-main | How fast are Himalayan glaciers and ice sheets melting, with figures?
+melting-glaciers-ice-sheets:def-main | How fast are glaciers and ice sheets melting, and what else is straining the Himalaya?
 melting-glaciers-ice-sheets:cause-main | Why is melting speeding up, what does it cause, and what are India and the world doing?
 oceans-heat-absorption:def-main | How much heat and CO₂ do oceans absorb, and what is it doing to them?
 oceans-heat-absorption:gov-main | India's ocean initiatives, the threats oceans face, and the way forward?
@@ -24,7 +24,7 @@ economic-impacts:issue-main | Why are disaster losses so costly, and how do we c
 panchamrit-india-s-cop26-climate-goals:def-main | What are the five Panchamrit goals?
 panchamrit-india-s-cop26-climate-goals:fact-main | What does NITI's net-zero report say, and how have India's NDC targets moved from 2015 to 2035?
 country-specific-examples:eg-main | What did Canada's 2023 wildfires show about climate change?
-challenges-solutions:issue-main | What are India's main climate challenges: emissions, hard sectors, CBAM, methane?
+challenges-solutions:issue-main | What are India's main climate challenges, and how do heavy industry and CBAM add to them?
 challenges-solutions:gov-main | India's climate measures, and practical solutions with examples?
 climate-change-sea-level-rise:fact-main | How fast is the sea rising around India, and what's driving it?
 climate-change-sea-level-rise:effect-on-india | What does sea-level rise mean for India's coasts, cities, Sundarbans and islands?
@@ -72,7 +72,7 @@ cop-27-sharm-el-sheikh:def-main | COP27: what was its crowning achievement, the 
 cop-27-sharm-el-sheikh:gov-main | India's two big moves at COP27, and why they mattered?
 cop-27-sharm-el-sheikh:gov-submission-of-the-lt-leds | What is India's LT-LEDS, and what does it focus on?
 cop-27-sharm-el-sheikh:issue-main | Where did COP27 fall short, and what next?
-cop-28-dubai:def-main | COP28: the stocktake, the "UAE Consensus", the pledges, and what happened on loss and damage?
+cop-28-dubai:def-main | COP28: where and when, its four main outcomes, and how much they delivered?
 cop-28-dubai:gov-main | What did India refuse at COP28 and why, and what did it launch and offer?
 cop-28-dubai:issue-main | Where did COP28 fall short, and what next?
 cop-29-baku:def-main | COP29: what was the finance goal, the compromise, and the carbon-market breakthrough?
@@ -80,7 +80,7 @@ cop-29-baku:def-main-2 | What else came out of COP29, and two examples from it?
 cop-29-baku:gov-main | How did India respond to the COP29 finance deal?
 cop-29-baku:gov-main-2 | India's other COP29 positions, the deal's flaws, and the way forward?
 cop-29-baku:news-extra-cop29-side-outcome | What is the Declaration on Green Digital Action, and why does digital tech matter?
-cop-30-belem:def-main | COP30: TFFF, adaptation finance, just transition and adaptation indicators?
+cop-30-belem:def-main | Where and when was COP30, and what were its four main outcomes?
 cop-30-belem:def-bel-m-package-195-parties | What is in the Belém Package, and what else was launched at Belém?
 cop-30-belem:use-main | Why does COP30 matter, and how has the TFFF started?
 cop-30-belem:gov-main | India's key interventions at COP30?

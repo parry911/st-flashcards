@@ -15,6 +15,7 @@ for t in D['topics']:
             ch=p[i]
             if ch in '([': d+=1
             elif ch in ')]': d=max(0,d-1)
+            if p[i:i+5]==' + + ': k+=1; out+=f' [{k}] '; i+=5; continue
             if p[i:i+3]==' + ': k+=1; out+=f' [{k}{"" if d==0 else "'"}] '; i+=3; continue
             if p[i:i+3]==' → ': a+=1; out+=f' →a{a} '; i+=3; continue
             out+=ch; i+=1

@@ -74,8 +74,10 @@ def split_long(html):
 
 def plus_cuts(html):
     """plain-text positions and bracket depth of Perry's ' + ' joins; arrows ' → ' listed separately"""
-    p = plain(html); d = 0; cuts = []; arrows = []
+    p = plain(html); d = 0; cuts = []; arrows = []; skip = -1
     for i, ch in enumerate(p):
+        if i <= skip: continue
+        if p[i:i+5] == ' + + ': cuts.append((i, d, 5)); skip = i + 3; continue   # Perry's doubled '+ +' is one join
         if ch in '([': d += 1
         elif ch in ')]': d = max(0, d - 1)
         elif p[i:i+3] == ' + ': cuts.append((i, d, 3))
@@ -107,7 +109,7 @@ def plus_split(html, spec):
     points = [[]]; rest = html; offset = 0
     for c, w, kind in sel:
         a_, b_ = split_html(rest, c - offset)
-        points[-1].append(a_); b_ = re.sub(r'^((?:<[^>]+>)*)[+→]\s*', r'\1', b_)
+        points[-1].append(a_); b_ = re.sub(r'^((?:<[^>]+>)*)(?:[+→]\s*)+', r'\1', b_)
         if kind == 'pt': points.append([])
         offset = c + w; rest = b_
     points[-1].append(rest)
