@@ -13,7 +13,7 @@ kunming-montreal-global-biodiversity-fra:def-main | What does the KMGBF aim for,
 kunming-montreal-global-biodiversity-fra:use-main | Why was the KMGBF needed, how far off track is the world, and how does India map onto it?
 kunming-montreal-global-biodiversity-fra:issue-main | What is the KMGBF's biggest gap, and how do we close it?
 india-nbsap-2024-30:def-main | NBSAP 2024–30: what is it aligned with, and its targets, approach, finance and mechanism?
-india-nbsap-2024-30:use-significance-india-s-status | India's biodiversity status in figures: forest cover, carbon, restoration, Ramsar sites, wildlife, PAs?
+india-nbsap-2024-30:use-significance-india-s-status | Where does India stand on biodiversity: its latest report and the key figures?
 india-nbsap-2024-30:eg-main | One NBSAP success, one mixed result, and the tools India uses to implement the plan?
 india-nbsap-2024-30:issue-main | Why could the NBSAP fall short, and how do we fix it?
 case-study-of-eco-bridge-a-k-a-eco-ducts:eg-main | Where is India's long eco-underpass and what is it for?
@@ -24,13 +24,13 @@ wpa-issues-and-features:def-protected-areas-pa-hierarchy | The four kinds of pro
 wpa-issues-and-features:gov-statutory-enforcement-bodies | Four bodies that enforce wildlife law, and what each does?
 wpa-issues-and-features:use-main | What has the WPA achieved in numbers, with one success and one failure?
 wpa-issues-and-features:gov-main | India's wildlife programmes and bodies (eight)?
-wpa-issues-and-features:issue-challenges-current-challenges-critical-a | Where does wildlife protection fail today: enforcement, conflict, federalism, carrying capacity?
+wpa-issues-and-features:issue-challenges-current-challenges-critical-a | Where does wildlife protection fail today? Four problem areas.
 wpa-issues-and-features:fix-main | How do we fix wildlife protection and human–wildlife conflict?
 nwap:def-main | What does the National Wildlife Action Plan focus on, and where does it fall short?
 jan-vishwas-amendment-of-provisions-act:def-main | What did the Jan Vishwas Act 2023 change in environmental law, and how?
 jan-vishwas-amendment-of-provisions-act:use-main | Why decriminalise, what changed in the EPA and Water Act, and what is coming next?
 jan-vishwas-amendment-of-provisions-act:issue-main | Why is the decriminalised law called toothless, and how do we fix it?
-the-biological-diversity-act-2002:def-main | How does the Biological Diversity Act protect biodiversity: bodies, heritage sites, benefit-sharing?
+the-biological-diversity-act-2002:def-main | How does the Biological Diversity Act protect biodiversity and share its benefits?
 the-biological-diversity-act-2002:issue-main | How did the 2023 amendment and 2025 rules weaken or change the BD Act?
 the-biological-diversity-act-2002:eg-main | One benefit-sharing success and one biopiracy case under the BD Act?
 the-biological-diversity-act-2002:fact-genetic-resources-tk | Examples of traditional knowledge, the laws that protect it, its problems and the way forward?
@@ -47,7 +47,7 @@ forest-conservation-act-1980:issue-main | Where does the FCA fall short, and wha
 forest-rights-act-2006:def-main | What rights does the FRA give, to whom, and why does it matter?
 forest-rights-act-2006:eg-main | Two FRA successes, one failure, and what the government is doing about pending claims?
 forest-rights-act-2006:issue-main | Why is the FRA poorly implemented, and how do we fix it?
-forest-conservation-amendment-act-2023:def-main | How did the 2023 amendment change the meaning of "forest", and what has the SC said since?
+forest-conservation-amendment-act-2023:def-main | What did the 2023 amendment rename, how did it change the meaning of "forest", and what has the SC said since?
 forest-conservation-amendment-act-2023:def-main-2 | What is the border exemption in the 2023 amendment, and the government's reason for it?
 forest-conservation-amendment-act-2023:issue-main | What does the 2023 amendment cost ecologically, and what is the way forward?
 the-van-sanrakshan-evam-samvardhan-amend:def-main | What do the Van Amendment Rules 2025 prioritise, and what changed for linear projects and critical minerals?
@@ -66,11 +66,11 @@ international-conventions:issue-main | Why do biodiversity conventions underdeli
 ecologically-sensitive-area:def-main | What is an eco-sensitive area, who notifies it, and why does it matter?
 ecologically-sensitive-area:eg-main | Three ESZ examples (worked, mixed, failed), and India's response?
 ecologically-sensitive-area:issue-main | Why do ESAs face resistance, and how do we fix it?
-great-nicobar-island-project:def-main | What is the Great Nicobar project, what does it include, and why is it planned?
+great-nicobar-island-project:def-main | What is the Great Nicobar project, what does it include, why, and where do its clearances stand?
 great-nicobar-island-project:issue-main | What are the concerns over Great Nicobar, and the way forward?
 wetland-conservation:fact-main | India's wetlands in numbers, and their main problems?
 wetland-conservation:gov-main | What do the Wetland Rules 2017 require, and which other wetland initiatives exist?
-wetland-conservation:def-main | Ramsar: India's sites (oldest, newest), wetland cities and the Montreux Record?
+wetland-conservation:def-main | Ramsar: when India joined, its sites (oldest, newest), wetland cities and the Montreux Record?
 wetland-conservation:def-main-2 | What is Ramsar's "wise use", India's resolution at COP15, and what unwise use looks like?
 mangrove-cover:def-main | What are mangroves, how much does India have, and why do they matter?
 mangrove-cover:eg-main | One mangrove success, one failure, and India's mangrove schemes?
@@ -78,7 +78,7 @@ mangrove-cover:issue-main | What threatens mangroves, and the way forward?
 coral-bleaching:def-main | What is coral bleaching, what do corals need, and where are India's reefs?
 coral-bleaching:use-main | Why reefs matter, a bleaching example and a recovery example, and how India protects corals?
 coral-bleaching:issue-main | What threatens coral reefs, and how do we protect them?
-peatlands:def-main | What are peatlands, why do they matter, and what threatens them?
+peatlands:def-main | What are peatlands, how much is at risk, which initiatives exist, and what threatens them?
 marine-protected-areas:def-main | What is a marine protected area? Three examples in India?
 unregulated-sand-mining:def-main | Why is sand so in demand, and what does unregulated sand mining cause?
 unregulated-sand-mining:gov-main | What law and guidelines govern sand mining, and what are the solutions?

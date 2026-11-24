@@ -30,7 +30,8 @@ for t in D['topics']:
     for tg in t['toggles']: NODEPATH[tg['node']] = tg['path']
 ROLES = {'def', 'how', 'use', 'issue', 'fix', 'gov', 'news', 'fact', 'tbl', 'pic', 'eg', 'cause', 'effect'}
 SPLIT_OVER = 75
-MAXLIST = 5   # paragraphs longer than this open in pieces, cut only at Perry's own sentence ends
+MAXLIST = 5
+AUTO = []   # paragraphs longer than this open in pieces, cut only at Perry's own sentence ends
 
 errors = []
 def err(m): errors.append(m)
@@ -72,36 +73,43 @@ def split_long(html):
     return [x for x in out if plain(x).strip()]
 
 def plus_cuts(html):
-    """plain-text positions and bracket depth of Perry's ' + ' joins"""
-    p = plain(html); d = 0; cuts = []
+    """plain-text positions and bracket depth of Perry's ' + ' joins; arrows ' → ' listed separately"""
+    p = plain(html); d = 0; cuts = []; arrows = []
     for i, ch in enumerate(p):
         if ch in '([': d += 1
         elif ch in ')]': d = max(0, d - 1)
-        elif p[i:i+3] == ' + ': cuts.append((i, d))
-    return cuts
+        elif p[i:i+3] == ' + ': cuts.append((i, d, 3))
+        elif p[i:i+3] == ' → ': arrows.append((i, d, 3))
+    return cuts, arrows
 
 def plus_split(html, spec):
-    """'+' joins become line breaks (one point shown as a list) or, marked '!', start a new point.
-    spec: '' or '*' = every top-level '+' is a line break; numbers (1-based over all '+') pick joins; '!N' = new point.
-    Returns a list of points, each a list of pieces. The '+' itself is the only thing removed."""
-    cuts = plus_cuts(html); kinds = {}
+    """Joins become line breaks (one point shown as a list) or, marked '!', start a new point.
+    spec tokens joined by '.': '' or '*' = every top-level '+' a line break; '+' = every top-level '+' a new point;
+    N = the Nth '+' (1-based, any depth); aN = the Nth arrow '→'; prefix '!' = start a new point there.
+    Only the joining '+' or '→' itself is dropped: no word changes."""
+    cuts, arrows = plus_cuts(html); kinds = {}
     toks = [x for x in spec.split('.') if x] or ['*']
     for x in toks:
         if x in ('*', '+'):
-            for k, (pos, d) in enumerate(cuts, 1):
-                if d == 0: kinds.setdefault(k, 'br' if x == '*' else 'pt')
-        elif x.startswith('!'): kinds[int(x[1:])] = 'pt'
-        else: kinds[int(x)] = 'br'
-    for k in kinds:
-        if not 1 <= k <= len(cuts): err(f'plus join {k} not in line ({len(cuts)} joins)')
-    sel = [(cuts[k-1][0], kinds[k]) for k in sorted(kinds) if 1 <= k <= len(cuts)]
-    if not sel: err('no top-level + join to cut in: ' + plain(html)[:70])
+            for k, (pos, d, w) in enumerate(cuts, 1):
+                if d == 0: kinds.setdefault(('p', k), 'br' if x == '*' else 'pt')
+            continue
+        kind = 'pt' if x.startswith('!') else 'br'; x = x.lstrip('!')
+        if x.startswith('a'):
+            k = int(x[1:]); key = ('a', k); ok = 1 <= k <= len(arrows)
+        else:
+            k = int(x); key = ('p', k); ok = 1 <= k <= len(cuts)
+        if not ok: err(f'join {x} not in line ({len(cuts)} +, {len(arrows)} arrows): ' + plain(html)[:60]); continue
+        kinds[key] = kind
+    pos = lambda key: (cuts if key[0] == 'p' else arrows)[key[1] - 1]
+    sel = sorted(((pos(k)[0], pos(k)[2], v) for k, v in kinds.items()), key=lambda x: x[0])
+    if not sel: err('no join to cut in: ' + plain(html)[:70])
     points = [[]]; rest = html; offset = 0
-    for c, kind in sel:
+    for c, w, kind in sel:
         a_, b_ = split_html(rest, c - offset)
-        points[-1].append(a_); b_ = re.sub(r'^((?:<[^>]+>)*)\+\s*', r'\1', b_)
+        points[-1].append(a_); b_ = re.sub(r'^((?:<[^>]+>)*)[+→]\s*', r'\1', b_)
         if kind == 'pt': points.append([])
-        offset = c + 3; rest = b_
+        offset = c + w; rest = b_
     points[-1].append(rest)
     return [[x for x in pt if plain(x).strip()] for pt in points]
 
@@ -165,13 +173,13 @@ for f in sorted(glob.glob('spec/*.txt')):
             persent = tok.endswith('/s')
             if persent: tok = tok[:-2]
             plus = None
-            mp = re.search(r'/\+([\d.!*+]*)$', tok)
+            mp = re.search(r'/\+([\da.!*+]*)$', tok)
             if mp: plus = mp.group(1); tok = tok[:mp.start()]
             if '>' in tok:   # A>B: Perry's short line A becomes the label shown before point B
                 a, b = tok.split('>')
                 persent_b = b.endswith('/s'); b = b[:-2] if persent_b else b
                 plus_b = None
-                mp = re.search(r'/\+([\d.!*+]*)$', b)
+                mp = re.search(r'/\+([\da.!*+]*)$', b)
                 if mp: plus_b = mp.group(1); b = b[:mp.start()]
                 ua, ub = use(a), use(b)
                 if ua and ub:
@@ -267,6 +275,7 @@ for ti, t in enumerate(D['topics']):
             m = re.fullmatch(r'<span class="lst">(.*)</span>', r.get('t', ''), re.S)
             items = re.findall(r'<span class="li[^"]*">(.*?)</span>(?=<br><span class="li|$)', m.group(1), re.S) if m else []
             if len(items) > MAXLIST:
+                AUTO.append(c['where'])
                 k = -(-len(items) // MAXLIST); size = -(-len(items) // k)
                 for j in range(0, len(items), size):
                     chunk = items[j:j + size]
@@ -297,4 +306,5 @@ json.dump(DECK, open('deck.json', 'w'), ensure_ascii=False)
 n = sum(len(t['cards']) for t in DECK['topics'])
 from collections import Counter
 pts = Counter(min(sum(1 for r in c['rows'] if 't' in r), 14) for t in DECK['topics'] for c in t['cards'])
+print('auto-cut lists (cut these by hand):', len(AUTO), ' '.join(sorted(set(a.split(':')[0][-6:-4]+':'+a.split(':')[1] for a in AUTO)))[:400])
 print('cards', n, 'units placed', len(used), 'of', len(U), '| points per card', sorted(pts.items()))

@@ -4,7 +4,7 @@ C fact | - | k:u1
 C def | l:u2 | u2/+1.2.!3.4.5
 C eg+gov | - | u3/+ u4/+
 # Criteria for Biodiversity hotspots (+ "Why biodiversity varies across India" stays on the same card)
-C def+how | - | u5 u6 u7/+
+C def+how | - | u5 u6 u7/+1.2.!3.4.5
 # Western Ghats
 C def+use | - | u8 u9/+
 C eg+gov | - | u10/+ u11
@@ -20,7 +20,7 @@ C issue+fix | - | u33 u34/+
 # NBSAP 2024-30
 C def | - | u35/+ h:u36 u37 u38 u39 u40
 C use | u41 | u42 u43 u44 u45 u46 u47 u48+u49 u50
-C eg+gov | - | u51/+ u52/+1.2.3.4.5.6
+C eg+gov | - | u51/+ u52/+1.2.!3.4.5.6
 C issue+fix | - | u53/+ u54/+
 # Eco-bridge
 C eg | - | u55
@@ -32,9 +32,9 @@ C tbl | - | u62
 C def | u63 | u64 u65 u66 u67 u68
 C gov | u69 | u70 u71 u72 u73
 C use+eg | - | u74/+ u75/+
-C gov | - | u76/+
-C issue | u77 | h:u78 u79 u80 h:u81 u82 u83 u84/+ h:u85 u86 u87/+
-C fix | - | u88/+1.2.3.!4.5.6.7.8.9.!10.11
+C gov | - | u76/+1.2.!3.4.5.6.7
+C issue | u77 | h:u78 u79 u80 h:u81 u82 u83 u84/+1.2.!3.4.5 h:u85 u86 u87/+
+C fix | - | u88/+1.2.3.!4.5.6.!7.8.9.!10.11
 # NWAP
 C def+issue | - | u89 u90
 # Jan Vishwas
@@ -45,12 +45,12 @@ C issue+fix | - | h:u99 u100 u101 u102/+
 C def+how | - | u103 u104 u108/+ u109
 C issue | - | u105 u106 u107 u110
 C eg | - | u111/+
-C fact | l:u112 | u112/+1.2.!3.4.5.6.7.8.9
+C fact | l:u112 | u112/+1.2.!a1.3.4.5.!6.7.!a2.!a3.8.9
 # Forests
 C def+use | - | u113/+1.2.4 u121/+
 C fact | - | h:u114 u115 u116 u117 u118 u119 u120
-C eg+gov | - | u122/+ u123/+1.2.3.4.5.6
-C issue+fix | - | u124/+ u125/+
+C eg+gov | - | u122/+ u123/+1.2.!3.4.5.6
+C issue+fix | - | u124/+ u125/+1.2.!3.4.5
 # Indian Forest Act
 C def | - | u126 u127/+
 C use+eg+gov | - | u128 u129/+ u130
@@ -68,15 +68,15 @@ C def+eg | - | u147/+ h:u148 u149 u150 u154/+
 C def+use | - | h:u151 u152 u153
 C issue+fix | - | h:u155 u156 u157 u158/+
 # Van Amendment Rules 2025
-C def | - | u159 u160 u161/+
-C def+eg | - | u162/+ u163/+ u164 u165/+
-C issue+fix | - | u166/+ u167/+
+C def | - | u159 u160/+a1.a2 u161/+a1.1
+C def+eg | - | u162/+a1.1.2 u163/+ u164/+a1.a2 u165/+
+C issue+fix | - | u166/+a1.1 u167/+
 # ARAVALLIS
 C def+use | - | u168 u169/+
-C news+issue | - | u170/s u171/+
+C news+issue | - | u170/+a1.a2.a3 u171/+
 C issue+gov+fix | - | u172/+ u173/+ u174/+
-C issue+fix | l:u175 | u175/+ u176/+
-C gov | @N21 | u177 u178
+C issue+fix | l:u175 | u175/+1.2.3.4.!5.6.!7.8 u176/+1.2.3.!4.5.6
+C gov | @N21 | u177/+a1.a2 u178
 # Sacred groves
 C news | - | u179
 # International conventions
@@ -85,17 +85,17 @@ C def | - | u183
 C eg+gov | - | u186/+ u187/+
 C issue+fix | - | u188/+ u189/+
 # Ecologically sensitive area
-C def+use | - | u190/+ u191/+
+C def+use | - | u190/+1.a1 u191/+
 C eg+gov | - | u192/+ u193/+
-C issue+fix | - | u194/+ u195/+
+C issue+fix | - | u194/+ u195/+1.2.3.!4.5
 # Great Nicobar
 C def+use+eg | - | u196 u197/+ u198/+ u199/+
-C issue+fix | - | u200/+ u201 u202/+
+C issue+fix | - | u200/+1.!2.3.4.!5 u201 u202/+
 # Wetland conservation
 C fact+issue | - | u203 u206 u208/+
-C gov | - | u204 u205/+
+C gov | - | u204 u205/+1.2.3.!4.5.6
 C def | - | u207 u209 u210 u211 u212
-C def+fact | - | u213/+ u214 u215/+
+C def+fact | - | u213/+!a1.2.3.4 u214 u215/+
 # Mangrove cover
 C def+use | - | u216/+ u217/+
 C eg+gov | - | u218/+ u219/+
@@ -110,14 +110,14 @@ C def+issue | - | u230 u231 u232/+ u233/+ u234
 C def | - | u235 u236
 # Unregulated sand mining
 C def+issue | - | u237 u238 u239
-C gov+fix | - | u240/+ u241/+ u242
+C gov+fix | - | u240/+1.2.!3.4.5 u241/+ u242
 C news | - | u243
 # Coastal sand mining
 C issue+eg+gov | - | u244/+ u245 u246/+
-C cause+effect+fix | u247 | u248/+ u249/+ u250/+ u251/+
-C cause+effect+fix | u252 | u253 u254/+ u255/+ u256/+ u257/+
+C cause+effect+fix | u247 | u248/+ u249/+1.!2.3.4.5 u250/+ u251/+1.2.!3.4.5
+C cause+effect+fix | u252 | u253 u254/+ u255/+ u256/+ u257/+1.2.!3.4.5
 C fact+gov+fix | u258 | u259/+ u260/+ u261/+
 # High Seas Treaty
 C def | - | u262 u263/+
-C use+eg+gov | - | u264/+2 u265/+ u266/+
+C use+eg+gov | - | u264/+2 u265/+ u266/+a1.a2.1.2
 C issue+fix | - | u267 u268/+
