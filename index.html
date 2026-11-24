@@ -287,6 +287,7 @@ mark{background:#d6efd9;color:inherit;border-radius:3px;padding:0 2px}
 .nv.sec.open small{color:var(--accent)}
 .nv.tp{padding-left:28px;border-top:0;font-size:13.5px;padding-top:7px;padding-bottom:7px}
 .nv.cur{color:var(--accent)}
+.nv.whole{font-weight:600;color:var(--accent)}
 .nv .st{color:#c9a227;font-weight:700}
 .star{border:0;background:#fbf3d6;color:#8a6516;border-radius:999px;padding:3px 9px;font:inherit;font-size:12px;font-weight:700;cursor:pointer}
 @media (prefers-color-scheme: dark){.star{background:#3a3218;color:#e3c66a}}
@@ -777,14 +778,16 @@ function renderNav(){
   const rows=[`<div class="nv all${S.subj==="all"?" cur":""}" data-a="all"><span>All sections</span><small>${all} cards</small></div>`];
   DECK.subjects.forEach(s=>{
     const ts=groups.filter(g=>g.subj===s.id&&circOK(g)), open=OPEN===s.id;
-    rows.push(`<div class="nv sec${open?" open":""}${S.subj===s.id&&S.topic==="all"?" cur":""}" data-s="${s.id}"><span>${esc(s.name)}</span><small>${open?"tap again: whole section":ts.length+" topics"}</small><i>${open?"▲":"▼"}</i></div>`);
+    rows.push(`<div class="nv sec${open?" open":""}${S.subj===s.id&&S.topic==="all"?" cur":""}" data-s="${s.id}"><span>${esc(s.name)}</span><small>${ts.length} topics</small><i>${open?"▲":"▼"}</i></div>`);
+    if(open) rows.push(`<div class="nv tp whole${S.subj===s.id&&S.topic==="all"?" cur":""}" data-w="${s.id}"><span>Whole section</span><small>${ts.reduce((n,g)=>n+g.ids.length,0)}</small></div>`);
     if(open) ts.forEach(g=>rows.push(`<div class="nv tp${S.topic===g.key?" cur":""}" data-t="${g.key}"><span>${g.circle?CIRC[g.circle]+" ":""}${esc(strip(g.name))}${g.pyq?' <b class="st">★</b>':""}</span><small>${g.ids.length}</small></div>`));
   });
   const p=$("#navPanel"); p.innerHTML=rows.join("");
   p.querySelectorAll(".nv").forEach(el=>el.onclick=e=>{ e.stopPropagation();
     if(el.dataset.a){ closeNav(); S.subj="all"; S.topic="all"; rebuild("All sections"); }
-    else if(el.dataset.s){ if(OPEN!==el.dataset.s){ OPEN=el.dataset.s; renderNav(); el.scrollIntoView&&p.querySelector('[data-s="'+OPEN+'"]').scrollIntoView({block:"nearest"}); }
-      else{ closeNav(); S.subj=el.dataset.s; S.topic="all"; rebuild(SUBJ[S.subj]); } }
+    else if(el.dataset.s){ OPEN=OPEN===el.dataset.s?null:el.dataset.s; renderNav();   /* tap opens the topics, tap again folds them */
+      if(OPEN) p.querySelector('[data-s="'+OPEN+'"]').scrollIntoView({block:"nearest"}); }
+    else if(el.dataset.w){ closeNav(); S.subj=el.dataset.w; S.topic="all"; rebuild(SUBJ[S.subj]); }
     else if(el.dataset.t){ const g=groups.find(x=>x.key===el.dataset.t); closeNav(); S.subj=g.subj; S.topic=g.key; rebuild(strip(g.name)); }
   });
 }
