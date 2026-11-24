@@ -5,7 +5,7 @@ non-fossil-share-of-installed-capacity:fact-main | Where does India's non-fossil
 solar-energy:fact-main | India's installed solar capacity and rank, with two examples and one conflict?
 solar-energy:gov-pm-surya-ghar-muft-bijli-yojana-pmsgmby | PM Surya Ghar: its objective, India's solar potential, and what drives growth?
 solar-energy:gov-main | What do ALMM and PM-KUSUM do?
-solar-energy:issue-challenges | What are the challenges for solar in India, including technology gaps?
+solar-energy:issue-challenges | What are the challenges for solar in India, including technology gaps, and the measures taken?
 solar-energy:gov-green-grids-initiative-ggi-osowog | What is GGI–OSOWOG, who launched it, and how will it be built?
 wind-energy:def-main | India's wind capacity, offshore potential and rank, and its manufacturing strength?
 wind-energy:eg-main | One wind success, one conflict, and India's wind policies?
@@ -25,7 +25,7 @@ nuclear-energy-mission-budget-2025-26:fact-target-roadmap | The Nuclear Energy M
 nuclear-energy-mission-budget-2025-26:gov-private-indigenous-push | How is India opening nuclear to private players and indigenous reactors?
 nuclear-energy-mission-budget-2025-26:use-key-relevance-challenge | Why nuclear suits India, its fuel problem, and one success and one stuck project?
 hydrogen:def-main | India's hydrogen production, its energy density, and what green hydrogen is?
-hydrogen:def-blue-hydrogen-blue-hydrogen-the-bridge-f | How is blue hydrogen made, and what does India need for it?
+hydrogen:def-blue-hydrogen-blue-hydrogen-the-bridge-f | How is blue hydrogen made, why is it rising, and what does India need for it?
 hydrogen:def-pink-or-red-hydrogen-the-nuclear-option | How is pink hydrogen made, and what is India doing on it?
 hydrogen:eg-main | Two green hydrogen examples, and India's hydrogen initiatives and mission targets?
 hydrogen:issue-main | What holds green hydrogen back, and the way forward?
@@ -34,4 +34,4 @@ biofuels:gov-main | India's biggest biofuel, the National Biofuel Policy, and th
 biofuels:fact-main | What has ethanol blending achieved, the measures and concerns, and two examples?
 methanol:def-main | What is methanol made from, and India's methanol initiatives?
 geothermal-energy:fact-main | India's geothermal potential, what exists, the best sites, and the 2025 policy?
-underground-coal-gasification:def-main | What is India's coal gasification target, the steps taken, and the problems?
+underground-coal-gasification:def-main | What is India's coal gasification target, the steps taken, the problems, and the fixes?

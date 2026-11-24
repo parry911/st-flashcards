@@ -2,21 +2,21 @@
 # Benefits of RE
 C use | - | u741+u742+u743+u744 u745/+
 # Challenges of RE
-C issue+fix | - | u746+u747+u748+u749 u750/+ u751/+
+C issue+fix | - | u746+u747+u748+u749 u750/+1.2.!3.4.5 u751/+
 # Non-fossil share (loose line under the section)
 C fact | - | u752/+
 # Solar
-C fact+eg | - | u754 u753/+
+C fact+eg | - | u754 u753/+1.!a1
 C gov | u755 | u756 u757 u758 u759 u760
 C gov | - | u761 u762
-C issue | u763 | u764 h:u765 u766 u767 u768 u769/+
-C gov | u770 | u771 u772 u773 u774
+C issue | u763 | u764 h:u765 u766 u767 u768 u769/+1.!a1.2
+C gov | u770 | u771/+a1 u772 u773 u774
 # Wind
 C def+use | - | u775/+ u776
 C eg+gov | - | u777/+ u778/+
 C issue+fix | - | u779/+ u780/+
 # Biomass
-C def | - | u781 u782/+ u783/+ u784/+
+C def | - | u781 u782/+ u783/+1.!a2.2.3.!4 u784/+
 C use+eg+gov | - | u785/+ u786/+ u787/+
 C issue+fix | - | u788/+ u789/+
 # Waste-to-energy
@@ -38,13 +38,13 @@ C use+issue+eg | u835 | u836 u837 u838/+
 C def | - | u839 u840 u841
 C def | u842 | u843 u844 u845
 C def | u846 | u847 u848 u849 u850
-C eg+gov | - | u851/+ u852/+
+C eg+gov | - | u851/+ u852/+1.!4.5.6.7
 C issue+fix | - | u853/+ u854/+
 # Biofuels
 C def+issue | - | u855 u856 u857 u858 u859 u860 u861
 C gov | - | u862 u863 u864
-C fact+issue+eg | - | u865/+ u866/+ u867 u868/+
+C fact+issue+eg | - | u865/+1.2.!3.4.5 u866/+1.2.3.!a2.4.5.6 u867 u868/+
 # Methanol, Geothermal (both lines of the ~300 MW / 20 kW clash kept), UCG
 C def | - | u869 u870 u871
 C fact | - | u872 u873 u874 u875/+
-C def+gov | - | u876 u877/+1.2.!3.4.5
+C def+gov | - | u876 u877/+1.2.!3.!a3.4.5
