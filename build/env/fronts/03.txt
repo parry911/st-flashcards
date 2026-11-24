@@ -1,0 +1,67 @@
+# Question fronts, 3. Pollution
+impact-thinking-framework:def-main | What is the impact-thinking framework for any pollution answer, and how is green GDP calculated?
+air:use-relevance-of-coal-for-india-s-energy-sec | Why does coal still matter for India's energy security?
+air:def-carbon-capture | What is India doing on carbon capture, and why do we need it?
+air:issue-carbon-capture | What holds back carbon capture, and what should be done?
+air:cause-air-pollution-statistics | Why is India's air so bad, how bad is it (IQAir 2025), and what does it cost?
+air:def-smog-types-and-gothenburg-protocol | Two types of smog and how each forms, and what the Gothenburg Protocol does?
+air:gov-national-clean-air-programme-2019 | NCAP: who funds it, its target, who runs it, its goal, and how it has done?
+air:tbl-initiatives-by-india | How did the WHO tighten air quality guidelines in 2021, and how far behind are India's standards?
+air:gov-initiatives-by-india | What tools does India use for Delhi's air: monitoring, CAQM, GRAP stages?
+air:fact-delhi | Delhi's air: what it costs, where the pollution comes from, and why winters are worst?
+air:eg-initiatives-by-india | Which city cleaned its air and how, and what is the fix for Delhi?
+air:how-solution-to-air-pollution-electric-cars | How are EVs being pushed in India: V2G, schemes, current share?
+air:use-solution-to-air-pollution-electric-cars | Why do EVs cut emissions, and what holds them back?
+air:gov-3-key-government-initiatives | Three government missions that cut transport and energy emissions?
+water:fact-availability-stress | India's water stress in numbers: share of water, wastewater, groundwater use, future demand?
+water:fact-cgwb-2025-6-762-units | What does CGWB 2025 say about groundwater, why is it falling, and what is being done?
+water:issue-gw-pollution-cgwb-2025 | What pollutes India's groundwater, the deeper causes, and which tech can help?
+water:def-availability-stress | What is "water bankruptcy", why has the world reached it, and the fix?
+water:gov-availability-stress | Why does urban water governance fail, and what works?
+water:fact-rivers | How polluted are India's rivers, from what, and with what impact?
+water:gov-rivers | Laws and schemes for rivers, how Namami Gange is doing, why earlier plans failed, and what next?
+water:issue-industrial-river-pollution | What does industry dump into rivers, two examples, and the fix?
+water:gov-schemes-missions | What do the National Water Mission, Jal Jeevan Mission and Jal Sanchay do?
+water:gov-schemes-missions-2 | What do PMKSY, Amrit Sarovar and AMRUT 2.0 do?
+water:how-national-perspective-plan-1980-nwda | River interlinking: the plan, the case for it, the case against, and the first link?
+water:fix-way-forward-innovations | The way forward on water, and what Mission Kakatiya achieved?
+water:gov-legislation | The Water Act, National Water Policy 2012, and what the 2020 draft wants to change?
+land-degradation:def-main | What is land degradation, with one success and one failure?
+land-degradation:use-significance-1-global-context-impact | Why does land degradation matter globally? Four facts.
+land-degradation:def-pillars-key-features-2-international-fra | Three international frameworks against land degradation?
+land-degradation:gov-india-s-response-challenges-causes-3-ind | India's land restoration target, progress, status and schemes?
+land-degradation:cause-india-s-response-challenges-causes-3-ind | How much of India is degraded, why, with what effects, and the remedies?
+land-degradation:fix-way-forward-4-the-way-forward-local-wisd | Way forward on land: landscape restoration, local techniques, invasive species?
+plastic-pollution:def-main | How much plastic waste does India produce, and how is it trending?
+plastic-pollution:tbl-main | The main types of plastic, and how to remember each?
+plastic-pollution:eg-main | One plastic-ban success, one failure, and India's response?
+plastic-pollution:issue-main | Why is plastic pollution hard to beat, and the way forward?
+plastic-pollution:gov-india-s-response-measures | India's four main plastic measures?
+oil-spills:eg-main | Three oil spill examples, the laws that apply, and unique fixes?
+oil-spills:def-maritime-disasters | What counts as a maritime disaster, recent cases off Kerala, and the problems behind them?
+oil-spills:gov-main | Which rules govern ship safety and spills, and the way forward?
+solid-waste:fact-main | How much solid waste India makes and treats, where it's heading, and why management fails?
+solid-waste:gov-main | What changed with the SWM Rules 2026, and other waste rules and schemes?
+solid-waste:eg-main | Which cities manage waste well, and how?
+e-waste:fact-main | India's e-waste in numbers, and why e-waste is a special problem?
+e-waste:gov-india-legislations-and-rules | How have India's e-waste rules evolved from 2011 to 2022?
+e-waste:gov-main | What do the Basel and Stockholm Conventions do?
+e-waste:issue-main | What goes wrong in e-waste recycling, the fix, and two examples?
+hazardous-and-biomedical-waste:def-hazardous-waste | What is hazardous waste, the rule that governs it, and its problems?
+hazardous-and-biomedical-waste:def-biomedical-waste | How much biomedical waste India makes, the rule for it, and its problems?
+hazardous-and-biomedical-waste:fix-main | The way forward on hazardous and biomedical waste, with one failure and one success?
+mercury-emissions:def-main | What forms does mercury take, and what does the Minamata Convention do?
+mercury-emissions:use-main | Why is mercury so harmful, and where does it come from?
+mercury-emissions:eg-main | Two mercury poisoning cases, and India's response?
+mercury-emissions:issue-main | What keeps mercury emissions high in India, and the fix?
+waste-to-wealth:how-main | How can waste become energy or wealth?
+circular-economy:def-main | How circular is the world economy, why does India need it, and what does it bring?
+circular-economy:eg-main | One circular-economy success, one mixed case, and India's initiatives?
+circular-economy:issue-main | What holds back the circular economy, and the way forward?
+natural-farming:def-main | What is natural farming, how is it different from organic, and its key practices?
+natural-farming:use-main | Why natural farming, one success, one failure, and India's mission?
+natural-farming:issue-main | What are the risks of natural farming, and how should India scale it?
+agroforestry:def-main | How much land is under agroforestry, and its main types?
+agroforestry:use-main | What does agroforestry give farmers and the climate, with two examples?
+agroforestry:gov-main | India's agroforestry policies, what holds farmers back, and the fix?
+general-observation:fact-main | What is the common thread in every pollution problem, and the approach to use?

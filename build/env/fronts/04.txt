@@ -1,0 +1,37 @@
+# Question fronts, 4. Renewable Energy
+benefits-of-renewable-energy-re:use-main | What are the benefits of renewable energy, including jobs?
+challenges-of-re:issue-main | What holds renewable energy back, in figures, and the way forward?
+non-fossil-share-of-installed-capacity:fact-main | Where does India's non-fossil capacity stand, what's next, and what's the catch?
+solar-energy:fact-main | India's installed solar capacity and rank, with two examples and one conflict?
+solar-energy:gov-pm-surya-ghar-muft-bijli-yojana-pmsgmby | PM Surya Ghar: its objective, India's solar potential, and what drives growth?
+solar-energy:gov-main | What do ALMM and PM-KUSUM do?
+solar-energy:issue-challenges | What are the challenges for solar in India, including technology gaps?
+solar-energy:gov-green-grids-initiative-ggi-osowog | What is GGI–OSOWOG, who launched it, and how will it be built?
+wind-energy:def-main | India's wind capacity, offshore potential and rank, and its manufacturing strength?
+wind-energy:eg-main | One wind success, one conflict, and India's wind policies?
+wind-energy:issue-main | What holds wind back (onshore and offshore), and the way forward?
+biomass:def-main | India's bioenergy capacity, and the National Bioenergy Programme and its revised rules?
+biomass:use-main | Why biomass energy, one success, one failure, and linked schemes?
+biomass:issue-main | What holds biomass energy back, and the way forward?
+waste-to-energy:def-main | India's waste-to-energy capacity and rank, why it's useful, one failure and one success?
+waste-to-energy:gov-main | WtE schemes and rules, why plants underperform, and the way forward?
+wef-energy-transition-index-2024:fact-main | India's rank in the WEF Energy Transition Index, why it needs the transition, and the hurdles?
+pradhan-mantri-khanij-kshetra-kalyan-yoj:def-pillars-key-features-funds | What is PMKKKY's basic idea, and how are DMF funds raised and split?
+pradhan-mantri-khanij-kshetra-kalyan-yoj:how-function | What are the functions of a District Mineral Foundation?
+pradhan-mantri-khanij-kshetra-kalyan-yoj:how-functionaries | Who runs the DMF and who picks beneficiaries?
+pradhan-mantri-khanij-kshetra-kalyan-yoj:use-main | Why does PMKKKY matter, two district examples, and the 2024 change?
+pradhan-mantri-khanij-kshetra-kalyan-yoj:issue-main | Where does PMKKKY go wrong, and how should it be fixed?
+nuclear-energy-mission-budget-2025-26:fact-target-roadmap | The Nuclear Energy Mission's target, current capacity and plans?
+nuclear-energy-mission-budget-2025-26:gov-private-indigenous-push | How is India opening nuclear to private players and indigenous reactors?
+nuclear-energy-mission-budget-2025-26:use-key-relevance-challenge | Why nuclear suits India, its fuel problem, and one success and one stuck project?
+hydrogen:def-main | India's hydrogen production, its energy density, and what green hydrogen is?
+hydrogen:def-blue-hydrogen-blue-hydrogen-the-bridge-f | How is blue hydrogen made, and what does India need for it?
+hydrogen:def-pink-or-red-hydrogen-the-nuclear-option | How is pink hydrogen made, and what is India doing on it?
+hydrogen:eg-main | Two green hydrogen examples, and India's hydrogen initiatives and mission targets?
+hydrogen:issue-main | What holds green hydrogen back, and the way forward?
+biofuels:def-main | The four generations of biofuels, the investment needed, and the concerns?
+biofuels:gov-main | India's biggest biofuel, the National Biofuel Policy, and the EBP programme?
+biofuels:fact-main | What has ethanol blending achieved, the measures and concerns, and two examples?
+methanol:def-main | What is methanol made from, and India's methanol initiatives?
+geothermal-energy:fact-main | India's geothermal potential, what exists, the best sites, and the 2025 policy?
+underground-coal-gasification:def-main | What is India's coal gasification target, the steps taken, and the problems?

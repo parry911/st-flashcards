@@ -1,0 +1,113 @@
+# Question fronts, 5. Disaster Management and 6. EIA
+seismic-and-disaster-statistics:def-main | How exposed is India to quakes, floods and displacement, and what does that mean for planning?
+india-s-disaster-approach:def-main | How has India's disaster approach shifted, one example each way, and how DRR links with climate adaptation?
+disaster-risk-formula:def-main | What is the disaster risk formula, what are exposure, hazard, disaster and risk, and what is cascading risk?
+disaster-risk-formula:def-main-2 | What is vulnerability, its four types, and two Indian examples?
+insurance-coverage:def-main | How insured is India against disasters, why it matters, and one success and one failure?
+insurance-coverage:gov-main | India's insurance push, the protection gap, and the way forward?
+examples-of-disaster-innovation:def-main | Examples of disaster innovation, and how India builds disaster knowledge?
+examples-of-disaster-innovation:issue-main | What limits tech in disasters, and the way forward?
+disaster-management-cycle:def-main | The phases of the disaster management cycle, and why the cycle matters?
+disaster-management-cycle:eg-main | One state where the full cycle worked, one where it failed, and how India runs the cycle?
+disaster-management-cycle:issue-main | Where does the cycle break down in India, and the fix?
+components-of-prevention:def-main | What is prevention, its components, and how much does it save?
+components-of-prevention:eg-main | One prevention success, one ignored warning, and India's prevention tools?
+components-of-prevention:issue-main | Why does prevention fail, and what comes first?
+components-of-preparedness:def-components-of-prepardness | What goes into disaster preparedness?
+components-of-preparedness:gov-main | What is Mission Mausam, its key features, and the Bharat Forecast System?
+components-of-preparedness:gov-main-2 | What was Exercise Suraksha Chakra, and why do sturzstrom-type events beat normal early warnings?
+components-of-response:def-main | What is disaster response, its components, and the golden hour?
+components-of-response:eg-main | One rescue success, one failure, and India's response forces and systems?
+components-of-response:issue-main | Where does response break down, and the fix?
+components-of-recovery:def-main | What is recovery, its components, two examples, and India's recovery tools?
+components-of-recovery:issue-main | Why does recovery go wrong, and the fix?
+disaster-resilience:def-main | What is disaster resilience, how is it measured, and an example?
+disaster-resilience:eg-main | One resilience success, one failure, and India's resilience initiatives?
+accountability-and-oversight:def-main | Who holds disaster management to account, with examples?
+accountability-and-oversight:issue-main | Where is accountability weak, and how do we fix it?
+disaster-management-act-2005:def-main | The DM Act 2005: its three tiers, NDMA, NEC, plans, NDRF and local bodies?
+disaster-management-act-2005:fix-main | What did the Standing Committee on Finance (2019) recommend on disaster funds?
+disaster-management-act-2005:eg-main | When did the DM Act work, and when did it fail?
+disaster-management-amendment-act-2025:def-main | What did the DM (Amendment) Act 2025 add?
+disaster-management-amendment-act-2025:gov-localisation-of-drr-507-cr-panchayat-pro | What is community-based DRR, the panchayat DRR project, and local examples and tools?
+legal-framework-for-disasters:def-main | Which laws besides the DM Act cover disasters, and what does each handle?
+legal-framework-for-disasters:eg-main | Examples of these laws in action, and the 2025 changes?
+legal-framework-for-disasters:issue-main | What's wrong with India's disaster laws, and the fix?
+national-disaster-management-plan-ndmp-2:def-main | What does NDMP 2019 align with, its themes, its time frames and its response framework?
+national-disaster-management-plan-ndmp-2:eg-main | Two examples of NDMP-style planning that worked?
+sdg-13-1-2:fact-main | What does SDG indicator 13.1.2 track?
+early-warning-systems:def-main | What is an early warning system, and why is it worth the money?
+early-warning-systems:eg-main | One warning success, one failure, and India's warning tools?
+early-warning-systems:issue-main | Why do warnings still miss people, and the fix?
+world-conferences-on-disaster-risk-reduc:def-first-wcdrr | The first WCDRR: where, when, outcome, aims and features?
+world-conferences-on-disaster-risk-reduc:def-second-wcdrr | The second WCDRR: where, when, outcome, aims and the five priorities?
+world-conferences-on-disaster-risk-reduc:def-third-wcdrr | The third WCDRR: where, when, outcome, its targets and priorities, and how India aligned?
+world-conferences-on-disaster-risk-reduc:tbl-hyogo-vs-sendai | How does Sendai differ from Hyogo?
+earthquakes:def-main | How quake-prone is India, why, its seismic zones, and what causes earthquakes?
+earthquakes:effect-main | What do earthquakes do, and the major Indian quakes of the last three decades?
+earthquakes:gov-ndma-guideline-scheme | India's earthquake approach, and recent steps in figures?
+earthquakes:issue-main | Where is earthquake safety weak, and the way forward?
+earthquakes:fact-related | What is the Pacific Ring of Fire, why is it so active, and a recent example?
+tsunamis:def-main | How often do tsunamis hit the Indian Ocean, and what causes them?
+tsunamis:effect-main | What did the 2004 tsunami do, and what caused it?
+tsunamis:gov-main | NDMA's tsunami guidelines and the way forward?
+floods:def-main | How flood-prone is India, why urban floods are growing, and the causes?
+floods:effect-main | What do floods do, and two big urban flood disasters with their causes?
+floods:gov-main | India's structural and non-structural flood measures, and policies?
+floods:fix-way-forward | Urban flood resilience: the scale of the problem, the tools, and the way forward?
+landslides:def-main | How landslide-prone is India, and why do landslides happen, especially in the Western Ghats?
+landslides:effect-main | What do landslides do, with recent examples?
+landslides:gov-main | NDMA's landslide guidelines and the national strategy?
+landslides:how-landslide-hazard-zonation-mapping | What is landslide hazard zonation mapping, at what scales, and its uses?
+landslides:fact-main | What is an avalanche, and what is land subsidence, where and the fix?
+sturzstrom-hyper-mobility-rock-ice-avala:def-main | What is a sturzstrom, how does it work, its drivers, and two examples?
+cloudburst:def-main | What counts as a cloudburst, and how does it form?
+cloudburst:effect-main | What do cloudbursts do, with recent examples?
+cloudburst:gov-main | NDMA measures and the way forward on cloudbursts?
+cloudburst:fact-related | How is the monsoon changing, the recent news, and its impact?
+lightning:def-main | How deadly is lightning in India now, and why is it rising?
+lightning:effect-main | Who dies from lightning, India's warning system, and the way forward?
+cyclone:def-main | How exposed is India to cyclones, and what makes them form and grow stronger?
+cyclone:effect-main | What do cyclones do, and the recent ones?
+cyclone:gov-main | NDMA's cyclone approach, Odisha's role, and the way forward?
+drought:def-main | How is drought defined, how drought-prone is India, its causes and the Cherrapunji paradox?
+drought:effect-main | What does drought do, with examples?
+drought:gov-main | NDMA's drought measures and the way forward?
+wildfires:def-main | How fire-prone are India's forests, and what starts wildfires?
+wildfires:effect-main | What do wildfires do, with an example?
+wildfires:gov-main | India's forest fire measures and the way forward?
+industrial-accidents:def-main | How big is the industrial accident risk in India, and the causes?
+industrial-accidents:effect-main | What do industrial accidents do, with key examples?
+industrial-accidents:gov-main | The law on industrial accidents, and the way forward?
+stampedes:def-main | How common are stampedes, where, and why do they happen?
+stampedes:effect-main | What do stampedes do, and NDMA's crowd guidelines?
+stampedes:fix-way-forward | What is the FIST model, and other crowd-safety fixes?
+heatwaves:def-main | How does IMD declare a heatwave, who is vulnerable, and why are heatwaves rising?
+heatwaves:effect-main | What do heatwaves do, with examples?
+heatwaves:gov-main | India's heatwave measures, and the way forward?
+glacier-lake-outburst-flood-glof:def-main | What is a GLOF, how fast are glacial lakes growing, and the causes?
+glacier-lake-outburst-flood-glof:effect-main | Who is at risk from GLOFs, what they do, and examples?
+glacier-lake-outburst-flood-glof:gov-main | India's GLOF measures, and the way forward?
+fire-safety:def-main | How many die in fires in India, and why?
+fire-safety:effect-main | What makes fires deadly, with recent examples?
+fire-safety:gov-main | Fire-safety law and standards, the gaps, and the way forward?
+dams:def-main | How many dams India has, and why they can fail?
+dams:effect-main | What does a dam failure do, with examples?
+dams:gov-main | The Dam Safety Act and dam-safety tools, and the way forward?
+new-technology-for-disaster-management:gov-main | How does India use technology and global leadership in disasters, with examples?
+new-technology-for-disaster-management:gov-main-2 | What did the 16th Finance Commission recommend on disaster funds?
+new-technology-for-disaster-management:fact-main | How does India finance DRR, what's wrong with it, and the way forward?
+meaning:def-main | What is EIA, where does it come from, its types and its project categories?
+process-with-drawback-of-each-stage:how-main | EIA stages from screening to scoping, and the drawback at each?
+process-with-drawback-of-each-stage:how-main-eia-5-questions | The five questions of the main EIA, and the drawbacks of each step?
+process-with-drawback-of-each-stage:how-main-2 | Who sits on a public hearing, the appraisal chain, and what happens after clearance?
+2006-vs-draft-2020-pyq-2020:tbl-main | How does the draft EIA 2020 differ from EIA 2006, and how did people push back?
+problems:issue-main | What's wrong with EIA reports and public hearings?
+problems:issue-main-2 | What goes wrong at clearance and after it, and how is EIA being diluted now?
+way-forward:fix-main | How do we fix EIA: an independent authority, better hearings, reasons on record?
+way-forward:fix-main-2 | Better monitoring after clearance, and reforms to the EIA system itself?
+cases:fact-main | The key environmental cases and constitutional provisions behind EIA?
+ngos-and-activists-pyq-2024:eg-main | What do NGOs and activists do in EIA, with four examples?
+coal-pithead-plants-pyq-2014:issue-main | Environmental impacts of coal pithead plants, and the norms on them?
+rehabilitation-pyq-2016:issue-main | Who gets displaced by projects, what they lose, and what RFCTLARR 2013 promises?
+sdgs:fact-main | How are the SDGs doing, India's rank, and the finance gap?

@@ -52,7 +52,7 @@ india-specific-legislations:fact-main | Carbon pricing worldwide, Article 6's th
 india-specific-legislations:gov-main | How do the CCTS and the GEI Target Rules work?
 india-specific-legislations:gov-main-2 | What is the Green Credit Programme, and what are its concerns?
 india-specific-legislations:gov-main-3 | How does the PAT scheme work?
-india-specific-legislations:gov-main-4 | Other green initiatives: hydrogen, steel, buildings, carbon capture?
+india-specific-legislations:gov-main-4 | Four other green initiatives in India's climate toolkit?
 india-specific-legislations:gov-to-reduce-methane | Why does methane matter, where does India's come from, and how do we cut it?
 india-specific-legislations:gov-main-5 | What are the CCPA's greenwashing guidelines, and the types of greenwashing?
 cop-3-kyoto-protocol:def-main | What did the Kyoto Protocol establish globally?

@@ -6,7 +6,7 @@ criteria-for-biodiversity-hotspots:def-main | What two criteria make a region a 
 western-ghats:def-main | Why do the Western Ghats matter, beyond being a hotspot?
 western-ghats:eg-main | One recent Western Ghats disaster, one success, and how India protects the range?
 western-ghats:issue-main | What threatens the Western Ghats, why is the ESA still stuck, and what is the fix?
-cop-16-un-convention-on-biological-diver:def-main | COP16 at Cali: theme, and its key outcomes from the Cali Fund to "One Health"?
+cop-16-un-convention-on-biological-diver:def-main | COP16 at Cali: its theme and its key outcomes?
 cop-16-un-convention-on-biological-diver:eg-main | How has the Cali Fund fared so far, and what did India bring to COP16?
 cop-16-un-convention-on-biological-diver:issue-main | Where did COP16 fall short, and what should come next?
 kunming-montreal-global-biodiversity-fra:def-main | What does the KMGBF aim for, when and where was it adopted, and what are its headline targets?
@@ -23,7 +23,7 @@ wpa-issues-and-features:tbl-main | The four WPA schedules after 2022: what does 
 wpa-issues-and-features:def-protected-areas-pa-hierarchy | The four kinds of protected areas under the WPA, and what is allowed in each?
 wpa-issues-and-features:gov-statutory-enforcement-bodies | Four bodies that enforce wildlife law, and what each does?
 wpa-issues-and-features:use-main | What has the WPA achieved in numbers, with one success and one failure?
-wpa-issues-and-features:gov-main | India's wildlife programmes and bodies, from Project Tiger onwards?
+wpa-issues-and-features:gov-main | India's wildlife programmes and bodies (eight)?
 wpa-issues-and-features:issue-challenges-current-challenges-critical-a | Where does wildlife protection fail today: enforcement, conflict, federalism, carrying capacity?
 wpa-issues-and-features:fix-main | How do we fix wildlife protection and human–wildlife conflict?
 nwap:def-main | What does the National Wildlife Action Plan focus on, and where does it fall short?
