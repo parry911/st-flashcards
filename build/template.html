@@ -121,6 +121,56 @@ mark{background:#d6efd9;color:inherit;border-radius:3px;padding:0 2px}
   .actions .in{margin-left:auto;margin-right:auto}
   .pin{left:calc(50vw + 370px);width:min(380px,calc(50vw - 400px))}
 }
+/* ---------- Environment & DM: one big card per syllabus topic ---------- */
+.leftcol,.hsp,.tip{display:none}
+.big .rows{gap:5px}
+.big .rw{padding:7px 10px;gap:10px}
+.big .rw .n{display:none}
+.big .rw .lt{flex:0 0 26px;height:26px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-weight:700;font-size:15px;color:var(--st);background:var(--st-soft)}
+.big .rw.s2 .ln{margin-top:2px}
+.big .rw.s0 .body.hb .hd{color:var(--ink2);font-weight:600;text-transform:none;letter-spacing:0;font-size:13.5px}
+.big .rw.flag{box-shadow:inset 3px 0 0 var(--bad)}
+.big .rw.flag .lt{color:var(--bad);background:color-mix(in srgb,var(--bad) 12%,transparent)}
+.big .sec{font-size:11.5px;text-transform:uppercase;letter-spacing:.07em;color:var(--st);margin:12px 2px 0;padding-top:10px;border-top:1px solid var(--line)}
+.big .sec:first-child{border-top:0;padding-top:0;margin-top:2px}
+.hs{font:inherit;color:inherit;background:color-mix(in srgb,var(--data) 14%,transparent);border:0;border-bottom:2px solid color-mix(in srgb,var(--data) 70%,transparent);border-radius:4px 4px 0 0;padding:0 2px;margin:0;cursor:pointer;line-height:inherit}
+.hs.chipx{font-size:12.5px;font-weight:650;color:var(--data);background:var(--data-soft);border:1px solid color-mix(in srgb,var(--data) 30%,transparent);border-radius:999px;padding:1px 9px;margin:3px 4px 0 0;display:inline-block;line-height:1.5}
+.hs.chipx:before{content:"◆ ";font-size:9px;vertical-align:1px}
+.hs.on{background:var(--data);color:var(--card);border-color:var(--data)}
+.cm{text-decoration:underline dotted;text-decoration-color:var(--ink3);text-underline-offset:3px;cursor:help}
+.tip{position:fixed;z-index:30;max-width:min(340px,calc(100vw - 24px));background:var(--ink);color:var(--card);font-size:13.5px;line-height:1.45;padding:9px 12px;border-radius:10px;box-shadow:var(--shadow)}
+.tip.on{display:block}
+.hsp h3,#hbox h3{font-family:var(--serif);font-size:17px;margin:0 0 4px;line-height:1.3}
+.hsp .from,#hbox .from{font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink3);margin-bottom:6px}
+.hsb ul{margin:4px 0 0;padding:0 0 0 18px}
+.hsb li{margin:6px 0;font-size:14.5px;line-height:1.52;color:var(--ink)}
+.hsb p{margin:6px 0;font-size:14.5px;line-height:1.5}
+.hsb details{margin:8px 0;border:1px solid var(--line);border-radius:10px;padding:6px 10px}
+.hsb summary{cursor:pointer;font-weight:600;font-size:14px}
+.hsb .pic img{max-height:300px}
+.hsp .empty{color:var(--ink3);font-size:13.5px;line-height:1.5}
+.keys{list-style:none;margin:6px 0 0;padding:0}
+.pin .keys li{padding:5px 0;font-size:13.5px;font-weight:400;color:var(--ink2)}
+.pin .keys li:before{display:none}
+.keys li{display:flex;gap:8px;align-items:baseline;padding:5px 0;border-top:1px solid var(--line);font-size:13.5px;line-height:1.45;color:var(--ink2)}
+.keys li:first-child{border-top:0}
+.keys .lt{flex:0 0 22px;height:22px;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;font-family:var(--serif);font-weight:700;font-size:13px;color:var(--st);background:var(--st-soft)}
+.keyh{margin-top:12px;padding-top:10px;border-top:1px solid var(--line);font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--st);font-weight:700}
+#hmodal{align-items:flex-end;padding:0}
+#hmodal .box{max-width:680px;width:100%;max-height:72vh;overflow:auto;border-radius:18px 18px 0 0;padding:18px 18px calc(18px + env(safe-area-inset-bottom))}
+@media (min-width:1060px){
+  body.env .pin{position:static;width:auto;max-height:none;overflow:visible;margin:0 0 14px}
+  body.env .pin summary{display:flex}
+  body.env .pin .in{padding:0 16px 14px}
+  body.env .hsp.on{display:block;position:fixed;top:64px;left:calc(50vw + 190px);width:340px;max-height:calc(100vh - 150px);overflow:auto;background:var(--card);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);padding:16px 18px}
+}
+@media (min-width:1400px){
+  body.env .leftcol{display:flex;flex-direction:column;gap:12px;position:fixed;top:64px;right:calc(50vw + 370px);width:min(380px,calc(50vw - 400px));max-height:calc(100vh - 90px);overflow:auto;padding-bottom:8px}
+  body.env .leftcol .pin,body.env .leftcol .pyqside{position:static;width:auto;max-height:none;margin:0;flex:0 0 auto}
+  body.env .leftcol .pin summary{display:none}
+  body.env .leftcol .pin .in{padding:16px 18px}
+  body.env .hsp.on{left:calc(50vw + 370px);width:min(380px,calc(50vw - 400px))}
+}
 </style>
 </head>
 <body>
@@ -167,6 +217,10 @@ mark{background:#d6efd9;color:inherit;border-radius:3px;padding:0 2px}
 <div class="modal" id="smodal"><div class="box sync" id="sbox"></div></div>
 <div class="modal" id="qmodal"><div class="box wide sheet" id="qbox"></div></div>
 <div class="pyqside" id="pyqSide"></div>
+<div class="leftcol" id="leftcol"></div>
+<aside class="hsp" id="hsp"></aside>
+<div class="modal" id="hmodal"><div class="box wide sheet" id="hbox"></div></div>
+<div class="tip" id="tip"></div>
 <div class="modal" id="pmodal"><div class="box wide sheet" id="pbox"></div></div>
 <script>
 const DECKS={st:/*DATA*/,env:/*ENVDATA*/};
@@ -194,17 +248,18 @@ const IMG=DECK.img||{};
 const PINKEY=ENV?"envpin.v1":"stpin.v1";
 (function pin(){
   const P=DECK.pin, el=$("#pin");
-  if(ENV){ $("#pinOne").textContent="Keywords to use · PARFREII";
-    $("#pinIn").innerHTML=`<div class="kw">${P.kw}</div><div class="vd">${P.pf}</div>`; }
+  if(ENV){ $("#pinOne").textContent="Keywords · PINCH-FC · PARFREII";
+    $("#pinIn").innerHTML=`<div class="kw">${P.kw}</div>`+(P.keys||[]).map(k=>`<div class="keyh">${k[0]}</div>${k[1]}`).join("")+(P.pf?`<div class="vd">${P.pf}</div>`:""); }
   else{
   $("#pinOne").textContent=P.heads.join(", ");
   $("#pinIn").innerHTML=`<div class="lead">${P.lead}</div><ul>${P.heads.map(h=>`<li>${h}</li>`).join("")}</ul><div class="niche">${P.niche}</div><div class="vd">${P.vd}</div>`;
   }
   let open=null; try{open=localStorage.getItem(PINKEY);}catch(e){}
   el.open=open===null?false:open==="1";
-  el.addEventListener("toggle",()=>{ if(matchMedia("(min-width:1060px)").matches) return; try{localStorage.setItem(PINKEY,el.open?"1":"0");}catch(e){} });
-  const wide=()=>{ if(matchMedia("(min-width:1060px)").matches) el.open=true; else{ let o=null; try{o=localStorage.getItem(PINKEY);}catch(e){} el.open=o==="1"; } };
-  wide(); matchMedia("(min-width:1060px)").addEventListener("change",wide);
+  const PW=ENV?"(min-width:1400px)":"(min-width:1060px)";
+  el.addEventListener("toggle",()=>{ if(matchMedia(PW).matches) return; try{localStorage.setItem(PINKEY,el.open?"1":"0");}catch(e){} });
+  const wide=()=>{ if(matchMedia(PW).matches) el.open=true; else{ let o=null; try{o=localStorage.getItem(PINKEY);}catch(e){} el.open=o==="1"; } };
+  wide(); matchMedia(PW).addEventListener("change",wide);
 })();
 
 /* ---------- build cards ---------- */
@@ -273,9 +328,9 @@ if(!validQueue()||!S.queue.length) buildQueue();
 let R=null;
 function resetReveal(c){
   const rows=c.payload.rows, idx=[]; rows.forEach((r,i)=>{ if("t" in r) idx.push(i); });
-  R={id:c.id,idx,steps:idx.map(()=>0),pre:idx.map(()=>false),marks:idx.map(()=>null)};
+  R={id:c.id,idx,steps:idx.map(()=>0),pre:idx.map(()=>false),marks:idx.map(()=>null),flag:idx.map(()=>false)};
   const rec=S.st[c.id], r=rec&&rec.r&&(!rec.v||rec.v===c.payload.v)&&rec.v?rec.r:null;
-  if(r&&r.some(x=>x===0)){ R.part=true; r.forEach((x,i)=>{ if(x===1&&i<R.steps.length){ R.steps[i]=1; R.pre[i]=true; } }); }
+  if(r&&r.some(x=>x===0)){ R.part=true; r.forEach((x,i)=>{ if(x===1&&i<R.steps.length){ R.steps[i]=1; R.pre[i]=true; } if(x===0&&i<R.steps.length) R.flag[i]=true; }); }
 }
 const allDone=()=>!R||R.steps.every(s=>s>=1);
 
@@ -296,7 +351,7 @@ function render(){
   $("#pk").style.width=(c0.t?c0.k/c0.t*100:0)+"%"; $("#pm").style.width=(c0.t?c0.m/c0.t*100:0)+"%";
   const mt=$("#missTgl"); mt.classList.toggle("on",S.missed); mt.textContent=S.missed?"Missed only ✓":"Missed only"; mt.disabled=!S.missed&&c0.m===0;
   const stage=$("#stage");
-  sidePYQ();
+  sidePYQ(); if(ENV){ hideTip(); renderHSP(); }
   if(!S.queue.length){ stage.innerHTML=`<div class="card"><div class="done"><h2>No cards here</h2><p>${S.missed?"Nothing is marked missed in this selection.":"Pick another subject or topic."}</p></div></div>`; actions([]); return; }
   if(S.pos>=S.queue.length){ renderDone(stage); return; }
   const c=cards[S.queue[S.pos]];
@@ -308,8 +363,8 @@ function render(){
     $("#front").onclick=flip; bindStar(c);
     actions([["ghost","‹","prev"],["primary","Show answer","flip"],["ghost","›","next"]]);
   } else {
-    stage.innerHTML=`<div class="card back" id="backcard">${kick}${backHTML(c)}<div class="fliphint">${R.steps.length?"Forgot an open point? Tap it to turn it red. Tap again to undo.<br>":""}<button class="flipback" id="flipBack">↺ Flip back</button></div></div>`;
-    bindRows(); bindStar(c);
+    stage.innerHTML=`<div class="card back${c.payload.big?" big":""}" id="backcard">${kick}${backHTML(c)}<div class="fliphint">${R.steps.length?(c.payload.big?"Tap a point to open it, then its highlighted word for the hot-spot. Dotted words explain themselves.<br>Forgot an open point? Tap it to turn it red.<br>":"Forgot an open point? Tap it to turn it red. Tap again to undo.<br>"):""}<button class="flipback" id="flipBack">↺ Flip back</button></div></div>`;
+    bindRows(); bindStar(c); if(ENV) markHS();
     $("#flipBack").onclick=e=>{e.stopPropagation(); unflip();};
     const done=allDone();
     actions([["ghost","‹","prev"]].concat(R.steps.length&&!done?[["ghost","Show all","all"]]:[]).concat([[anyRed()?"miss sug":"miss","Missed <kbd>1</kbd>","miss"],["got","Got it <kbd>2</kbd>","got"],["ghost","›","next"]]));
@@ -329,7 +384,7 @@ function titles(c){
 function chip(c){
   const p=c.payload;
   const roles=(p.roles||[]).map(r=>`<span class="chip role ${ROLE[r][1]}">${ROLE[r][0]}</span>`).join("");
-  const n=p.table?`${c.count} row${c.count===1?"":"s"}`:c.count?`${c.count} point${c.count===1?"":"s"}`:"picture";
+  const n=p.table?`${c.count} row${c.count===1?"":"s"}`:c.count?`${c.count} point${c.count===1?"":"s"}`+(p.big&&p.hs&&p.hs.length?` · ${p.hs.length} hot-spot${p.hs.length===1?"":"s"}`:""):"picture";
   const q=ENV&&c.topic.pyq&&c.topic.pyq.length?` <button class="star" data-pyq>★ PYQ ${c.topic.pyq.length}</button>`:"";
   return `<span class="chiprow">${roles}<span class="cnt">${n}</span>${q}</span>`;
 }
@@ -365,9 +420,9 @@ function backHTML(c){
     if("sec" in r) return `<div class="sec${r.tg?" tg":""}">${r.sec}</div>`;
     if("img" in r){ const f=IMG[r.img]; return f?`<div class="pic${c.count?"":" big"}"><img src="${f}" alt="" loading="lazy" onerror="this.parentNode.style.display='none'"></div>`:""; }
     if("video" in r) return `<a class="vid" href="${esc(r.video)}" target="_blank" rel="noopener">▶ Video</a>`;
-    k++; return rowHTML(r,k,!!p.table);
+    k++; return p.big?bigRow(r,k):rowHTML(r,k,!!p.table);
   }).join("");
-  const hint=(!R.steps.length||allDone())?"":R.part?`<div class="recall">Green points: you knew them last time. Recall the closed ones.</div>`:`<div class="recall">Say each point aloud, then tap it to check.</div>`;
+  const hint=(!R.steps.length||allDone())?"":(p.big&&R.part)?`<div class="recall">Green: known last time · red edge: missed last time. Recall the closed ones.</div>`:R.part?`<div class="recall">Green points: you knew them last time. Recall the closed ones.</div>`:`<div class="recall">Say each point aloud, then tap it to check.</div>`;
   return head+th+hint+`<div class="rows">${body}</div>`;
 }
 function rowHTML(r,i,tb){
@@ -380,8 +435,17 @@ function rowHTML(r,i,tb){
   const cls=(isRed(i)?" fg":(R.pre[i])?" kn":"")+(r.cont?" cont":"");
   return `<div class="rw s2${cls}" data-i="${i}"><div class="n">${i+1}</div><div class="body">${h}</div></div>`;
 }
+function bigRow(r,i){   /* Environment & DM big card: the letter is the cue, hot-spots and hard words sit inside the point */
+  const st=R.steps[i], firstHidden=R.steps.findIndex(s=>s<1);
+  const lt=r.lt?`<span class="lt">${r.h}</span>`:"";
+  if(st===0) return `<div class="rw s0${i===firstHidden?" next":""}${R.flag[i]?" flag":""}" data-i="${i}"><div class="n"></div>${lt}<div class="body${!r.lt&&r.h?" hb":""}" style="--w:${45+((i*37)%40)}%">${!r.lt&&r.h?`<div class="hd">${r.h}</div>`:""}</div></div>`;
+  const cls=(isRed(i)?" fg":(R.pre[i])?" kn":"");
+  return `<div class="rw s2${cls}" data-i="${i}"><div class="n"></div>${lt}<div class="body"><div class="ln">${r.t}</div></div></div>`;
+}
 function bindRows(){
-  document.querySelectorAll(".rw").forEach(el=>el.onclick=e=>{ if(e.target.closest("a")) return; const i=+el.dataset.i; if(el.classList.contains("s2")) toggleRed(i); else step(i);});
+  document.querySelectorAll(".rw").forEach(el=>el.onclick=e=>{ if(e.target.closest("a")) return;
+    const hb=e.target.closest(".hs"); if(hb){ e.stopPropagation(); openHS(+hb.dataset.h); return; }
+    const cm=e.target.closest(".cm"); if(cm&&el.classList.contains("s2")){ e.stopPropagation(); showTip(cm); return; } const i=+el.dataset.i; if(el.classList.contains("s2")) toggleRed(i); else step(i);});
   document.querySelectorAll(".pic img").forEach(im=>im.onclick=e=>{e.stopPropagation(); $("#lbImg").src=im.src; $("#lightbox").classList.add("on");});
 }
 $("#lightbox").onclick=()=>$("#lightbox").classList.remove("on");
@@ -549,6 +613,8 @@ $("#mOk").onclick=()=>{const keep={subj:S.subj,topic:S.topic,mode:S.mode}; S={v:
 let tt; function toast(m){const t=$("#toast"); t.textContent=m; t.classList.add("on"); clearTimeout(tt); tt=setTimeout(()=>t.classList.remove("on"),1600);}
 document.addEventListener("keydown",e=>{
   if($("#lightbox").classList.contains("on")){ if(e.key==="Escape"||e.key===" "||e.key==="Enter"){e.preventDefault(); $("#lightbox").classList.remove("on");} return; }
+  if(e.key==="Escape"){ hideTip(); if($("#hmodal").classList.contains("on")){ $("#hmodal").classList.remove("on"); return; } }
+  if($("#hmodal").classList.contains("on")) return;
   if($("#modal").classList.contains("on")||$("#pmodal").classList.contains("on")||$("#smodal").classList.contains("on")||$("#qmodal").classList.contains("on")) return;
   if(e.target.tagName==="SELECT"||e.target.tagName==="INPUT"||e.target.tagName==="SUMMARY") return;
   if(!S.queue.length||S.pos>=S.queue.length) return;
@@ -606,13 +672,54 @@ function openPYQ(t){
 function sidePYQ(){
   const el=$("#pyqSide"); if(!ENV){ el.style.display="none"; return; }
   const c=S.queue&&S.pos<S.queue.length?cards[S.queue[S.pos]]:null, t=c&&c.topic;
-  const show=!!(S.pyqSide&&matchMedia(WIDEQ).matches&&t&&t.pyq&&t.pyq.length);
+  const show=!!(S.pyqSide!==false&&matchMedia(WIDEQ).matches&&t&&t.pyq&&t.pyq.length);
   el.style.display=show?"block":"none"; if(!show) return;
   el.innerHTML=`<button class="x" id="qx" aria-label="Close">×</button>`+pyqHTML(t);
   $("#qx").onclick=()=>{ S.pyqSide=false; save(); sidePYQ(); };
 }
 $("#qmodal").onclick=e=>{ if(e.target.id==="qmodal") $("#qmodal").classList.remove("on"); };
 matchMedia(WIDEQ).addEventListener("change",sidePYQ);
+/* ---------- Environment & DM: hot-spot panel (right) / bottom sheet (phone), tap-to-explain words, left column ---------- */
+let HSI=null, HSCARD=null;
+const HSWIDE="(min-width:1060px)";
+function curBig(){ const c=S.queue&&S.pos<S.queue.length?cards[S.queue[S.pos]]:null; return c&&c.payload.big?c:null; }
+function hsHTML(c,i){ const h=c.payload.hs[i]; return `<div class="from">${strip(c.topic.name)} · hot-spot</div><h3>${h.t}</h3><div class="hsb">${h.b}</div>`; }
+function openHS(i){ const c=curBig(); if(!c) return; hideTip(); HSI=i; HSCARD=c.id;
+  if(matchMedia(HSWIDE).matches){ renderHSP(); const el=$("#hsp"); el.scrollTop=0; }
+  else{ $("#hbox").innerHTML=hsHTML(c,i)+`<div class="row" style="justify-content:flex-end;margin-top:12px"><button class="btn ghost" id="hClose">Close</button></div>`;
+    $("#hmodal").classList.add("on"); $("#hClose").onclick=()=>$("#hmodal").classList.remove("on"); bindTips($("#hbox")); bindPics($("#hbox")); }
+  document.querySelectorAll(".hs").forEach(b=>b.classList.toggle("on",+b.dataset.h===i));
+}
+function renderHSP(){
+  const el=$("#hsp"); if(!ENV) return;
+  const c=curBig(), show=!!(c&&S.back);
+  el.classList.toggle("on",show); if(!show){ el.innerHTML=""; return; }
+  if(HSCARD!==c.id){ HSI=null; HSCARD=c.id; }
+  el.innerHTML=HSI===null?`<div class="from">Hot-spots</div><div class="empty">Open a point, then tap its highlighted word. The hot-spot opens here.<br><br>This card has ${c.payload.hs.length}.</div>`:hsHTML(c,HSI);
+  bindTips(el); bindPics(el);
+}
+function markHS(){ document.querySelectorAll(".rows .hs").forEach(b=>b.classList.toggle("on",+b.dataset.h===HSI)); bindTips(document.querySelector(".rows")||document.body); }
+function bindPics(root){ root.querySelectorAll(".pic img").forEach(im=>im.onclick=e=>{e.stopPropagation(); $("#lbImg").src=im.src; $("#lightbox").classList.add("on");}); }
+function bindTips(root){ root.querySelectorAll(".cm").forEach(x=>x.onclick=e=>{ e.stopPropagation(); showTip(x); }); }
+let TIPEL=null;
+function showTip(x){ const c=curBig(); if(!c) return; const tx=c.payload.cm&&c.payload.cm[x.dataset.c]; if(!tx) return;
+  const t=$("#tip"); if(TIPEL===x&&t.classList.contains("on")){ hideTip(); return; }
+  TIPEL=x; t.innerHTML=tx; t.classList.add("on");
+  const r=x.getBoundingClientRect(), w=t.offsetWidth, h=t.offsetHeight;
+  let left=Math.min(Math.max(12,r.left),window.innerWidth-w-12), top=r.bottom+6; if(top+h>window.innerHeight-90) top=Math.max(8,r.top-h-6);
+  t.style.left=left+"px"; t.style.top=top+"px"; }
+function hideTip(){ $("#tip").classList.remove("on"); TIPEL=null; }
+if(ENV){
+  document.body.classList.add("env");
+  document.addEventListener("click",e=>{ if(!e.target.closest(".cm")) hideTip(); });
+  window.addEventListener("scroll",hideTip,{passive:true}); $("#hsp").addEventListener("scroll",hideTip,{passive:true}); $("#hbox").addEventListener("scroll",hideTip,{passive:true});
+  $("#hmodal").onclick=e=>{ if(e.target.id==="hmodal") $("#hmodal").classList.remove("on"); };
+  const pinHome=$("#pin").previousElementSibling, place=()=>{ const lc=$("#leftcol");
+    if(matchMedia(WIDEQ).matches){ lc.appendChild($("#pyqSide")); lc.appendChild($("#pin")); }
+    else{ pinHome.after($("#pin")); document.body.appendChild($("#pyqSide")); } };
+  place(); matchMedia(WIDEQ).addEventListener("change",place);
+  matchMedia(HSWIDE).addEventListener("change",()=>{ $("#hmodal").classList.remove("on"); renderHSP(); });
+}
 $("#progBtn").textContent="Progress by "+UNIT;
 render();
 })();

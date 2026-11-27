@@ -22,3 +22,21 @@ No list may exceed 5 items: `arrange.py` prints any list it had to cut automatic
 Helpers: `review.py s0N` (lines with numbered joins), `apply.py spec/0N.txt 'uN=/+…'`, `qa.py s0N W` (question + back),
 `setq.py 'card-id=question'`. Question fronts live in `env/fronts/*.txt`; prose cards in `env/read_in_notion.txt`. `show.py` and `peek.py` help read units and cards.
 A rebuild of the S&T deck with `make.py` keeps the Environment deck (it reads `env/site_deck.json`).
+
+## Big cards (since 28 Nov)
+
+Sections 1–5 are now one big card per syllabus topic, built straight from the **New way** of the Notion page
+(the OLD way toggles are not used). EIA (section 6) is still the old cards from `deck.json`, unchanged, same ids.
+
+1. Fetch the page with discussions and save it as `env/newway/page.md`.
+2. Comment texts go in `env/newway/comments.json` (discussion id → text). The page fetch shows only 50 discussions;
+   `notion-get-comments` with a block id as `page_id` returns that block's comments.
+3. `python3 make_env.py` (in `env/`) runs `newway/build.py`, then writes the site page.
+
+What `newway/build.py` does: each 🟢/🟡 topic toggle → one card. Before the first bold heading = FRAME; each bold
+heading (Causes, Effects, Solutions, Fixes, Timeline…) → a section. `<b>P</b>: …` lines show only their letter until
+opened. A toggle under a point → a hot-spot: highlighted in place if its title is in the point, else a chip after it;
+it opens in the right panel (wide screens) or a bottom sheet (phone). Commented words get a dotted underline and
+explain themselves on tap. 🔑 PINCH-FC, 🔑 PARFREII and the keyword callout fill the keys box (left column on wide
+screens, under the PYQs). PYQs: the old topics' lists, mapped in `MAP` inside `build.py`.
+Points marked red stay closed with a red edge next time; known points open green.
