@@ -78,7 +78,8 @@ def point(card, x, rows):
 def add_hs(card, y, row):
     i = len(card.hs)
     title = plain(chars(y['title'])).strip()
-    card.hs.append({'t': H.escape(title, quote=False), 'b': hs_body(card, y['kids'])})
+    tC = card.html(y['title'].strip())
+    card.hs.append({'t': card.out(tC).strip(), 'p': H.escape(title, quote=False), 'b': hs_body(card, y['kids'])})
     # highlight in place if the title text is in the point, else add a chip after it
     if row is None: return
     P = plain(row['C']).lower(); k = P.find(title.lower())
@@ -107,7 +108,7 @@ def build_topic(sec, grp, t):
         out.append({'sec': H.escape(nmb, quote=False)})
         for r in rs:
             body = card.out(r['C'])
-            if r['hs']: body += ' ' + ''.join(f'<button class="hs chipx" data-h="{i}">{card.hs[i]["t"]}</button>' for i in r['hs'])
+            if r['hs']: body += ' ' + ''.join(f'<button class="hs chipx" data-h="{i}">{card.hs[i]["p"]}</button>' for i in r['hs'])
             o = {'t': body.strip()}
             if r['h']: o['h'] = r['h']
             if r['lt']: o['lt'] = 1
@@ -131,15 +132,41 @@ walk(T)
 # keys box: keyword callout + PINCH-FC + PARFREII
 kc = next(x for x in T if x['k'] == 'callout' and x['kids'] and 'keywords' in x['kids'][0].get('x', ''))
 kw = H.escape(plain(chars(kc['kids'][0]['x'])), quote=False).replace('ENVIRONMENT', '<b>ENVIRONMENT</b>', 1)
+PINCM = {}; _pk = {}
+def keyhtml(txt):
+    C = snap(chars(txt))
+    for x in C:
+        d = x['cm']
+        if d and d not in _pk:
+            t = cmtext(d)
+            if t is None: x['cm'] = None; continue
+            _pk[d] = 'k' + str(len(PINCM)); PINCM[_pk[d]] = H.escape(t, quote=False)
+    return render(C, _pk)
 def keylist(t):
     li = []
     for y in t['kids']:
         if y['k'] != 'li': continue
-        C = chars(y['x']); s = render(C, {})
-        s = re.sub(r'^<b>([A-Za-z]+)</b>', r'<span class="lt">\1</span>', s)
-        li.append(f'<li>{s}</li>')
+        s = keyhtml(y['x'])
+        m = re.match(r'^<b>([A-Za-z]{1,2})</b>\s*', s)
+        li.append(f'<li><span class="lt">{m.group(1)}</span><span>{s[m.end():]}</span></li>' if m else f'<li><span>{s}</span></li>')
     return '<ul class="keys">' + ''.join(li) + '</ul>'
-pin = {'kw': kw, 'keys': [['PINCH-FC · causes and fixes', keylist(keys['PINCH-FC'])], ['PARFREII · DM solutions', keylist(keys['PARFREII'])]]}
+def loose(sec_no):
+    # lines of a section that sit outside every topic toggle (callouts, intro bullets)
+    out = []
+    def w(n, sec=None):
+        for x in n:
+            if x['k'] == 'tog' and x['h'] == 'h1': w(x['kids'], x['title'])
+            elif x['k'] == 'tog' and x['h'] == 'h3': w(x['kids'], sec)
+            elif x['k'] == 'tog': continue
+            elif sec and sec.startswith(sec_no):
+                if x['k'] == 'callout': w(x['kids'], sec)
+                elif x.get('x'): out.append(keyhtml(x['x']))
+    w(T); return out
+pol = loose('3'); dm = loose('5')
+pin = {'kw': kw, 'cm': PINCM, 'keys': [['PINCH-FC · causes and fixes', keylist(keys['PINCH-FC'])],
+       ['Pollution · how to think', '<ul class="keys">' + ''.join(f'<li><span>{x}</span></li>' for x in pol) + '</ul>'],
+       ['PARFREII · DM solutions', keylist(keys['PARFREII'])],
+       ['DM · meaning, cycle, NDMA pillars', '<ul class="keys">' + ''.join(f'<li><span>{x}</span></li>' for x in dm) + '</ul>']]}
 # PYQs: old topics' PYQs moved to the new big cards
 MAP = {'overview': 'b-biodiversity-loss', 'criteria-for-biodiversity-hotspots': 'b-biodiversity-loss', 'the-biological-diversity-act-2002': 'b-biodiversity-loss',
  'aravallis': 'b-mining', 'unregulated-sand-mining': 'b-mining', 'coastal-sand-mining': 'b-mining', 'wetland-conservation': 'b-fragile-ecosystems',
@@ -167,6 +194,7 @@ def yr(q):
     m = re.search(r'(\d{4})', q); return -int(m.group(1)) if m else 0
 for t in tops:
     if 'pyq' in t: t['pyq'].sort(key=yr)
+    for h in t['cards'][0]['hs']: h.pop('p')
 eia = [t for t in OLD['topics'] if t['subj'] == 's06']
 subjects = [{'id': 's0' + k, 'name': v} for k, v in SECNAME.items()] + [{'id': 's06', 'name': '6. EIA'}]
 D = {'subjects': subjects, 'topics': tops + eia, 'pin': pin}

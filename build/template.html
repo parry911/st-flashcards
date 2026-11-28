@@ -702,7 +702,7 @@ function markHS(){ document.querySelectorAll(".rows .hs").forEach(b=>b.classList
 function bindPics(root){ root.querySelectorAll(".pic img").forEach(im=>im.onclick=e=>{e.stopPropagation(); $("#lbImg").src=im.src; $("#lightbox").classList.add("on");}); }
 function bindTips(root){ root.querySelectorAll(".cm").forEach(x=>x.onclick=e=>{ e.stopPropagation(); showTip(x); }); }
 let TIPEL=null;
-function showTip(x){ const c=curBig(); if(!c) return; const tx=c.payload.cm&&c.payload.cm[x.dataset.c]; if(!tx) return;
+function showTip(x){ const c=curBig(), src=x.closest("#pin")?(DECK.pin||{}).cm:(c&&c.payload.cm); const tx=src&&src[x.dataset.c]; if(!tx) return;
   const t=$("#tip"); if(TIPEL===x&&t.classList.contains("on")){ hideTip(); return; }
   TIPEL=x; t.innerHTML=tx; t.classList.add("on");
   const r=x.getBoundingClientRect(), w=t.offsetWidth, h=t.offsetHeight;
@@ -717,7 +717,8 @@ if(ENV){
   const pinHome=$("#pin").previousElementSibling, place=()=>{ const lc=$("#leftcol");
     if(matchMedia(WIDEQ).matches){ lc.appendChild($("#pyqSide")); lc.appendChild($("#pin")); }
     else{ pinHome.after($("#pin")); document.body.appendChild($("#pyqSide")); } };
-  place(); matchMedia(WIDEQ).addEventListener("change",place);
+  place(); matchMedia(WIDEQ).addEventListener("change",place); bindTips($("#pinIn"));
+  $("#pin").addEventListener("scroll",hideTip,{passive:true}); $("#leftcol").addEventListener("scroll",hideTip,{passive:true});
   matchMedia(HSWIDE).addEventListener("change",()=>{ $("#hmodal").classList.remove("on"); renderHSP(); });
 }
 $("#progBtn").textContent="Progress by "+UNIT;
